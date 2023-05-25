@@ -8,9 +8,11 @@ Link to Overleaf paper (continuously updated) can be found [here](https://www.ov
 
 In the context of this project, base Romanian legislation is comprised of:
 
-1. The Constitution
-2. The Civil Code
-3. The Civil Procedure Code
-4. The Penal Code
-5. The Penal Procedure Code
-6. The Administrative Code*
+1. The Constitution \[[source](https://www.cdep.ro/pls/dic/site2015.page?id=339&idl=1)\]
+2. The Civil Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/175630?isFormaDeBaza=True&rep=True)\]
+3. The Civil Procedure Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/236282?isFormaDeBaza=True&rep=True)\]
+4. The Penal Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/255278?isFormaDeBaza=True&rep=True)\]
+5. The Penal Procedure Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/262649?isFormaDeBaza=True&rep=True)\]
+6. The Fiscal Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/171282?isFormaDeBaza=True&rep=True)\]
+7. The Fiscal Procedure Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/172697?isFormaDeBaza=True&rep=True)\]
+8. The Administrative Code*
