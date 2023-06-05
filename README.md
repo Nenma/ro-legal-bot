@@ -16,3 +16,11 @@ In the context of this project, base Romanian legislation is comprised of:
 6. The Fiscal Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/171282?isFormaDeBaza=True&rep=True)\]
 7. The Fiscal Procedure Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/172697?isFormaDeBaza=True&rep=True)\]
 8. The Administrative Code*
+
+## Running the app
+
+The flask chat app can be run like this:
+```
+cd src
+python app.py
+```
