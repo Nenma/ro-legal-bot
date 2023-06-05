@@ -1,0 +1,169 @@
+body {
+	background: #dcedf7;
+	font-family: 'Noto Sans', sans-serif;
+	line-height: 1.5;
+}
+
+.content {
+	background: #fff;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+	max-width: 800px;
+	min-height: 800px;
+	margin: 4em auto;
+	border-radius: 8px;
+	overflow-y: auto;
+}
+
+.conversation-title {
+	text-align: center;
+	padding: 15px;
+	background: linear-gradient(to bottom right, #fc4a1a, #7f1d1d);
+	color: #fff;
+}
+
+.conversation-title h1 {
+	font: 700 18px 'Noto Sans', sans-serif;
+	margin: 0;
+}
+
+.conversation-wrapper {
+	background: #f9f9f9;
+	padding: 25px;
+	min-height: 650px;
+	max-height: 69vh;
+	overflow-y: auto;
+}
+
+.message-sent,
+.message-received,
+.message-update,
+.message-join {
+	padding: 0;
+}
+
+.message-received {
+	text-align: left;
+}
+
+.message-sent {
+	text-align: right;
+}
+
+.message-update {
+	text-align: center;
+}
+
+.message-help {
+	text-align: center;
+}
+
+.message-join {
+	text-align: center;
+}
+
+.bubble {
+	border-radius: 8px;
+	background: #fff;
+	padding: 12px 18px;
+	border: 0.5px solid rgba(0, 0, 0, 0.02);
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.08);
+	max-width: 70%;
+	display: inline-block;
+	text-align: left;
+}
+
+.notice {
+	color: #BEBEBE
+}
+
+.help {
+	color: #BEBEBE
+}
+
+.timestamp {
+	margin: 8px 0;
+}
+
+.timestamp .avatar {
+	border-radius: 50%;
+	background: linear-gradient(to top right, #fc4a1a, #7f1d1d);
+	display: inline-block;
+	width: 25px;
+	height: 20px;
+	vertical-align: top;
+	color: #fff;
+	font-size: 10px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.timestamp .time {
+	display: inline-block;
+	font-size: 12px;
+	color: #999;
+	margin: 0 5px;
+}
+
+.timestamp .status {
+	display: inline-block;
+}
+
+.messaging-area {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.03);
+}
+
+.messaging-area input {
+	font: 16px 'Noto Sans', sans-serif;
+	border: none;
+	padding: 20px 65px;
+	width: 100%;
+}
+
+.messaging-area input:focus {
+	outline: 0;
+}
+
+.messaging-area a.send {
+	background: linear-gradient(to top right, #fc4a1a, #7f1d1d);
+	color: #fff;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	padding: 8px 10px 12px;
+	position: absolute;
+	font-size: 1.4em;
+	text-align: center;
+	right: 8px;
+	bottom: 8px;
+	cursor: pointer;
+}
+
+.messaging-area a.help {
+	background: linear-gradient(to top right, #fc4a1a, #7f1d1d);
+	color: #fff;
+	border-radius: 30%;
+	width: 25px;
+	height: 25px;
+	padding: 6px 10px 12px;
+	position: absolute;
+	font-size: 1.4em;
+	text-align: center;
+	bottom: 8px;
+	left: 8px;
+	cursor: pointer;
+}
+
+.join-wrapper a.join {
+	display: inline-block;
+	text-align: center;
+	background: linear-gradient(to top right, #fc4a1a, #7f1d1d);
+	border-radius: 15px;
+	color: #FFFFFF;
+	font-size: 2.0em;
+	padding-left: 25px;
+	padding-right: 25px;
+	cursor: pointer;
+}

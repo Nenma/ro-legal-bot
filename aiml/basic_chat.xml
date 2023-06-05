@@ -1,0 +1,77 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <category>
+        <pattern>SALUT</pattern>
+        <template>Salutare <get name="username" />
+        </template>
+    </category>
+
+    <category>
+        <pattern>BUNĂ</pattern>
+        <template>
+            <srai>SALUT</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CE EȘTI</pattern>
+        <template>Sunt doar un micuț bot menit să ajute cu înțelegerea cu ușurință a legislației din România!</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <template>
+            <random>
+                <li>Aici m-ai cam blocat.</li>
+                <li>Nu știu cum să continui...</li>
+                <li>Mi-ar plăcea să aud mai mult!</li>
+                <li>Continuă.</li>
+                <li>Fii mai specific.</li>
+                <li>Nu știam asta.</li>
+                <li>Spui adevărul?</li>
+                <li>Nu știu ce înseamnă asta.</li>
+                <li>Încearcă să-mi spui asta în alt mod.</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>MĂ CHEAMĂ *</pattern>
+        <template> E un nume foarte frumos, <set name="username">
+                <star />
+            </set>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NUMELE MEU ESTE *</pattern>
+        <template>
+            <srai>MĂ CHEAMĂ <star />
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CARE ESTE ARTICOLUL * AL CODULUI *</pattern>
+        <template>
+            <think>
+                <set name="article_number">
+                    <star index="1" />
+                </set>
+            </think>
+            <think>
+                <set name="legal_code">
+                    <star index="2" />
+                </set>
+            </think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CARE ESTE ARTICOLUL * DIN CODUL *</pattern>
+        <template>
+            <srai>CARE ESTE ARTICOLUL <star index="1" /> AL CODULUI <star index="2" /></srai>
+        </template>
+    </category>
+
+</aiml>
