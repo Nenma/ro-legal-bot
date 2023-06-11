@@ -1,4 +1,5 @@
 import os
+import re
 import aiml
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
@@ -27,14 +28,17 @@ def send():
     if message == "salvează":
         kernel.saveBrain(f"../aiml/{SESSION_ID}.brn")
         return jsonify({"answer": "Conversație salvată!"})
-    elif message.startswith("care este articolul"):
+    elif message.startswith("câte articole"):
+        legal_code = str(kernel.getPredicate("legal_code_size", SESSION_ID)).strip()
+        response = LawProcessor().get_code_size(legal_code)
+
+        return jsonify({"answer": response})
+    elif re.match(r"^care e.* articolul", message):
         article_number = int(kernel.getPredicate("article_number", SESSION_ID))
-        legal_code = str(kernel.getPredicate("legal_code", SESSION_ID))
+        legal_code = str(kernel.getPredicate("legal_code", SESSION_ID)).strip()
+        response = LawProcessor().find_article(article_number, legal_code)
 
-        # article_text = LawProcessor().find_article(article_number, legal_code)
-
-        # return jsonify({"answer": article_text})
-        return jsonify({"answer": f"Vrei să știi despre articolul {article_number} din {legal_code}"})
+        return jsonify({"answer": response})
     elif message == "":
         return jsonify({"answer": "Voiai să mă întrebi ceva?"})
     else:

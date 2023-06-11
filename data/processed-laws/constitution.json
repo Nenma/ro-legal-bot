@@ -87,10 +87,22 @@
                                  "article_number": 14,
                                  "text": "Capitala României este municipiul Bucureşti."
                               }
+                           ],
+                           "article_range": [
+                              1,
+                              14
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1,
+                        14
                      ]
                   }
+               ],
+               "article_range": [
+                  1,
+                  14
                ]
             },
             {
@@ -140,8 +152,16 @@
                                  "article_number": 21,
                                  "text": "(1) Orice persoană se poate adresa justiţiei pentru apărarea drepturilor, a libertăţilor şi a intereselor sale legitime.\n(2) Nici o lege nu poate îngrădi exercitarea acestui drept.\n(3) Părţile au dreptul la un proces echitabil şi la soluţionarea cauzelor într-un termen rezonabil.\n(4) Jurisdicţiile speciale administrative sunt facultative şi gratuite."
                               }
+                           ],
+                           "article_range": [
+                              15,
+                              21
                            ]
                         }
+                     ],
+                     "article_range": [
+                        15,
+                        21
                      ]
                   },
                   {
@@ -312,8 +332,16 @@
                                  "article_number": 53,
                                  "text": "(1) Exerciţiul unor drepturi sau al unor libertăţi poate fi restrâns numai prin lege şi numai dacă se impune, după caz, pentru: apărarea securităţii naţionale, a ordinii, a sănătăţii ori a moralei publice, a drepturilor şi a libertăţilor cetăţenilor; desfăşurarea instrucţiei penale; prevenirea consecinţelor unei calamităţi naturale, ale unui dezastru ori ale unui sinistru deosebit de grav.\n(2) Restrângerea poate fi dispusă numai dacă este necesară într-o societate democratică. Măsura trebuie să fie proporţională cu situaţia care a determinat-o, să fie aplicată în mod nediscriminatoriu şi fără a aduce atingere existenţei dreptului sau a libertăţii."
                               }
+                           ],
+                           "article_range": [
+                              22,
+                              53
                            ]
                         }
+                     ],
+                     "article_range": [
+                        22,
+                        53
                      ]
                   },
                   {
@@ -344,8 +372,16 @@
                                  "article_number": 57,
                                  "text": "Cetăţenii români, cetăţenii străini şi apatrizii trebuie să-şi exercite drepturile şi libertăţile constituţionale cu bună-credinţă, fără să încalce drepturile şi libertăţile celorlalţi."
                               }
+                           ],
+                           "article_range": [
+                              54,
+                              57
                            ]
                         }
+                     ],
+                     "article_range": [
+                        54,
+                        57
                      ]
                   },
                   {
@@ -371,10 +407,22 @@
                                  "article_number": 60,
                                  "text": "Avocatul Poporului prezintă celor două Camere ale Parlamentului rapoarte, anual sau la cererea acestora. Rapoartele pot conţine recomandări privind legislaţia sau măsuri de altă natură, pentru ocrotirea drepturilor şi a libertăţilor cetăţenilor."
                               }
+                           ],
+                           "article_range": [
+                              58,
+                              60
                            ]
                         }
+                     ],
+                     "article_range": [
+                        58,
+                        60
                      ]
                   }
+               ],
+               "article_range": [
+                  15,
+                  60
                ]
             },
             {
@@ -429,6 +477,10 @@
                                  "article_number": 68,
                                  "text": "(1) Şedinţele celor două Camere sunt publice.\n(2) Camerele pot hotărî ca anumite şedinţe să fie secrete."
                               }
+                           ],
+                           "article_range": [
+                              61,
+                              68
                            ]
                         },
                         {
@@ -455,6 +507,10 @@
                                  "article_number": 72,
                                  "text": "(1) Deputaţii şi senatorii nu pot fi traşi la răspundere juridică pentru voturile sau pentru opiniile politice exprimate în exercitarea mandatului.\n(2) Deputaţii şi senatorii pot fi urmăriţi şi trimişi în judecată penală pentru fapte care nu au legătură cu voturile sau cu opiniile politice exprimate în exercitarea mandatului, dar nu pot fi percheziţionaţi, reţinuţi sau arestaţi fără încuviinţarea Camerei din care fac parte, după ascultarea lor. Urmărirea şi trimiterea în judecată penală se pot face numai de către Parchetul de pe lângă Înalta Curte de Casaţie şi Justiţie. Competenţa de judecată aparţine Înaltei Curţi de Casaţie şi Justiţie.\n(3) În caz de infracţiune flagrantă, deputaţii sau senatorii pot fi reţinuţi şi supuşi percheziţiei. Ministrul justiţiei îl va informa neîntârziat pe preşedintele Camerei asupra reţinerii şi a percheziţiei. În cazul în care Camera sesizată constată că nu există temei pentru reţinere, va dispune imediat revocarea acestei măsuri."
                               }
+                           ],
+                           "article_range": [
+                              69,
+                              72
                            ]
                         },
                         {
@@ -496,8 +552,16 @@
                                  "article_number": 79,
                                  "text": "(1) Consiliul Legislativ este organ consultativ de specialitate al Parlamentului, care avizează proiectele de acte normative în vederea sistematizării, unificării şi coordonării întregii legislaţii. El ţine evidenţa oficială a legislaţiei României.\n(2) Înfiinţarea, organizarea şi funcţionarea Consiliului Legislativ se stabilesc prin lege organică."
                               }
+                           ],
+                           "article_range": [
+                              73,
+                              79
                            ]
                         }
+                     ],
+                     "article_range": [
+                        61,
+                        79
                      ]
                   },
                   {
@@ -618,8 +682,16 @@
                                  "article_number": 101,
                                  "text": "Indemnizaţia şi celelalte drepturi ale Preşedintelui României se stabilesc prin lege."
                               }
+                           ],
+                           "article_range": [
+                              80,
+                              101
                            ]
                         }
+                     ],
+                     "article_range": [
+                        80,
+                        101
                      ]
                   },
                   {
@@ -675,8 +747,16 @@
                                  "article_number": 110,
                                  "text": "(1) Guvernul îşi exercită mandatul până la data validării alegerilor parlamentare generale.\n(2) Guvernul este demis la data retragerii de către Parlament a încrederii acordate sau dacă primul-ministru se află în una dintre situaţiile prevăzute la articolul 106, cu excepţia revocării, ori este în imposibilitatea de a-şi exercita atribuţiile mai mult de 45 de zile.\n(3) În situaţiile prevăzute în alineatul (2) sunt aplicabile prevederile articolului 103.\n(4) Guvernul al cărui mandat a încetat potrivit alineatelor (1) şi (2) îndeplineşte numai actele necesare pentru administrarea treburilor publice, până la depunerea jurământului de membrii noului Guvern."
                               }
+                           ],
+                           "article_range": [
+                              102,
+                              110
                            ]
                         }
+                     ],
+                     "article_range": [
+                        102,
+                        110
                      ]
                   },
                   {
@@ -712,8 +792,16 @@
                                  "article_number": 115,
                                  "text": "(1) Parlamentul poate adopta o lege specială de abilitare a Guvernului pentru a emite ordonanţe în domenii care nu fac obiectul legilor organice.\n(2) Legea de abilitare va stabili, în mod obligatoriu, domeniul şi data până la care se pot emite ordonanţe.\n(3) Dacă legea de abilitare o cere, ordonanţele se supun aprobării Parlamentului, potrivit procedurii legislative, până la împlinirea termenului de abilitare. Nerespectarea termenului atrage încetarea efectelor ordonanţei.\n(4) Guvernul poate adopta ordonanţe de urgenţă numai în situaţii extraordinare a căror reglementare nu poate fi amânată, având obligaţia de a motiva urgenţa în cuprinsul acestora.\n(5) Ordonanţa de urgenţă intră în vigoare numai după depunerea sa spre dezbatere în procedură de urgenţă la Camera competentă să fie sesizată şi după publicarea ei în Monitorul Oficial al României. Camerele, dacă nu se află în sesiune, se convoacă în mod obligatoriu în 5 zile de la depunere sau, după caz, de la trimitere. Dacă în termen de cel mult 30 de zile de la depunere, Camera sesizată nu se pronunţă asupra ordonanţei, aceasta este considerată adoptată şi se trimite celeilalte Camere care decide de asemenea în procedură de urgenţă. Ordonanţa de urgenţă cuprinzând norme de natura legii organice se aprobă cu majoritatea prevăzută la articolul 76 alineatul (1) .\n(6) Ordonanţele de urgenţă nu pot fi adoptate în domeniul legilor constituţionale, nu pot afecta regimul instituţiilor fundamentale ale statului, drepturile, libertăţile şi îndatoririle prevăzute de Constituţie, drepturile electorale şi nu pot viza măsuri de trecere silită a unor bunuri în proprietate publică.\n(7) Ordonanţele cu care Parlamentul a fost sesizat se aprobă sau se resping printr-o lege în care vor fi cuprinse şi ordonanţele ale căror efecte au încetat potrivit alineatului (3) .\n(8) Prin legea de aprobare sau de respingere se vor reglementa, dacă este cazul, măsurile necesare cu privire la efectele juridice produse pe perioada de aplicare a ordonanţei."
                               }
+                           ],
+                           "article_range": [
+                              111,
+                              115
                            ]
                         }
+                     ],
+                     "article_range": [
+                        111,
+                        115
                      ]
                   },
                   {
@@ -744,6 +832,10 @@
                                  "article_number": 119,
                                  "text": "Consiliul Suprem de Apărare a Ţării organizează şi coordonează unitar activităţile care privesc apărarea ţării şi securitatea naţională, participarea la menţinerea securităţii internaţionale şi la apărarea colectivă în sistemele de alianţă militară, precum şi la acţiuni de menţinere sau de restabilire a păcii."
                               }
+                           ],
+                           "article_range": [
+                              116,
+                              119
                            ]
                         },
                         {
@@ -770,8 +862,16 @@
                                  "article_number": 123,
                                  "text": "(1) Guvernul numeşte un prefect în fiecare judeţ şi în municipiul Bucureşti.\n(2) Prefectul este reprezentantul Guvernului pe plan local şi conduce serviciile publice deconcentrate ale ministerelor şi ale celorlalte organe ale administraţiei publice centrale din unităţile administrativ-teritoriale.\n(3) Atribuţiile prefectului se stabilesc prin lege organică.\n(4) Între prefecţi, pe de o parte, consiliile locale şi primari, precum şi consiliile judeţene şi preşedinţii acestora, pe de altă parte, nu există raporturi de subordonare.\n(5) Prefectul poate ataca, în faţa instanţei de contencios administrativ, un act al consiliului judeţean, al celui local sau al primarului, în cazul în care consideră actul ilegal. Actul atacat este suspendat de drept."
                               }
+                           ],
+                           "article_range": [
+                              120,
+                              123
                            ]
                         }
+                     ],
+                     "article_range": [
+                        116,
+                        123
                      ]
                   },
                   {
@@ -817,6 +917,10 @@
                                  "article_number": 130,
                                  "text": "Instanţele judecătoreşti dispun de poliţia pusă în serviciul lor."
                               }
+                           ],
+                           "article_range": [
+                              124,
+                              130
                            ]
                         },
                         {
@@ -833,6 +937,10 @@
                                  "article_number": 132,
                                  "text": "(1) Procurorii îşi desfăşoară activitatea potrivit principiului legalităţii, al imparţialităţii şi al controlului ierarhic, sub autoritatea ministrului justiţiei.\n(2) Funcţia de procuror este incompatibilă cu orice altă funcţie publică sau privată, cu excepţia funcţiilor didactice din învăţământul superior."
                               }
+                           ],
+                           "article_range": [
+                              131,
+                              132
                            ]
                         },
                         {
@@ -849,10 +957,22 @@
                                  "article_number": 134,
                                  "text": "(1) Consiliul Superior al Magistraturii propune Preşedintelui României numirea în funcţie a judecătorilor şi a procurorilor, cu excepţia celor stagiari, în condiţiile legii.\n(2) Consiliul Superior al Magistraturii îndeplineşte rolul de instanţă de judecată, prin secţiile sale, în domeniul răspunderii disciplinare a judecătorilor şi a procurorilor, potrivit procedurii stabilite prin legea sa organică. În aceste situaţii, ministrul justiţiei, preşedintele Înaltei Curţi de Casaţie şi Justiţie şi procurorul general al Parchetului de pe lângă Înalta Curte de Casaţie şi Justiţie nu au drept de vot.\n(3) Hotărârile Consiliului Superior al Magistraturii în materie disciplinară pot fi atacate la Înalta Curte de Casaţie şi Justiţie.\n(4) Consiliul Superior al Magistraturii îndeplineşte şi alte atribuţii stabilite prin legea sa organică, în realizarea rolului său de garant al independenţei justiţiei."
                               }
+                           ],
+                           "article_range": [
+                              133,
+                              134
                            ]
                         }
+                     ],
+                     "article_range": [
+                        124,
+                        134
                      ]
                   }
+               ],
+               "article_range": [
+                  61,
+                  134
                ]
             },
             {
@@ -902,10 +1022,22 @@
                                  "article_number": 141,
                                  "text": "Consiliul Economic şi Social este organ consultativ al Parlamentului şi al Guvernului în domeniile de specialitate stabilite prin legea sa organică de înfiinţare, organizare şi funcţionare."
                               }
+                           ],
+                           "article_range": [
+                              135,
+                              141
                            ]
                         }
+                     ],
+                     "article_range": [
+                        135,
+                        141
                      ]
                   }
+               ],
+               "article_range": [
+                  135,
+                  141
                ]
             },
             {
@@ -950,10 +1082,22 @@
                                  "article_number": 147,
                                  "text": "(1) Dispoziţiile din legile şi ordonanţele în vigoare, precum şi cele din regulamente, constatate ca fiind neconstituţionale, îşi încetează efectele juridice la 45 de zile de la publicarea deciziei Curţii Constituţionale dacă, în acest interval, Parlamentul sau Guvernul, după caz, nu pun de acord prevederile neconstituţionale cu dispoziţiile Constituţiei. Pe durata acestui termen, dispoziţiile constatate ca fiind neconstituţionale sunt suspendate de drept.\n(2) În cazurile de neconstituţionalitate care privesc legile, înainte de promulgarea acestora, Parlamentul este obligat să reexamineze dispoziţiile respective pentru punerea lor de acord cu decizia Curţii Constituţionale.\n(3) În cazul în care constituţionalitatea tratatului sau acordului internaţional a fost constatată potrivit articolului 146 litera b) , acesta nu poate face obiectul unei excepţii de neconstituţionalitate. Tratatul sau acordul internaţional constatat ca fiind neconstituţional nu poate fi ratificat.\n(4) Deciziile Curţii Constituţionale se publică în Monitorul Oficial al României. De la data publicării, deciziile sunt general obligatorii şi au putere numai pentru viitor."
                               }
+                           ],
+                           "article_range": [
+                              142,
+                              147
                            ]
                         }
+                     ],
+                     "article_range": [
+                        142,
+                        147
                      ]
                   }
+               ],
+               "article_range": [
+                  142,
+                  147
                ]
             },
             {
@@ -978,10 +1122,22 @@
                                  "article_number": 149,
                                  "text": "Aderarea României la Tratatul Atlanticului de Nord se face prin lege adoptată în şedinţa comună a Camerei Deputaţilor şi Senatului, cu o majoritate de două treimi din numărul deputaţilor şi senatorilor."
                               }
+                           ],
+                           "article_range": [
+                              148,
+                              149
                            ]
                         }
+                     ],
+                     "article_range": [
+                        148,
+                        149
                      ]
                   }
+               ],
+               "article_range": [
+                  148,
+                  149
                ]
             },
             {
@@ -1011,10 +1167,22 @@
                                  "article_number": 152,
                                  "text": "(1) Dispoziţiile prezentei Constituţii privind caracterul naţional, independent, unitar şi indivizibil al statului român, forma republicană de guvernământ, integritatea teritoriului, independenţa justiţiei, pluralismul politic şi limba oficială nu pot forma obiectul revizuirii.\n(2) De asemenea, nici o revizuire nu poate fi făcută dacă are ca rezultat suprimarea drepturilor şi a libertăţilor fundamentale ale cetăţenilor sau a garanţiilor acestora.\n(3) Constituţia nu poate fi revizuită pe durata stării de asediu sau a stării de urgenţă şi nici în timp de război."
                               }
+                           ],
+                           "article_range": [
+                              150,
+                              152
                            ]
                         }
+                     ],
+                     "article_range": [
+                        150,
+                        152
                      ]
                   }
+               ],
+               "article_range": [
+                  150,
+                  152
                ]
             },
             {
@@ -1049,13 +1217,33 @@
                                  "article_number": 156,
                                  "text": "Legea de revizuire a Constituţiei se publică în Monitorul Oficial al României în termen de 5 zile de la data adoptării. Constituţia, modificată şi completată, după aprobarea prin referendum, se republică de către Consiliul Legislativ, cu reactualizarea denumirilor, dându-se textelor o nouă numerotare."
                               }
+                           ],
+                           "article_range": [
+                              153,
+                              156
                            ]
                         }
+                     ],
+                     "article_range": [
+                        153,
+                        156
                      ]
                   }
+               ],
+               "article_range": [
+                  153,
+                  156
                ]
             }
+         ],
+         "article_range": [
+            1,
+            156
          ]
       }
+   ],
+   "article_range": [
+      1,
+      156
    ]
 }

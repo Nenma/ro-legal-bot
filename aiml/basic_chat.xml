@@ -2,8 +2,7 @@
 
     <category>
         <pattern>SALUT</pattern>
-        <template>Salutare <get name="username" />
-        </template>
+        <template>Salutare <get name="username" />!</template>
     </category>
 
     <category>
@@ -15,7 +14,8 @@
 
     <category>
         <pattern>CE EȘTI</pattern>
-        <template>Sunt doar un micuț bot menit să ajute cu înțelegerea cu ușurință a legislației din România!</template>
+        <template>Sunt doar un micuț bot menit să ajute cu înțelegerea cu ușurință a legislației din
+            România!</template>
     </category>
 
     <category>
@@ -52,7 +52,37 @@
     </category>
 
     <category>
-        <pattern>CARE ESTE ARTICOLUL * AL CODULUI *</pattern>
+        <pattern>MULȚUMESC</pattern>
+        <template>Cu mare plăcere!</template>
+    </category>
+
+    <category>
+        <pattern>MERSI</pattern>
+        <template>
+            <srai>MULȚUMESC</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CÂTE ARTICOLE SUNT ÎN *</pattern>
+        <template>
+            <think>
+                <set name="legal_code_size">
+                    <star index="1" />
+                </set>
+            </think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CÂTE ARTICOLE CONȚINE *</pattern>
+        <template>
+            <srai>CÂTE ARTICOLE SUNT ÎN <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CARE ESTE ARTICOLUL * AL *</pattern>
         <template>
             <think>
                 <set name="article_number">
@@ -68,9 +98,23 @@
     </category>
 
     <category>
-        <pattern>CARE ESTE ARTICOLUL * DIN CODUL *</pattern>
+        <pattern>CARE E ARTICOLUL * AL *</pattern>
         <template>
-            <srai>CARE ESTE ARTICOLUL <star index="1" /> AL CODULUI <star index="2" /></srai>
+            <srai>CARE ESTE ARTICOLUL <star index="1" /> AL <star index="2" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CARE ESTE ARTICOLUL * DIN *</pattern>
+        <template>
+            <srai>CARE ESTE ARTICOLUL <star index="1" /> AL <star index="2" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CARE E ARTICOLUL * DIN *</pattern>
+        <template>
+            <srai>CARE ESTE ARTICOLUL <star index="1" /> AL <star index="2" /></srai>
         </template>
     </category>
 

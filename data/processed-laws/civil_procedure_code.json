@@ -37,8 +37,16 @@
                                  "article_number": 4,
                                  "text": "În materiile reglementate de prezentul cod, normele obligatorii ale dreptului comunitar se aplică în mod prioritar, indiferent de calitatea sau de statutul părţilor."
                               }
+                           ],
+                           "article_range": [
+                              1,
+                              4
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1,
+                        4
                      ]
                   },
                   {
@@ -144,8 +152,16 @@
                                  "article_number": 23,
                                  "text": "(1) Cei prezenţi la şedinţa de judecată sunt datori să manifeste respectul cuvenit faţă de instanţă şi să nu tulbure buna desfăşurare a şedinţei de judecată.\n(2) Preşedintele veghează ca ordinea şi solemnitatea şedinţei să fie respectate, putând lua în acest scop orice măsură prevăzută de lege."
                               }
+                           ],
+                           "article_range": [
+                              5,
+                              23
                            ]
                         }
+                     ],
+                     "article_range": [
+                        5,
+                        23
                      ]
                   },
                   {
@@ -181,12 +197,28 @@
                                  "article_number": 28,
                                  "text": "(1) Dacă prin lege nu se dispune altfel, dispoziţiile legii de procedură se aplică proceselor de pe întregul teritoriu al ţării.\n(2) În cazul raporturilor procesuale cu element de extraneitate, determinarea legii de procedură aplicabile se face potrivit normelor cuprinse în cartea a VII-a."
                               }
+                           ],
+                           "article_range": [
+                              24,
+                              28
                            ]
                         }
+                     ],
+                     "article_range": [
+                        24,
+                        28
                      ]
                   }
+               ],
+               "article_range": [
+                  1,
+                  28
                ]
             }
+         ],
+         "article_range": [
+            1,
+            28
          ]
       },
       {
@@ -260,10 +292,22 @@
                                  "article_number": 39,
                                  "text": "(1) Cererile făcute de o persoană care nu are capacitate procesuală sunt nule sau, după caz, anulabile. De asemenea, în cazul lipsei calităţii procesuale sau a interesului, instanţa va respinge cererea ori apărarea formulată ca fiind făcută de o persoană sau împotriva unei persoane fără calitate ori ca lipsită de interes, după caz.\n(2) Încălcarea dispoziţiilor prezentului titlu poate, de asemenea, atrage aplicarea şi a altor sancţiuni prevăzute de lege, iar cel care a suferit un prejudiciu are dreptul de a fi despăgubit, potrivit dreptului comun."
                               }
+                           ],
+                           "article_range": [
+                              29,
+                              39
                            ]
                         }
+                     ],
+                     "article_range": [
+                        29,
+                        39
                      ]
                   }
+               ],
+               "article_range": [
+                  29,
+                  39
                ]
             },
             {
@@ -348,8 +392,16 @@
                                  "article_number": 53,
                                  "text": "Dispoziţiile prezentului capitol se aplică în mod corespunzător şi procurorilor, magistraţilor-asistenţi, asistenţilor judiciari şi grefierilor."
                               }
+                           ],
+                           "article_range": [
+                              40,
+                              53
                            ]
                         }
+                     ],
+                     "article_range": [
+                        40,
+                        53
                      ]
                   },
                   {
@@ -375,6 +427,10 @@
                                  "article_number": 57,
                                  "text": "(1) În caz de urgenţă, dacă persoana fizică lipsită de capacitatea de exerciţiu a drepturilor civile nu are reprezentant legal, instanţa, la cererea părţii interesate, va numi un curator special, care să o reprezinte până la numirea reprezentantului legal, potrivit legii. De asemenea, instanţa va numi un curator special în caz de conflict de interese între reprezentantul legal şi cel reprezentat sau când o persoană juridică ori o entitate dintre cele prevăzute la art. 55 alin. (2), chemată să stea în judecată, nu are reprezentant.\n(2) Dispoziţiile alin. (1) se aplică în mod corespunzător şi persoanelor cu capacitate de exerciţiu restrânsă.\n(3) Numirea acestor curatori se va face de instanţa care judecă procesul, dintre avocaţii anume desemnaţi în acest scop de barou pentru fiecare instanţă judecătorească. Curatorul special are toate drepturile şi obligaţiile prevăzute de lege pentru reprezentantul legal.\n(4) Remunerarea provizorie a curatorului astfel numit se fixează de instanţă, prin încheiere, stabilindu-se totodată şi modalitatea de plată. La cererea curatorului, odată cu încetarea calităţii sale, ţinându-se seama de activitatea desfăşurată, remuneraţia va putea fi majorată."
                               }
+                           ],
+                           "article_range": [
+                              55,
+                              57
                            ]
                         },
                         {
@@ -391,6 +447,10 @@
                                  "article_number": 59,
                                  "text": "(1) Actele de procedură, apărările şi concluziile unuia dintre reclamanţi sau pârâţi nu le pot profita celorlalţi şi nici nu îi pot prejudicia.\n(2) Cu toate acestea, dacă prin natura raportului juridic sau în temeiul unei dispoziţii a legii, efectele hotărârii se întind asupra tuturor reclamanţilor ori pârâţilor, actele de procedură îndeplinite numai de unii dintre ei sau termenele încuviinţate numai unora dintre ei pentru îndeplinirea actelor de procedură profită şi celorlalţi. Când actele de procedură ale unora sunt potrivnice celor făcute de ceilalţi, se va ţine seama de actele cele mai favorabile.\n(3) Reclamanţii sau pârâţii care nu s-au înfăţişat ori nu au îndeplinit un act de procedură în termen vor continua totuşi să fie citaţi, dacă, potrivit legii, nu au termenul în cunoştinţă. Dispoziţiile art. 197 sunt aplicabile."
                               }
+                           ],
+                           "article_range": [
+                              58,
+                              59
                            ]
                         },
                         {
@@ -492,6 +552,10 @@
                                  "article_number": 78,
                                  "text": "(1) Cel introdus în proces va fi citat, odată cu citaţia comunicându-i-se, în copie, şi încheierea prevăzută la art. 77 alin. (3), cererea de chemare în judecată, întâmpinarea, precum şi înscrisurile anexate acestora. Prin citaţie i se va comunică şi termenul până la care va putea să arate excepţiile, dovezile şi celelalte mijloace de apărare de care înţelege să se folosească.\n(2) El va lua procedura în starea în care se află în momentul introducerii în proces. Instanţa, la cererea celui introdus în proces, va putea dispune readministrarea probelor sau administrarea de noi probe. Actele de procedură ulterioare vor fi îndeplinite şi faţă de acesta."
                               }
+                           ],
+                           "article_range": [
+                              60,
+                              78
                            ]
                         },
                         {
@@ -548,6 +612,10 @@
                                  "article_number": 88,
                                  "text": "(1) Renunţarea la mandat sau revocarea acestuia nu poate fi opusă celeilalte părţi decât de la comunicare, afară numai dacă a fost făcută în şedinţa de judecată şi în prezenţa ei.\n(2) Mandatarul care renunţă la împuternicire este ţinut să înştiinţeze atât pe cel care i-a dat mandatul, cât şi instanţa, cu cel puţin 15 zile înainte de termenul imediat următor renunţării. Mandatarul nu poate renunţa la mandat în cursul termenului de exercitare a căilor de atac."
                               }
+                           ],
+                           "article_range": [
+                              79,
+                              88
                            ]
                         },
                         {
@@ -559,8 +627,16 @@
                                  "article_number": 89,
                                  "text": "(1) Cel care nu este în stare să facă faţă cheltuielilor pe care le presupune declanşarea şi susţinerea unui proces civil, fără a primejdui propria sa întreţinere sau a familiei sale, poate beneficia de asistenţă judiciară, în condiţiile legii speciale privind ajutorul public judiciar.\n(2) Asistenţa judiciară cuprinde:\na) acordarea de scutiri, reduceri, eşalonări sau amânări pentru plata taxelor judiciare prevăzute de lege;\nb) apărarea şi asistenţa gratuită printr-un avocat desemnat de barou;\nc) orice alte modalităţi prevăzute de lege.\n(3) Asistenţa judiciară poate fi acordată oricând în cursul procesului, în tot sau numai în parte."
                               }
+                           ],
+                           "article_range": [
+                              89,
+                              89
                            ]
                         }
+                     ],
+                     "article_range": [
+                        55,
+                        89
                      ]
                   },
                   {
@@ -581,10 +657,22 @@
                                  "article_number": 91,
                                  "text": "În cazurile prevăzute la art. 90 alin. (1), titularul dreptului va fi introdus în proces şi se va putea prevala de dispoziţiile art. 400, 402, 403 şi 432-434, iar dacă procurorul îşi va retrage cererea, va putea cere continuarea judecăţii sau a executării silite."
                               }
+                           ],
+                           "article_range": [
+                              90,
+                              91
                            ]
                         }
+                     ],
+                     "article_range": [
+                        90,
+                        91
                      ]
                   }
+               ],
+               "article_range": [
+                  40,
+                  91
                ]
             },
             {
@@ -619,6 +707,10 @@
                                  "article_number": 95,
                                  "text": "Înalta Curte de Casaţie şi Justiţie judecă:\n1. recursurile declarate împotriva hotărârilor curţilor de apel, precum şi a altor hotărâri, în cazurile prevăzute de lege;\n2. recursurile în interesul legii;\n3. cererile în vederea pronunţării unei hotărâri prealabile pentru dezlegarea unor probleme de drept;\n4. orice alte cereri date prin lege în competenţa sa."
                               }
+                           ],
+                           "article_range": [
+                              92,
+                              95
                            ]
                         },
                         {
@@ -670,8 +762,16 @@
                                  "article_number": 104,
                                  "text": "(1) Instanţa legal învestită potrivit dispoziţiilor referitoare la competenţă după valoarea obiectului cererii rămâne competentă să judece chiar dacă, ulterior învestirii, intervin modificări în ceea ce priveşte cuantumul valorii aceluiaşi obiect.\n(2) Dispoziţiile alin. (1) sunt aplicabile şi la judecarea căilor de atac."
                               }
+                           ],
+                           "article_range": [
+                              96,
+                              104
                            ]
                         }
+                     ],
+                     "article_range": [
+                        92,
+                        104
                      ]
                   },
                   {
@@ -752,8 +852,16 @@
                                  "article_number": 118,
                                  "text": "Cererile formulate de un întreprinzător sau alt profesionist împotriva unui consumator pot fi introduse numai la instanţa domiciliului consumatorului. Dispoziţiile art. 122 alin. (2) rămân aplicabile."
                               }
+                           ],
+                           "article_range": [
+                              105,
+                              118
                            ]
                         }
+                     ],
+                     "article_range": [
+                        105,
+                        118
                      ]
                   },
                   {
@@ -794,8 +902,16 @@
                                  "article_number": 124,
                                  "text": "Competenţa ce revine instanţelor judecătoreşti în legătură cu incidentele privind arbitrajul reglementat de prezentul cod aparţine în toate cazurile tribunalului în circumscripţia căruia are loc arbitrajul."
                               }
+                           ],
+                           "article_range": [
+                              119,
+                              124
                            ]
                         }
+                     ],
+                     "article_range": [
+                        119,
+                        124
                      ]
                   },
                   {
@@ -846,6 +962,10 @@
                                  "article_number": 132,
                                  "text": "În cazul declarării necompetenţei, dovezile administrate în faţa instanţei necompetente rămân câştigate judecăţii şi instanţa competentă învestită cu soluţionarea cauzei nu va dispune refacerea lor decât pentru motive temeinice."
                               }
+                           ],
+                           "article_range": [
+                              125,
+                              132
                            ]
                         },
                         {
@@ -862,6 +982,10 @@
                                  "article_number": 134,
                                  "text": "(1) Pentru asigurarea unei bune judecăţi, în primă instanţă este posibilă conexarea mai multor procese în care sunt aceleaşi părţi sau chiar împreună cu alte părţi şi al căror obiect şi cauză au între ele o strânsă legătură.\n(2) Excepţia conexităţii poate fi invocată de părţi sau din oficiu cel mai târziu la primul termen de judecată înaintea instanţei ulterior sesizate, care, prin încheiere, se va pronunţa asupra excepţiei. Încheierea poate fi atacată numai odată cu fondul.\n(3) Dosarul va fi trimis instanţei mai întâi învestite, în afară de cazul în care reclamantul şi pârâtul cer trimiterea lui la una dintre celelalte instanţe.\n(4) Când una dintre cereri este de competenţa exclusivă a unei instanţe, conexarea se va face la acea instanţă.\n(5) În orice stare a judecăţii procesele conexate pot fi disjunse şi judecate separat, dacă numai unul dintre ele este în stare de judecată."
                               }
+                           ],
+                           "article_range": [
+                              133,
+                              134
                            ]
                         },
                         {
@@ -908,10 +1032,22 @@
                                  "article_number": 142,
                                  "text": "Când, din cauza unor împrejurări excepţionale, instanţa competentă este împiedicată un timp mai îndelungat să funcţioneze, Înalta Curte de Casaţie şi Justiţie, la cererea părţii interesate, va desemna o altă instanţă de acelaşi grad care să judece procesul."
                               }
+                           ],
+                           "article_range": [
+                              135,
+                              142
                            ]
                         }
+                     ],
+                     "article_range": [
+                        125,
+                        142
                      ]
                   }
+               ],
+               "article_range": [
+                  92,
+                  142
                ]
             },
             {
@@ -951,8 +1087,16 @@
                                  "article_number": 147,
                                  "text": "Cererea de chemare în judecată sau pentru exercitarea unei căi de atac este valabil făcută chiar dacă poartă o denumire greşită."
                               }
+                           ],
+                           "article_range": [
+                              143,
+                              147
                            ]
                         }
+                     ],
+                     "article_range": [
+                        143,
+                        147
                      ]
                   },
                   {
@@ -1068,8 +1212,16 @@
                                  "article_number": 168,
                                  "text": "Citarea martorilor, experţilor, traducătorilor, interpreţilor ori a altor participanţi în proces, precum şi, când este cazul, comunicarea actelor de procedură adresate acestora sunt supuse dispoziţiilor prezentului capitol, care se aplică în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              148,
+                              168
                            ]
                         }
+                     ],
+                     "article_range": [
+                        148,
+                        168
                      ]
                   },
                   {
@@ -1110,10 +1262,22 @@
                                  "article_number": 174,
                                  "text": "(1) Actul de procedură lovit de nulitate este desfiinţat, în tot sau în parte, de la data îndeplinirii lui.\n(2) Dacă este cazul, instanţa dispune refacerea actului de procedură, cu respectarea tuturor condiţiilor de validitate.\n(3) Desfiinţarea unui act de procedură atrage şi desfiinţarea actelor de procedură următoare, dacă acestea nu pot avea o existenţă de sine stătătoare.\n(4) Nulitatea unui act de procedură nu împiedică faptul ca acesta să producă alte efecte juridice decât cele care decurg din natura lui proprie."
                               }
+                           ],
+                           "article_range": [
+                              169,
+                              174
                            ]
                         }
+                     ],
+                     "article_range": [
+                        169,
+                        174
                      ]
                   }
+               ],
+               "article_range": [
+                  143,
+                  174
                ]
             },
             {
@@ -1163,10 +1327,22 @@
                                  "article_number": 181,
                                  "text": "(1) Partea care a pierdut un termen procedural va fi repusă în termen numai dacă dovedeşte că întârzierea se datorează unor motive temeinic justificate.\n(2) În acest scop, partea va îndeplini actul de procedură în cel mult 15 zile de la încetarea împiedicării, cerând totodată repunerea sa în termen. În cazul exercitării căilor de atac, această durată este aceeaşi cu cea prevăzută pentru exercitarea căii de atac.\n(3) Cererea de repunere în termen va fi rezolvată de instanţa competentă să soluţioneze cererea privitoare la dreptul neexercitat în termen."
                               }
+                           ],
+                           "article_range": [
+                              175,
+                              181
                            ]
                         }
+                     ],
+                     "article_range": [
+                        175,
+                        181
                      ]
                   }
+               ],
+               "article_range": [
+                  175,
+                  181
                ]
             },
             {
@@ -1206,12 +1382,28 @@
                                  "article_number": 186,
                                  "text": "(1) Împotriva încheierii prevăzute la art. 185, cel obligat la amendă sau despăgubire va putea face numai cerere de reexaminare, solicitând, motivat, să se revină asupra amenzii ori despăgubirii sau să se dispună reducerea acesteia.\n(2) Cererea se face în termen de 15 zile, după caz, de la data la care a fost luată măsura sau de la data comunicării încheierii.\n(3) În toate cazurile, cererea se soluţionează, cu citarea părţilor, prin încheiere, dată în camera de consiliu, de către un alt complet decât cel care a stabilit amenda sau despăgubirea.\n(4) Încheierea prevăzută la alin. (3) este definitivă."
                               }
+                           ],
+                           "article_range": [
+                              182,
+                              186
                            ]
                         }
+                     ],
+                     "article_range": [
+                        182,
+                        186
                      ]
                   }
+               ],
+               "article_range": [
+                  182,
+                  186
                ]
             }
+         ],
+         "article_range": [
+            29,
+            186
          ]
       },
       {
@@ -1240,6 +1432,10 @@
                                  "article_number": 188,
                                  "text": "(1) Sesizarea instanţei se poate face numai după îndeplinirea unei proceduri prealabile, dacă legea prevede în mod expres aceasta. Dovada îndeplinirii procedurii prealabile se va anexa la cererea de chemare în judecată.\n(2) Neîndeplinirea procedurii prealabile nu poate fi invocată decât de către pârât prin întâmpinare, sub sancţiunea decăderii.\n(3) La sesizarea instanţei cu dezbaterea procedurii succesorale, reclamantul va depune o încheiere emisă de notarul public cu privire la verificarea evidenţelor succesorale prevăzute de Codul civil şi de lege. În acest caz neîndeplinirea procedurii prealabile poate fi invocată nu numai de către pârât, ci şi de către instanţă, din oficiu."
                               }
+                           ],
+                           "article_range": [
+                              187,
+                              188
                            ]
                         },
                         {
@@ -1301,6 +1497,10 @@
                                  "article_number": 199,
                                  "text": "(1) Reclamantul poate să îşi modifice cererea şi să propună noi dovezi, sub sancţiunea decăderii, numai până la primul termen la care acesta este legal citat. În acest caz, instanţa dispune amânarea pricinii şi comunicarea cererii modificate pârâtului, în vederea formulării întâmpinării, care, sub sancţiunea decăderii, va fi depusă cu cel puţin 10 zile înaintea termenului fixat, urmând a fi cercetată de reclamant la dosarul cauzei.\n(2) Cu toate acestea, nu se va da termen, ci se vor trece în încheierea de şedinţă declaraţiile verbale făcute în instanţă când:\n1. se îndreaptă greşelile materiale din cuprinsul cererii;\n2. reclamantul măreşte sau micşorează cuantumul obiectului cererii;\n3. se solicită contravaloarea obiectului cererii, pierdut sau pierit în cursul procesului;\n4. se înlocuieşte o cerere în constatare printr-o cerere în realizarea dreptului sau invers, atunci când cererea în constatare este admisibilă."
                               }
+                           ],
+                           "article_range": [
+                              189,
+                              199
                            ]
                         },
                         {
@@ -1327,6 +1527,10 @@
                                  "article_number": 203,
                                  "text": "(1) Întâmpinarea este obligatorie, în afară de cazurile în care legea prevede în mod expres altfel.\n(2) Nedepunerea întâmpinării în termenul prevăzut de lege atrage decăderea pârâtului din dreptul de a mai propune probe şi de a invoca excepţii, în afara celor de ordine publică, dacă legea nu prevede altfel."
                               }
+                           ],
+                           "article_range": [
+                              200,
+                              203
                            ]
                         },
                         {
@@ -1343,8 +1547,16 @@
                                  "article_number": 205,
                                  "text": "(1) Cererea reconvenţională se judecă odată cu cererea principală.\n(2) Dacă numai cererea principală este în stare de a fi judecată, instanţa poate dispune judecarea separată a cererii reconvenţionale. Cu toate acestea, disjungerea nu poate fi dispusă în cazurile anume prevăzute de lege sau dacă judecarea ambelor cereri se impune pentru soluţionarea unitară a procesului."
                               }
+                           ],
+                           "article_range": [
+                              204,
+                              205
                            ]
                         }
+                     ],
+                     "article_range": [
+                        187,
+                        205
                      ]
                   },
                   {
@@ -1485,6 +1697,10 @@
                                  "article_number": 231,
                                  "text": "Dispoziţiile prezentei secţiuni se aplică atât la cercetarea procesului, cât şi la dezbaterea în fond a cauzei."
                               }
+                           ],
+                           "article_range": [
+                              206,
+                              231
                            ]
                         },
                         {
@@ -2246,6 +2462,10 @@
                                  "article_number": 382,
                                  "text": "Dispoziţiile prezentei subsecţiuni sunt aplicabile în mod corespunzător şi consilierilor juridici care, potrivit legii, reprezintă partea."
                               }
+                           ],
+                           "article_range": [
+                              232,
+                              382
                            ]
                         },
                         {
@@ -2282,6 +2502,10 @@
                                  "article_number": 388,
                                  "text": "(1) Când consideră că au fost lămurite toate împrejurările de fapt şi temeiurile de drept ale cauzei, preşedintele închide dezbaterile.\n(2) Dacă va considera necesar, instanţa poate cere părţilor, la închiderea dezbaterilor, să depună completări la notele întocmite potrivit art. 238. Părţile pot depune aceste completări şi în cazul în care acestea nu au fost cerute de instanţă.\n(3) După închiderea dezbaterilor, părţile nu mai pot depune niciun înscris la dosarul cauzei, sub sancţiunea de a nu fi luat în seamă."
                               }
+                           ],
+                           "article_range": [
+                              383,
+                              388
                            ]
                         },
                         {
@@ -2343,8 +2567,16 @@
                                  "article_number": 399,
                                  "text": "Nulitatea unei hotărâri nu poate fi cerută decât prin căile de atac prevăzute de lege, în afară de cazul când legea prevede în mod expres altfel."
                               }
+                           ],
+                           "article_range": [
+                              389,
+                              399
                            ]
                         }
+                     ],
+                     "article_range": [
+                        206,
+                        399
                      ]
                   },
                   {
@@ -2365,6 +2597,10 @@
                                  "article_number": 401,
                                  "text": "(1) Renunţarea la judecată a unuia dintre reclamanţi nu este opozabilă celorlalţi reclamanţi.\n(2) Renunţarea produce efecte numai faţă de părţile în privinţa cărora a fost făcută şi nu afectează cererile incidentale care au caracter de sine stătător."
                               }
+                           ],
+                           "article_range": [
+                              400,
+                              401
                            ]
                         },
                         {
@@ -2386,6 +2622,10 @@
                                  "article_number": 404,
                                  "text": "Hotărârea este supusă recursului, care se judecă de instanţa ierarhic superioară celei care a luat act de renunţarea la dreptul pretins. Când renunţarea are loc în faţa unei secţii a Înaltei Curţi de Casaţie şi Justiţie, recursul se judecă de Completul de 9 judecători."
                               }
+                           ],
+                           "article_range": [
+                              402,
+                              404
                            ]
                         },
                         {
@@ -2417,6 +2657,10 @@
                                  "article_number": 409,
                                  "text": "Judecata cauzei suspendate se reia:\n1. prin cererea de redeschidere făcută de una dintre părţi, când suspendarea s-a dispus prin învoirea părţilor sau din cauza lipsei lor;\n2. prin cererea de redeschidere a procesului, făcută cu arătarea moştenitorilor, tutorelui sau curatorului, a celui reprezentat de mandatarul defunct, a noului mandatar sau, după caz, a părţii interesate, a lichidatorului, a administratorului judiciar ori a lichidatorului judiciar, în cazurile prevăzute la art. 406 alin. (1) pct. 1-6;\n3. în cazurile prevăzute la art. 406 alin. (1) pct. 7, după pronunţarea hotărârii de către Curtea de Justiţie a Uniunii Europene;\n4. prin alte modalităţi prevăzute de lege."
                               }
+                           ],
+                           "article_range": [
+                              405,
+                              409
                            ]
                         },
                         {
@@ -2463,8 +2707,16 @@
                                  "article_number": 417,
                                  "text": "Orice cerere adresată unei instanţe şi care a rămas în nelucrare timp de 10 ani se perimă de drept, chiar în lipsa unor motive imputabile părţii. Dispoziţiile art. 414 se aplică în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              410,
+                              417
                            ]
                         }
+                     ],
+                     "article_range": [
+                        400,
+                        417
                      ]
                   },
                   {
@@ -2535,6 +2787,10 @@
                                  "article_number": 429,
                                  "text": "(1) Hotărârea judecătorească este obligatorie şi produce efecte numai între părţi şi succesorii acestora.\n(2) Hotărârea este opozabilă oricărei terţe persoane atât timp cât aceasta din urmă nu face, în condiţiile legii, dovada contrară."
                               }
+                           ],
+                           "article_range": [
+                              418,
+                              429
                            ]
                         },
                         {
@@ -2551,6 +2807,10 @@
                                  "article_number": 431,
                                  "text": "(1) Hotărârea prevăzută la art. 430 poate fi atacată numai cu recurs la instanţa ierarhic superioară.\n(2) Când recunoaşterea pretenţiilor a fost făcută înaintea instanţei de apel, hotărârea primei instanţe va fi anulată în măsura recunoaşterii, dispunându-se admiterea, în mod corespunzător, a cererii. Dispoziţiile art. 430 alin. (2) rămân aplicabile."
                               }
+                           ],
+                           "article_range": [
+                              430,
+                              431
                            ]
                         },
                         {
@@ -2577,6 +2837,10 @@
                                  "article_number": 435,
                                  "text": "Dispoziţiile prezentei secţiuni se aplică în mod corespunzător şi în cazul în care tranzacţia părţilor este urmarea procedurii de mediere."
                               }
+                           ],
+                           "article_range": [
+                              432,
+                              435
                            ]
                         },
                         {
@@ -2613,6 +2877,10 @@
                                  "article_number": 441,
                                  "text": "În cazul în care cererea de îndreptare, de lămurire sau de completare a hotărârii a fost admisă, cheltuielile făcute de parte în aceste cereri vor fi suportate de stat, din fondul constituit potrivit legii. Când cererea a fost respinsă, cheltuielile vor fi suportate de parte potrivit dreptului comun."
                               }
+                           ],
+                           "article_range": [
+                              436,
+                              441
                            ]
                         },
                         {
@@ -2634,6 +2902,10 @@
                                  "article_number": 444,
                                  "text": "(1) Suspendarea executării provizorii va putea fi solicitată fie prin cererea de apel, fie distinct în tot cursul judecăţii în apel.\n(2) Cererea se va depune la prima instanţă sau, după caz, la instanţa de apel. În aceasta din urmă situaţie, la cerere se va alătura o copie legalizată a dispozitivului hotărârii.\n(3) Cererea de suspendare se va judeca de către instanţa de apel. Dispoziţiile art. 708 alin. (6) sunt aplicabile.\n(4) Suspendarea va putea fi încuviinţată numai cu plata unei cauţiuni al cărei cuantum va fi stabilit de instanţă în condiţiile art. 708 alin. (2) şi (3).\n(5) Până la soluţionarea cererii de suspendare, aceasta va putea fi încuviinţată provizoriu, prin ordonanţă preşedinţială, chiar înainte de sosirea dosarului, cu respectarea cerinţei prevăzute la alin. (4)."
                               }
+                           ],
+                           "article_range": [
+                              442,
+                              444
                            ]
                         },
                         {
@@ -2665,10 +2937,22 @@
                                  "article_number": 449,
                                  "text": "Dacă în cauză sunt mai mulţi reclamanţi sau mai mulţi pârâţi, ei vor putea fi obligaţi să plătească cheltuielile de judecată în mod egal, proporţional sau solidar, potrivit cu poziţia lor în proces ori cu natura raportului juridic existent între ei."
                               }
+                           ],
+                           "article_range": [
+                              445,
+                              449
                            ]
                         }
+                     ],
+                     "article_range": [
+                        418,
+                        449
                      ]
                   }
+               ],
+               "article_range": [
+                  187,
+                  449
                ]
             },
             {
@@ -2733,8 +3017,16 @@
                                  "article_number": 459,
                                  "text": "Măsurile de administrare judiciară nu pot face obiectul niciunei căi de atac."
                               }
+                           ],
+                           "article_range": [
+                              450,
+                              459
                            ]
                         }
+                     ],
+                     "article_range": [
+                        450,
+                        459
                      ]
                   },
                   {
@@ -2830,8 +3122,16 @@
                                  "article_number": 476,
                                  "text": "Dispoziţiile de procedură privind judecata în primă instanţă se aplică şi în instanţa de apel, în măsura în care nu sunt potrivnice celor cuprinse în prezentul capitol."
                               }
+                           ],
+                           "article_range": [
+                              460,
+                              476
                            ]
                         }
+                     ],
+                     "article_range": [
+                        460,
+                        476
                      ]
                   },
                   {
@@ -2942,6 +3242,10 @@
                                  "article_number": 496,
                                  "text": "La judecarea recursului, precum şi la rejudecarea procesului după casarea hotărârii de către instanţa de recurs, dispoziţiile art. 475 sunt aplicabile în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              477,
+                              496
                            ]
                         },
                         {
@@ -2978,6 +3282,10 @@
                                  "article_number": 502,
                                  "text": "(1) Contestaţia în anulare se soluţionează de urgenţă şi cu precădere, potrivit dispoziţiilor procedurale aplicabile judecăţii finalizate cu hotărârea atacată.\n(2) Întâmpinarea este obligatorie şi se depune la dosar cu cel puţin 5 zile înaintea primului termen de judecată. Contestatorul va lua cunoştinţă de conţinutul acesteia de la dosarul cauzei.\n(3) Dacă motivul de contestaţie este întemeiat, instanţa va pronunţa o singură hotărâre prin care va anula hotărârea atacată şi va soluţiona cauza. Dacă soluţionarea cauzei la acelaşi termen nu este posibilă, instanţa va pronunţa o hotărâre de anulare a hotărârii atacate şi va fixa termen în vederea soluţionării cauzei printr-o nouă hotărâre. În acest ultim caz, hotărârea de anulare nu poate fi atacată separat.\n(4) Hotărârea dată în contestaţie în anulare este supusă aceloraşi căi de atac ca şi hotărârea atacată."
                               }
+                           ],
+                           "article_range": [
+                              497,
+                              502
                            ]
                         },
                         {
@@ -3009,10 +3317,22 @@
                                  "article_number": 507,
                                  "text": "(1) Cererea de revizuire se soluţionează potrivit dispoziţiilor procedurale aplicabile judecăţii finalizate cu hotărârea atacată.\n(2) Întâmpinarea este obligatorie şi se depune la dosar cu cel puţin 5 zile înaintea primului termen de judecată. Revizuentul va lua cunoştinţă de conţinutul întâmpinării de la dosarul cauzei.\n(3) Dezbaterile sunt limitate la admisibilitatea revizuirii şi la faptele pe care se întemeiază.\n(4) Dacă instanţa încuviinţează cererea de revizuire, ea va schimba, în tot sau în parte, hotărârea atacată, iar în cazul hotărârilor definitive potrivnice, ea va anula cea din urmă hotărâre. Se va face arătare de hotărârea dată în revizuire, în josul originalului hotărârii revizuite.\n(5) Hotărârea dată asupra revizuirii este supusă căilor de atac prevăzute de lege pentru hotărârea revizuită.\n(6) Dacă revizuirea s-a cerut pentru hotărâri potrivnice calea de atac este recursul. În cazul în care revizuirea a fost soluţionată de una dintre secţiile Înaltei Curţi de Casaţie şi Justiţie, recursul este de competenţa Completului de 9 judecători."
                               }
+                           ],
+                           "article_range": [
+                              503,
+                              507
                            ]
                         }
+                     ],
+                     "article_range": [
+                        477,
+                        507
                      ]
                   }
+               ],
+               "article_range": [
+                  450,
+                  507
                ]
             },
             {
@@ -3047,8 +3367,16 @@
                                  "article_number": 511,
                                  "text": "(1) Asupra cererii, completul Înaltei Curţi de Casaţie şi Justiţie se pronunţă prin decizie.\n(2) Decizia se pronunţă numai în interesul legii şi nu are efecte asupra hotărârilor judecătoreşti examinate şi nici cu privire la situaţia părţilor din acele procese.\n(3) Decizia se motivează în termen de cel mult 30 de zile de la pronunţare şi se publică în cel mult 15 zile de la motivare în Monitorul Oficial al României, Partea I.\n(4) Dezlegarea dată problemelor de drept judecate este obligatorie pentru instanţe de la data publicării deciziei în Monitorul Oficial al României, Partea I."
                               }
+                           ],
+                           "article_range": [
+                              508,
+                              511
                            ]
                         }
+                     ],
+                     "article_range": [
+                        508,
+                        511
                      ]
                   },
                   {
@@ -3074,10 +3402,22 @@
                                  "article_number": 514,
                                  "text": "(1) Asupra sesizării, secţia sau, după caz, secţiile se pronunţă prin decizie, numai cu privire la problema de drept supusă dezlegării.\n(2) Dispoziţiile art. 511 alin. (3) se aplică în mod corespunzător.\n(3) Dezlegarea dată problemelor de drept este obligatorie pentru instanţe, inclusiv în cauza în legătură cu care s-a ridicat problema de drept, de la data publicării deciziei în Monitorul Oficial al României, Partea I."
                               }
+                           ],
+                           "article_range": [
+                              512,
+                              514
                            ]
                         }
+                     ],
+                     "article_range": [
+                        512,
+                        514
                      ]
                   }
+               ],
+               "article_range": [
+                  508,
+                  514
                ]
             },
             {
@@ -3117,12 +3457,28 @@
                                  "article_number": 519,
                                  "text": "(1) Atunci când contestaţia sau plângerea a fost făcută cu rea-credinţă, autorul acesteia poate fi obligat la plata unei amenzi judiciare de la 500 lei la 2.000 lei, precum şi, la cererea părţii interesate, la plata de despăgubiri pentru repararea prejudiciului cauzat prin introducerea contestaţiei sau plângerii.\n(2) Reaua-credinţă rezultă din caracterul vădit nefondat al contestaţiei ori al plângerii, precum şi din orice alte împrejurări care îndreptăţesc constatarea că exercitarea acesteia s-a făcut în alt scop decât acela pentru care legea o recunoaşte."
                               }
+                           ],
+                           "article_range": [
+                              515,
+                              519
                            ]
                         }
+                     ],
+                     "article_range": [
+                        515,
+                        519
                      ]
                   }
+               ],
+               "article_range": [
+                  515,
+                  519
                ]
             }
+         ],
+         "article_range": [
+            187,
+            519
          ]
       },
       {
@@ -3196,10 +3552,22 @@
                                  "article_number": 530,
                                  "text": "(1) Procedura necontencioasă se aplică şi în cazurile în care legea dă în competenţa preşedintelui instanţei luarea unor măsuri cu caracter necontencios.\n(2) În aceste cazuri, preşedintele trebuie să pronunţe încheierea în termen de cel mult 5 zile de la primirea cererii.\n(3) Apelul împotriva încheierii date de preşedintele judecătoriei se judecă de tribunal, iar apelul împotriva încheierii date de preşedintele tribunalului sau curţii de apel se judecă de un complet al instanţei respective.\n(4) Încheierile date de preşedinţii secţiilor Înaltei Curţi de Casaţie şi Justiţie sunt definitive."
                               }
+                           ],
+                           "article_range": [
+                              520,
+                              530
                            ]
                         }
+                     ],
+                     "article_range": [
+                        520,
+                        530
                      ]
                   }
+               ],
+               "article_range": [
+                  520,
+                  530
                ]
             },
             {
@@ -3224,12 +3592,28 @@
                                  "article_number": 532,
                                  "text": "(1) Cererea de eliberare privind sumele de bani sau alte valori ori titluri, consemnate, precum şi orice alte bunuri, păstrate la instanţă ori aflate în custodia altuia, după caz, în legătură cu un proces, se introduce, de persoana îndreptăţită, la instanţa care a dispus acea măsură.\n(2) Cererea se va soluţiona prin încheiere executorie, dată în camera de consiliu. Părţile vor fi citate dacă instanţa consideră necesar.\n(3) În încheierea de eliberare se va arăta deţinătorul obligat la eliberarea bunurilor, precum şi persoana îndreptăţită să le primească.\n(4) Încheierea prevăzută la alin. (3) este supusă aceloraşi căi de atac ca şi hotărârea pe baza căreia s-a cerut eliberarea bunului."
                               }
+                           ],
+                           "article_range": [
+                              531,
+                              532
                            ]
                         }
+                     ],
+                     "article_range": [
+                        531,
+                        532
                      ]
                   }
+               ],
+               "article_range": [
+                  531,
+                  532
                ]
             }
+         ],
+         "article_range": [
+            520,
+            532
          ]
       },
       {
@@ -3283,10 +3667,22 @@
                                  "article_number": 539,
                                  "text": "(1) Pentru înlăturarea piedicilor ce s-ar ivi în organizarea şi desfăşurarea arbitrajului, precum şi pentru îndeplinirea altor atribuţii ce revin instanţei judecătoreşti în arbitraj, partea interesată poate sesiza tribunalul în circumscripţia căruia are loc arbitrajul. Tribunalul va soluţiona cauza în completul prevăzut de lege pentru judecata în primă instanţă.\n(2) Instanţa va soluţiona aceste cereri de urgenţă şi cu precădere, prin procedura ordonanţei preşedinţiale, hotărârea nefiind supusă niciunei căi de atac."
                               }
+                           ],
+                           "article_range": [
+                              533,
+                              539
                            ]
                         }
+                     ],
+                     "article_range": [
+                        533,
+                        539
                      ]
                   }
+               ],
+               "article_range": [
+                  533,
+                  539
                ]
             },
             {
@@ -3336,10 +3732,22 @@
                                  "article_number": 546,
                                  "text": "(1) Instanţa judecătorească, sesizată cu o cauză cu privire la care s-a încheiat o convenţie arbitrală, îşi va verifica propria competenţă şi se va declara necompetentă numai dacă părţile sau una dintre ele solicită aceasta, invocând convenţia arbitrală.\n(2) Instanţa va reţine spre soluţionare procesul dacă:\na) pârâtul şi-a formulat apărările în fond, fără nicio rezervă întemeiată pe convenţia arbitrală;\nb) convenţia arbitrală este lovită de nulitate ori este inoperantă;\nc) tribunalul arbitral nu poate fi constituit din cauze vădit imputabile pârâtului în arbitraj.\n(3) Conflictul de competenţă dintre tribunalul arbitral şi o instanţă judecătorească este soluţionat de instanţa judecătorească ierarhic superioară celei aflate în conflict."
                               }
+                           ],
+                           "article_range": [
+                              540,
+                              546
                            ]
                         }
+                     ],
+                     "article_range": [
+                        540,
+                        546
                      ]
                   }
+               ],
+               "article_range": [
+                  540,
+                  546
                ]
             },
             {
@@ -3434,10 +3842,22 @@
                                  "article_number": 562,
                                  "text": "(1) Dezbaterea litigiului în faţa tribunalului arbitral se face în limba stabilită prin convenţia arbitrală sau, dacă nu s-a prevăzut nimic în această privinţă ori nu a intervenit o înţelegere ulterioară, în limba contractului din care s-a născut litigiul ori într-o limbă de circulaţie internaţională stabilită de tribunalul arbitral.\n(2) Dacă o parte nu cunoaşte limba în care se desfăşoară dezbaterea, la cererea şi pe cheltuiala ei, tribunalul arbitral îi asigură serviciile unui traducător.\n(3) Părţile pot să participe la dezbateri cu traducătorul lor."
                               }
+                           ],
+                           "article_range": [
+                              547,
+                              562
                            ]
                         }
+                     ],
+                     "article_range": [
+                        547,
+                        562
                      ]
                   }
+               ],
+               "article_range": [
+                  547,
+                  562
                ]
             },
             {
@@ -3472,8 +3892,16 @@
                                  "article_number": 566,
                                  "text": "(1) Dacă pârâtul are pretenţii împotriva reclamantului, derivând din acelaşi raport juridic, el poate face cerere reconvenţională.\n(2) Cererea reconvenţională va fi introdusă în cadrul termenului pentru depunerea întâmpinării sau cel mai târziu până la primul termen de judecată la care pârâtul a fost legal citat şi trebuie să îndeplinească aceleaşi condiţii ca şi cererea principală."
                               }
+                           ],
+                           "article_range": [
+                              563,
+                              566
                            ]
                         }
+                     ],
+                     "article_range": [
+                        563,
+                        566
                      ]
                   },
                   {
@@ -3579,8 +4007,16 @@
                                  "article_number": 585,
                                  "text": "(1) Dezbaterile arbitrale vor fi consemnate în încheierea de şedinţă.\n(2) Orice dispoziţie a tribunalului arbitral va fi consemnată în încheiere şi va fi motivată.\n(3) Încheierea de şedinţă va cuprinde, pe lângă menţiunile prevăzute la art. 594 alin. (1) lit. a) şi b), şi următoarele menţiuni:\na) o scurtă descriere a desfăşurării şedinţei;\nb) cererile şi susţinerile părţilor;\nc) motivele pe care se sprijină măsurile dispuse;\nd) dispozitivul;\ne) semnăturile arbitrilor, cu observarea prevederilor art. 593 alin. (3).\n(4) Dispoziţiile art. 594 alin. (3) se aplică în mod corespunzător.\n(5) Părţile au dreptul să ia cunoştinţă de conţinutul încheierilor şi de actele dosarului. La cererea părţilor sau din oficiu, tribunalul arbitral poate îndrepta sau completa încheierea de şedinţă printr-o altă încheiere. Părţilor li se comunică, la cerere, copie de pe încheierea de şedinţă."
                               }
+                           ],
+                           "article_range": [
+                              567,
+                              585
                            ]
                         }
+                     ],
+                     "article_range": [
+                        567,
+                        585
                      ]
                   },
                   {
@@ -3621,8 +4057,16 @@
                                  "article_number": 591,
                                  "text": "Orice diferenţă în plus sau în minus de cheltuieli arbitrale se regularizează cel mai târziu prin hotărârea arbitrală şi se plăteşte până la comunicarea hotărârii către părţi. Hotărârea nu se va comunică, dacă este cazul, până la plata diferenţei."
                               }
+                           ],
+                           "article_range": [
+                              586,
+                              591
                            ]
                         }
+                     ],
+                     "article_range": [
+                        586,
+                        591
                      ]
                   },
                   {
@@ -3668,10 +4112,22 @@
                                  "article_number": 598,
                                  "text": "În termen de 30 de zile de la data comunicării hotărârii sau de la data lămuririi, completării ori îndreptării ei, potrivit art. 595, tribunalul arbitral va depune dosarul litigiului la tribunalul prevăzut la art. 539, ataşând şi dovezile de comunicare a hotărârii arbitrale."
                               }
+                           ],
+                           "article_range": [
+                              592,
+                              598
                            ]
                         }
+                     ],
+                     "article_range": [
+                        592,
+                        598
                      ]
                   }
+               ],
+               "article_range": [
+                  563,
+                  598
                ]
             },
             {
@@ -3716,10 +4172,22 @@
                                  "article_number": 604,
                                  "text": "(1) Curtea de apel va judeca acţiunea în anulare în completul prevăzut de lege pentru judecarea recursului.\n(2) Întâmpinarea este obligatorie. Dispoziţiile art. 200-203 sunt aplicabile în mod corespunzător.\n(3) Admiţând acţiunea, curtea de apel va anula hotărârea arbitrală şi:\na) în cazurile prevăzute la art. 599 alin. (1) lit. a), b) şi e), va trimite cauza spre judecată instanţei competente să o soluţioneze, potrivit legii;\nb) în celelalte cazuri prevăzute la art. 599 alin. (1), dacă litigiul este în stare de judecată, se va pronunţa în fond, în limitele convenţiei arbitrale. Dacă însă, pentru a hotărî în fond, este nevoie de noi probe, curtea se va pronunţa în fond după administrarea lor. În acest din urmă caz, curtea va pronunţa mai întâi hotărârea de anulare şi, după administrarea probelor, hotărârea asupra fondului.\n(4) Hotărârile curţii de apel, pronunţate potrivit alin. (3), sunt definitive."
                               }
+                           ],
+                           "article_range": [
+                              599,
+                              604
                            ]
                         }
+                     ],
+                     "article_range": [
+                        599,
+                        604
                      ]
                   }
+               ],
+               "article_range": [
+                  599,
+                  604
                ]
             },
             {
@@ -3744,10 +4212,22 @@
                                  "article_number": 606,
                                  "text": "(1) Pentru a fi executată silit, hotărârea arbitrală se învesteşte cu formulă executorie.\n(2) Cererea de învestire se va soluţiona de tribunalul prevăzut la art. 539, potrivit legii. Dacă există îndoieli cu privire la regularitatea hotărârii arbitrale, părţile vor fi citate.\n(3) Hotărârea arbitrală învestită cu formulă executorie constituie titlu executoriu şi se execută silit întocmai ca şi o hotărâre judecătorească."
                               }
+                           ],
+                           "article_range": [
+                              605,
+                              606
                            ]
                         }
+                     ],
+                     "article_range": [
+                        605,
+                        606
                      ]
                   }
+               ],
+               "article_range": [
+                  605,
+                  606
                ]
             },
             {
@@ -3792,12 +4272,28 @@
                                  "article_number": 612,
                                  "text": "Dacă organizaţia sau instituţia prevăzută la art. 607 refuză să organizeze arbitrajul, convenţia arbitrală rămâne valabilă, iar litigiul dintre părţi va fi soluţionat potrivit prevederilor prezentei cărţi."
                               }
+                           ],
+                           "article_range": [
+                              607,
+                              612
                            ]
                         }
+                     ],
+                     "article_range": [
+                        607,
+                        612
                      ]
                   }
+               ],
+               "article_range": [
+                  607,
+                  612
                ]
             }
+         ],
+         "article_range": [
+            533,
+            612
          ]
       },
       {
@@ -3866,8 +4362,16 @@
                                  "article_number": 622,
                                  "text": "(1) Executarea silită poate fi pornită împotriva oricărei persoane fizice sau persoane juridice, de drept public sau de drept privat, cu excepţia acelora care beneficiază, în condiţiile legii, de imunitate de executare.\n(2) Dispoziţiile prezentei cărţi constituie dreptul comun în materie de executare silită, indiferent de izvorul sau de natura obligaţiilor cuprinse în titlul executoriu ori de calitatea juridică a părţilor."
                               }
+                           ],
+                           "article_range": [
+                              613,
+                              622
                            ]
                         }
+                     ],
+                     "article_range": [
+                        613,
+                        622
                      ]
                   },
                   {
@@ -3933,8 +4437,16 @@
                                  "article_number": 633,
                                  "text": "Dacă s-a desfiinţat titlul executoriu, toate actele de executare efectuate în baza acestuia sunt desfiinţate de drept, dacă prin lege nu se prevede altfel. În acest caz, sunt aplicabile dispoziţiile privitoare la întoarcerea executării."
                               }
+                           ],
+                           "article_range": [
+                              623,
+                              633
                            ]
                         }
+                     ],
+                     "article_range": [
+                        623,
+                        633
                      ]
                   },
                   {
@@ -4040,8 +4552,16 @@
                                  "article_number": 652,
                                  "text": "(1) Martorul asistent, prin semnarea procesului-verbal, atestă faptele la care a asistat.\n(2) El este îndreptăţit să ceară informaţii despre actele de executare la care este invitat şi să facă observaţii în legătură cu îndeplinirea lor. Observaţiile martorului asistent, când este cazul, vor fi consemnate de către executorul judecătoresc în proces-verbal.\n(3) Înainte de a începe efectuarea actelor de executare la care urmează să participe, executorul judecătoresc va explica martorilor asistenţi drepturile şi îndatoririle lor.\n(4) Pentru serviciul prestat, martorul asistent are dreptul la sumele prevăzute la art. 320, care se aplică în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              634,
+                              652
                            ]
                         }
+                     ],
+                     "article_range": [
+                        634,
+                        652
                      ]
                   },
                   {
@@ -4102,6 +4622,10 @@
                                  "article_number": 662,
                                  "text": "Comunicarea actelor de procedură în cadrul executării silite se poate face de către executorul judecătoresc fie personal, fie prin intermediul agentului său procedural. Dovada comunicării prin agent procedural are aceeaşi forţă probantă cu dovada comunicării efectuate de către executor însuşi."
                               }
+                           ],
+                           "article_range": [
+                              653,
+                              662
                            ]
                         },
                         {
@@ -4178,6 +4702,10 @@
                                  "article_number": 676,
                                  "text": "Încălcarea dispoziţiilor art. 664, 668 şi 674 atrage anularea executării."
                               }
+                           ],
+                           "article_range": [
+                              663,
+                              676
                            ]
                         },
                         {
@@ -4199,6 +4727,10 @@
                                  "article_number": 679,
                                  "text": "Dacă la moartea debitorului executarea era începută, ea se suspendă şi nu va fi reluată împotriva succesibililor acceptanţi decât după 10 zile de la data când aceştia au fost încunoştinţaţi despre continuarea executării silite, dispoziţiile art. 678 aplicându-se în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              677,
+                              679
                            ]
                         },
                         {
@@ -4240,6 +4772,10 @@
                                  "article_number": 686,
                                  "text": "Creditorii chirografari care au intervenit după expirarea termenului prevăzut la art. 681 alin. (1), dar înainte de expirarea termenului pentru depunerea titlurilor de creanţă, în vederea întocmirii proiectului de distribuire a sumei rezultate din urmărire, au dreptul să participe la distribuirea părţii din suma rămasă după îndestularea drepturilor creditorilor urmăritori, a creditorilor garantaţi sau privilegiaţi şi a celor care au intervenit în timp util. Dispoziţiile art. 682 alin. (4)-(6) rămân aplicabile."
                               }
+                           ],
+                           "article_range": [
+                              680,
+                              686
                            ]
                         },
                         {
@@ -4261,6 +4797,10 @@
                                  "article_number": 689,
                                  "text": "(1) În caz de perimare a executării, se va putea face, înăuntrul termenului de prescripţie, o nouă cerere de executare silită, dispoziţiile art. 655 şi 656 fiind aplicabile în mod corespunzător.\n(2) După încuviinţarea executării silite, executorul va comunică debitorului încheierea instanţei, precum şi o nouă somaţie, la care nu se va mai alătura titlul ce se execută."
                               }
+                           ],
+                           "article_range": [
+                              687,
+                              689
                            ]
                         },
                         {
@@ -4282,6 +4822,10 @@
                                  "article_number": 692,
                                  "text": "(1) Când creditorul urmăreşte în acelaşi timp mai multe bunuri mobile sau imobile a căror valoare este vădit excesivă în raport cu creanţa ce urmează a fi satisfăcută, instanţa de executare, la cererea debitorului şi după citarea creditorului, poate să restrângă executarea la anumite bunuri.\n(2) În acest caz, instanţa competentă să soluţioneze o astfel de cerere este aceea la care a început executarea acelui bun al debitorului, care apare ca îndestulător pentru acoperirea creanţelor tuturor creditorilor urmăritori.\n(3) Dacă cererea este admisă, instanţa va suspenda executarea celorlalte bunuri, iar în caz de executări pornite în circumscripţiile mai multor instanţe de executare, debitorul, pe baza simplei înfăţişări a încheierii prin care s-a încuviinţat restrângerea, poate cere acestor din urmă instanţe suspendarea acelor executări. Până la soluţionarea acestor cereri, executarea este suspendată de drept.\n(4) Executările suspendate nu vor putea fi reluate decât după rămânerea definitivă a proiectului de distribuire a sumelor rezultate din executarea efectuată."
                               }
+                           ],
+                           "article_range": [
+                              690,
+                              692
                            ]
                         },
                         {
@@ -4303,8 +4847,16 @@
                                  "article_number": 695,
                                  "text": "(1) În cazurile prevăzute la art. 693 pct. 2 se poate cere reluarea executării silite, înăuntrul termenului de prescripţie a dreptului de a obţine executarea silită.\n(2) Reluarea executării silite poate fi cerută şi asupra aceluiaşi bun. Dacă acesta este un imobil, atât timp cât, potrivit legii, poate avea loc reluarea executării silite, nu se va putea solicita de către executorul judecătoresc radierea urmăririi înscrise potrivit dispoziţiilor art. 811."
                               }
+                           ],
+                           "article_range": [
+                              693,
+                              695
                            ]
                         }
+                     ],
+                     "article_range": [
+                        653,
+                        695
                      ]
                   },
                   {
@@ -4340,8 +4892,16 @@
                                  "article_number": 700,
                                  "text": "Prevederile prezentului capitol se completează cu dispoziţiile Codului civil privitoare la prescripţia extinctivă."
                               }
+                           ],
+                           "article_range": [
+                              696,
+                              700
                            ]
                         }
+                     ],
+                     "article_range": [
+                        696,
+                        700
                      ]
                   },
                   {
@@ -4397,8 +4957,16 @@
                                  "article_number": 709,
                                  "text": "(1) Dacă admite contestaţia la executare, instanţa, ţinând seama de obiectul acesteia, după caz, va îndrepta ori anula actul de executare contestat, va dispune anularea ori încetarea executării înseşi, va anula ori lămuri titlul executoriu sau, când acesta a fost greşit învestit, va anula încheierea de învestire cu formulă executorie.\n(2) De asemenea, dacă prin contestaţia la executare s-a cerut de către partea interesată împărţirea bunurilor proprietate comună, instanţa va hotărî şi asupra împărţelii acestora, potrivit legii.\n(3) În cazul respingerii contestaţiei, contestatorul poate fi obligat, la cerere, la despăgubiri pentru pagubele cauzate prin întârzierea executării, iar când contestaţia a fost exercitată cu rea-credinţă, el va fi obligat şi la plata unei amenzi judiciare de la 1.000 lei la 7.000 lei.\n(4) Hotărârea de admitere sau de respingere a contestaţiei, rămasă definitivă, va fi comunicată, din oficiu şi de îndată, şi executorului judecătoresc.\n(5) Dacă contestaţia este admisă, executorul judecătoresc este obligat să se conformeze măsurilor luate sau dispuse de instanţă.\n(6) Atunci când contestaţia a fost respinsă, suma reprezentând cauţiunea depusă rămâne indisponibilizată, urmând a servi la acoperirea creanţelor arătate la alin. (3) sau a celor stabilite prin titlul executoriu, după caz, situaţie în care se va comunică executorului şi recipisa de consemnare a acestei sume.\n(7) În cazul în care constată refuzul nejustificat al executorului de a primi ori de a înregistra cererea de executare silită sau de a îndeplini un act de executare silită ori de a lua orice altă măsură prevăzută de lege, instanţa de executare va putea obliga executorul, prin aceeaşi hotărâre, la plata unei amenzi judiciare de la 1.000 lei la 7.000 lei, precum şi, la cererea părţii interesate, la plata de despăgubiri pentru paguba astfel cauzată.\n(8) În situaţia prevăzută la alin. (7), instanţa va solicita încheierea prevăzută la art. 655 alin. (1) sau, după caz, actul care constată refuzul executorului judecătoresc de a îndeplini un act de executare silită ori de a lua altă măsură prevăzută de lege."
                               }
+                           ],
+                           "article_range": [
+                              701,
+                              709
                            ]
                         }
+                     ],
+                     "article_range": [
+                        701,
+                        709
                      ]
                   },
                   {
@@ -4419,8 +4987,16 @@
                                  "article_number": 711,
                                  "text": "Suma consemnată de debitor sau de terţul garant, potrivit art. 710, va servi exclusiv la plata creditorului pe seama căruia s-a făcut consemnarea, precum şi la acoperirea cheltuielilor de executare, cu excepţia cazului în care sunt mai mulţi creditori urmăritori sau intervenienţi, când se va proceda la distribuire, potrivit dispoziţiilor art. 853 şi următoarele."
                               }
+                           ],
+                           "article_range": [
+                              710,
+                              711
                            ]
                         }
+                     ],
+                     "article_range": [
+                        710,
+                        711
                      ]
                   },
                   {
@@ -4451,10 +5027,22 @@
                                  "article_number": 715,
                                  "text": "Hotărârea de primă instanţă prin care s-a dispus restabilirea situaţiei anterioare executării poate fi dată cu executare provizorie, dispoziţiile art. 443 aplicându-se în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              712,
+                              715
                            ]
                         }
+                     ],
+                     "article_range": [
+                        712,
+                        715
                      ]
                   }
+               ],
+               "article_range": [
+                  613,
+                  715
                ]
             },
             {
@@ -4489,6 +5077,10 @@
                                  "article_number": 719,
                                  "text": "Renunţarea la beneficiul dispoziţiilor prevăzute în articolele din prezenta secţiune, precum şi urmărirea ori cesiunea făcută cu încălcarea acestor dispoziţii sunt nule de drept."
                               }
+                           ],
+                           "article_range": [
+                              716,
+                              719
                            ]
                         },
                         {
@@ -4745,6 +5337,10 @@
                                  "article_number": 769,
                                  "text": "(1) Bunurile sechestrate care nu au putut fi valorificate în condiţiile prezentei secţiuni rămân indisponibilizate cel mult un an de la data aplicării sechestrului. În cursul acestui termen, executorul judecătoresc poate proceda din nou la valorificarea acestor bunuri. Dacă nici după expirarea acestui termen bunurile nu pot fi valorificate, iar creditorul refuză să le preia în contul creanţei, ele se restituie din oficiu debitorului sau unui reprezentant al său.\n(2) În cazul în care debitorul căruia ar urma să i se restituie bunurile potrivit alin. (1) nu se mai află la domiciliul cunoscut şi nici nu ar putea fi identificat în alt loc, iar bunurile respective ar urma să treacă, potrivit legii, în proprietatea privată a unităţii administrativ-teritoriale unde executorul judecătoresc îşi are sediul, acesta le va preda organului competent.\n(3) Despre predarea bunurilor prevăzute la alin. (2) executorul judecătoresc va încheia un proces-verbal, ce va fi semnat de el şi de organul căruia i s-a făcut predarea."
                               }
+                           ],
+                           "article_range": [
+                              720,
+                              769
                            ]
                         },
                         {
@@ -4821,6 +5417,10 @@
                                  "article_number": 783,
                                  "text": "(1) Dacă după înfiinţarea popririi cauza în temeiul căreia s-a înfiinţat aceasta a încetat să mai existe, executorul judecătoresc, din oficiu sau la cererea debitorului poprit, va dispune desfiinţarea popririi printr-o adresă către terţul poprit. Atunci când poprirea a fost validată, desfiinţarea acesteia se va face de instanţa de executare prin încheiere executorie, dată cu citarea părţilor.\n(2) Când creanţa debitorului poprit este garantată cu ipotecă, acesta va putea cere, în temeiul acestei adrese sau, după caz, al încheierii rămase definitivă, radierea notării popririi sau a intabulării strămutării dreptului de ipotecă în cartea funciară.\n(3) Dispoziţiile alin. (2) se aplică în mod corespunzător în cazul radierii popririi asupra unor creanţe sau altor bunuri mobile incorporale, înscrise în alte registre de publicitate decât cartea funciară."
                               }
+                           ],
+                           "article_range": [
+                              770,
+                              783
                            ]
                         },
                         {
@@ -4917,8 +5517,16 @@
                                  "article_number": 801,
                                  "text": "Urmărirea veniturilor încetează:\n1. prin renunţare la urmărire, făcută de toţi creditorii urmăritori şi intervenienţi;\n2. prin plata creanţelor acestora, inclusiv a dobânzilor şi a cheltuielilor de judecată şi de executare;\n3. prin depunerea, cu afectaţiune specială, a sumelor pentru care s-a făcut urmărirea, în condiţiile art. 710;\n4. prin adjudecarea silită a imobilului;\n5. prin trecerea unui termen de 5 ani de la înfiinţarea ei, chiar dacă creditorul urmăritor nu a fost îndestulat. Se exceptează cazul când se urmăresc veniturile unui uzufruct asupra unui imobil."
                               }
+                           ],
+                           "article_range": [
+                              784,
+                              801
                            ]
                         }
+                     ],
+                     "article_range": [
+                        716,
+                        801
                      ]
                   },
                   {
@@ -4959,6 +5567,10 @@
                                  "article_number": 807,
                                  "text": "(1) Creditorii personali ai unui debitor coproprietar sau codevălmaş nu vor putea să urmărească partea acestuia din imobilele aflate în proprietate comună, ci vor trebui să ceară mai întâi partajul acestora. La cererea creditorului, acţiunea în împărţeală poate fi notată în cartea funciară.\n(2) Până la soluţionarea partajului, prin hotărâre rămasă definitivă, urmărirea imobilului este de drept suspendată. Dacă nu s-a făcut decât cerere de partaj, până la soluţionarea acesteia, prin hotărâre rămasă definitivă, se suspendă prescripţia dreptului la acţiune contra debitorului coproprietar sau devălmaş.\n(3) Creditorii personali pot urmări însă cota-parte determinată a debitorului lor din dreptul de proprietate asupra imobilului, fără a mai fi necesar să ceară partajul, dacă ea este neîndoielnic stabilită şi lămurită şi este înscrisă, prin arătarea unei fracţiuni, în cartea funciară. În acest caz, coproprietarii vor putea cere punerea în vânzare a întregului imobil aflat în coproprietate în condiţiile prevăzute la art. 812."
                               }
+                           ],
+                           "article_range": [
+                              802,
+                              807
                            ]
                         },
                         {
@@ -5005,6 +5617,10 @@
                                  "article_number": 815,
                                  "text": "Imobilele urmărite silit se valorifică prin modalităţile de vânzare prevăzute la art. 743-746, care se aplică în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              808,
+                              815
                            ]
                         },
                         {
@@ -5021,6 +5637,10 @@
                                  "article_number": 817,
                                  "text": "(1) Închirierile sau arendările, precum şi cesiunile de venituri făcute de debitor sau terţul dobânditor după data notării urmăririi nu vor fi opozabile creditorului urmăritor şi adjudecatarului.\n(2) Închirierile sau arendările anterioare notării sunt opozabile, în condiţiile legii, atât creditorilor urmăritori, cât şi adjudecatarului. Cu toate acestea, adjudecatarul nu este ţinut să respecte locaţiunea atunci când preţul convenit este mai mic cu o treime decât preţul pieţei sau mai mic faţă de cel rezultat din locaţiunile precedente.\n(3) Plăţile de chirii sau arenzi efectuate debitorului urmărit înainte de scadenţă nu pot fi însă opuse creditorilor urmăritori şi adjudecatarului decât dacă sunt notate în cartea funciară. Dispoziţiile alin. (2) teza a doua rămân aplicabile."
                               }
+                           ],
+                           "article_range": [
+                              816,
+                              817
                            ]
                         },
                         {
@@ -5167,6 +5787,10 @@
                                  "article_number": 845,
                                  "text": "(1) Dacă nu s-a făcut contestaţie în termenul arătat la art. 844 alin. (1) sau dacă aceasta a fost respinsă prin hotărâre definitivă, la cererea adjudecatarului, actul de adjudecare se va învesti cu formulă executorie de către instanţa de executare şi acesta va fi pus în posesia imobilului adjudecat, de către executor, cu excepţia cazului în care a fost pus anterior în posesie, potrivit art. 843 alin. (2).\n(2) Odată cu învestirea cu formulă executorie, instanţa de executare va dispune din oficiu, prin aceeaşi hotărâre, ca dreptul de proprietate al adjudecatarului să fie intabulat în cartea funciară, chiar în cazul în care adjudecatar este însuşi terţul dobânditor care avea deja dreptul înscris în cartea funciară.\n(3) În cazul în care imobilul a fost vândut cu plata preţului în rate, instanţa de executare va dispune, prin aceeaşi încheiere, şi înscrierea în cartea funciară a interdicţiei de înstrăinare şi de grevare a imobilului până la plata integrală a preţului şi a dobânzii corespunzătoare.\n(4) Instanţa de executare va preda totodată creditorului urmăritor un exemplar al actului de adjudecare învestit cu formulă executorie, care îi va servi drept titlu executoriu împotriva cumpărătorului, dacă acesta nu plăteşte diferenţa de preţ."
                               }
+                           ],
+                           "article_range": [
+                              818,
+                              845
                            ]
                         },
                         {
@@ -5188,6 +5812,10 @@
                                  "article_number": 848,
                                  "text": "(1) Locaţiunea şi celelalte acte juridice privitoare la imobilul adjudecat rămân în fiinţă sau, după caz, încetează, potrivit dispoziţiilor art. 817 alin. (1) şi (2).\n(2) Plăţile făcute înainte de scadenţă de către locatar sau alte persoane interesate sunt supuse dispoziţiilor art. 817 alin. (3)."
                               }
+                           ],
+                           "article_range": [
+                              846,
+                              848
                            ]
                         },
                         {
@@ -5214,8 +5842,16 @@
                                  "article_number": 852,
                                  "text": "(1) În tot cursul urmăririi silite şi până la expirarea termenului prevăzut la art. 844 alin. (1), debitorul ori altă persoană interesată poate obţine desfiinţarea măsurilor asigurătorii sau de executare, consemnând la dispoziţia creditorului urmăritor întreaga valoare a creanţei, cu toate accesoriile şi cheltuielile de executare.\n(2) Dispoziţiile art. 740 şi 741 se aplică în mod corespunzător.\n(3) În cazul în care cererea este admisă, instanţa sau, după caz, executorul judecătoresc va dispune şi eliberarea sumei în mâinile creditorului."
                               }
+                           ],
+                           "article_range": [
+                              849,
+                              852
                            ]
                         }
+                     ],
+                     "article_range": [
+                        802,
+                        852
                      ]
                   },
                   {
@@ -5251,6 +5887,10 @@
                                  "article_number": 857,
                                  "text": "Dobânzile şi penalităţile sau alte asemenea accesorii ale creanţei principale vor urma ordinea de preferinţă a acestei creanţe."
                               }
+                           ],
+                           "article_range": [
+                              853,
+                              857
                            ]
                         },
                         {
@@ -5307,6 +5947,10 @@
                                  "article_number": 867,
                                  "text": "Erorile de calcul şi alte greşeli materiale se vor îndrepta de executor, din oficiu ori la cerere, făcându-se menţiune despre aceasta în încheierea prin care se dispune eliberarea sau, după caz, distribuirea sumei."
                               }
+                           ],
+                           "article_range": [
+                              858,
+                              867
                            ]
                         },
                         {
@@ -5358,10 +6002,22 @@
                                  "article_number": 876,
                                  "text": "Sumele consemnate şi neridicate în termen de 5 ani de la data comunicării încheierii prin care s-a aprobat distribuirea acestora se fac venit la bugetul local, dispoziţiile art. 769 aplicându-se în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              868,
+                              876
                            ]
                         }
+                     ],
+                     "article_range": [
+                        853,
+                        876
                      ]
                   }
+               ],
+               "article_range": [
+                  716,
+                  876
                ]
             },
             {
@@ -5401,8 +6057,16 @@
                                  "article_number": 881,
                                  "text": "(1) Dacă în titlul executoriu nu s-a stabilit ce sumă urmează a fi plătită ca echivalent al valorii lucrului în cazul imposibilităţii predării acestuia, instanţa de executare, la cererea creditorului, va stabili această sumă prin hotărâre dată cu citarea părţilor.\n(2) Hotărârea este executorie şi este supusă numai apelului. Suspendarea executării acestei hotărâri nu se va putea obţine decât cu consemnarea sumei stabilite. Dispoziţiile art. 740 şi 741 sunt aplicabile în mod corespunzător.\n(3) Pe baza cererii prevăzute la alin. (1), creditorul va putea înfiinţa măsuri asigurătorii."
                               }
+                           ],
+                           "article_range": [
+                              877,
+                              881
                            ]
                         }
+                     ],
+                     "article_range": [
+                        877,
+                        881
                      ]
                   },
                   {
@@ -5428,8 +6092,16 @@
                                  "article_number": 884,
                                  "text": "Executorul judecătoresc va încheia, în condiţiile art. 879, un proces-verbal despre îndeplinirea executării, stabilind totodată cheltuielile de executare pe care urmează să le plătească debitorul."
                               }
+                           ],
+                           "article_range": [
+                              882,
+                              884
                            ]
                         }
+                     ],
+                     "article_range": [
+                        882,
+                        884
                      ]
                   },
                   {
@@ -5475,8 +6147,16 @@
                                  "article_number": 891,
                                  "text": "(1) Dacă debitorul se reinstalează sau ocupă în mod abuziv, fără niciun titlu, imobilul din care a fost evacuat sau obligat să îl lase creditorului, el va putea fi evacuat din nou, la cererea creditorului sau a altei persoane interesate.\n(2) În acest caz, va putea fi făcută o nouă executare silită în baza aceluiaşi titlu executoriu, fără somaţie şi fără nicio altă formalitate prealabilă."
                               }
+                           ],
+                           "article_range": [
+                              885,
+                              891
                            ]
                         }
+                     ],
+                     "article_range": [
+                        885,
+                        891
                      ]
                   },
                   {
@@ -5517,6 +6197,10 @@
                                  "article_number": 897,
                                  "text": "(1) Dacă printr-un titlu executoriu s-a dispus efectuarea unei înscrieri în cartea funciară împotriva celui înscris ca titular al dreptului, creditorul va putea solicita, direct sau prin intermediul executorului judecătoresc, biroului de cadastru şi publicitate imobiliară să dispună înscrierea în baza acestui titlu.\n(2) Dacă cel împotriva căruia s-a dispus efectuarea înscrierii a fost totodată obligat, prin acelaşi titlu executoriu sau prin altul, să evacueze ori, după caz, să predea imobilul în mâinile creditorului, se va proceda potrivit dispoziţiilor art. 885 şi următoarele.\n(3) Dispoziţiile prezentului articol sunt aplicabile, în mod corespunzător, şi în cazurile în care obligaţia cuprinsă în titlul executoriu priveşte efectuarea înscrierilor în alte registre publice decât cartea funciară."
                               }
+                           ],
+                           "article_range": [
+                              892,
+                              897
                            ]
                         },
                         {
@@ -5548,12 +6232,28 @@
                                  "article_number": 902,
                                  "text": "Executorul judecătoresc va încheia un proces-verbal în care va constata modul de îndeplinire a obligaţiilor prevăzute la art. 898 alin. (1), dispoziţiile art. 879 fiind aplicabile în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              898,
+                              902
                            ]
                         }
+                     ],
+                     "article_range": [
+                        892,
+                        902
                      ]
                   }
+               ],
+               "article_range": [
+                  877,
+                  902
                ]
             }
+         ],
+         "article_range": [
+            613,
+            902
          ]
       },
       {
@@ -5642,8 +6342,16 @@
                                  "article_number": 916,
                                  "text": "(1) Apelul reclamantului împotriva hotărârii prin care s-a respins cererea va fi respins ca nesusţinut, dacă la judecată se prezintă numai pârâtul.\n(2) Apelul pârâtului va fi judecat chiar dacă se înfăţişează numai reclamantul.\n(3) Dacă unul dintre soţi s-a recăsătorit, hotărârea definitivă prin care s-a desfăcut căsătoria nu este supusă contestaţiei în anulare şi revizuirii în ce priveşte divorţul.\n(4) Instanţa la care hotărârea de divorţ a rămas definitivă o va trimite, din oficiu, serviciului de stare civilă unde a fost încheiată căsătoria, Registrului naţional al regimurilor matrimoniale, prevăzut de Codul civil, şi, dacă unul dintre soţi a fost întreprinzător, registrului comerţului."
                               }
+                           ],
+                           "article_range": [
+                              903,
+                              916
                            ]
                         }
+                     ],
+                     "article_range": [
+                        903,
+                        916
                      ]
                   },
                   {
@@ -5674,6 +6382,10 @@
                                  "article_number": 920,
                                  "text": "(1) Când cererea de divorţ este întemeiată pe culpa soţului pârât, iar acesta recunoaşte faptele care au dus la destrămarea vieţii conjugale, instanţa, dacă reclamantul este de acord, va pronunţa divorţul fără a cerceta temeinicia motivelor de divorţ şi fără a face menţiune despre culpa pentru desfacerea căsătoriei.\n(2) Dispoziţiile art. 919 alin. (2)-(4) se aplică în mod corespunzător.\n(3) Dacă reclamantul nu este de acord cu pronunţarea divorţului în condiţiile alin. (1), cererea va fi soluţionată potrivit art. 922."
                               }
+                           ],
+                           "article_range": [
+                              917,
+                              920
                            ]
                         },
                         {
@@ -5685,8 +6397,16 @@
                                  "article_number": 921,
                                  "text": "Când divorţul este cerut pentru că starea sănătăţii unuia dintre soţi face imposibilă continuarea căsătoriei, instanţa va administra probe privind existenţa bolii şi starea sănătăţii soţului bolnav şi va pronunţa divorţul, potrivit Codului civil, fără a face menţiune despre culpa pentru desfacerea căsătoriei."
                               }
+                           ],
+                           "article_range": [
+                              921,
+                              921
                            ]
                         }
+                     ],
+                     "article_range": [
+                        917,
+                        921
                      ]
                   },
                   {
@@ -5707,10 +6427,22 @@
                                  "article_number": 923,
                                  "text": "(1) Când soţii sunt separaţi în fapt de cel puţin 5 ani, oricare dintre ei va putea cere divorţul, asumându-şi responsabilitatea pentru eşecul căsătoriei. În acest caz, instanţa va verifica existenţa şi durata despărţirii în fapt şi va pronunţa divorţul din culpa exclusivă a reclamantului.\n(2) Dacă soţul pârât se declară de acord cu divorţul, se vor aplica în mod corespunzător dispoziţiile art. 919."
                               }
+                           ],
+                           "article_range": [
+                              922,
+                              923
                            ]
                         }
+                     ],
+                     "article_range": [
+                        922,
+                        923
                      ]
                   }
+               ],
+               "article_range": [
+                  903,
+                  923
                ]
             },
             {
@@ -5760,10 +6492,22 @@
                                  "article_number": 930,
                                  "text": "(1) Ridicarea interdicţiei judecătoreşti se face cu procedura prevăzută în prezentul titlu, care se aplică în mod corespunzător.\n(2) Despre ridicarea interdicţiei judecătoreşti se face menţiune pe hotărârea prin care s-a pronunţat interdicţia judecătorească."
                               }
+                           ],
+                           "article_range": [
+                              924,
+                              930
                            ]
                         }
+                     ],
+                     "article_range": [
+                        924,
+                        930
                      ]
                   }
+               ],
+               "article_range": [
+                  924,
+                  930
                ]
             },
             {
@@ -5818,10 +6562,22 @@
                                  "article_number": 938,
                                  "text": "Când se cere rectificarea sau constatarea nulităţii hotărârii declarative de moarte şi în patrimoniul persoanei a cărei moarte a fost declarată există bunuri imobile, instanţa, din oficiu, va dispune notarea cererii în cartea funciară."
                               }
+                           ],
+                           "article_range": [
+                              931,
+                              938
                            ]
                         }
+                     ],
+                     "article_range": [
+                        931,
+                        938
                      ]
                   }
+               ],
+               "article_range": [
+                  931,
+                  938
                ]
             },
             {
@@ -5876,6 +6632,10 @@
                                  "article_number": 946,
                                  "text": "În toate cazurile în care competenţa de primă instanţă aparţine curţii de apel, calea de atac este recursul, dispoziţiile art. 941 şi 944 aplicându-se în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              939,
+                              946
                            ]
                         },
                         {
@@ -5932,8 +6692,16 @@
                                  "article_number": 956,
                                  "text": "Oprirea temporară a plecării navei, în absenţa unei hotărâri judecătoreşti, se poate dispune de căpitănia portului în condiţiile legii speciale."
                               }
+                           ],
+                           "article_range": [
+                              947,
+                              956
                            ]
                         }
+                     ],
+                     "article_range": [
+                        939,
+                        956
                      ]
                   },
                   {
@@ -5954,8 +6722,16 @@
                                  "article_number": 958,
                                  "text": "Soluţionarea cererii, executarea măsurii, desfiinţarea şi ridicarea popririi asigurătorii se vor efectua potrivit dispoziţiilor art. 941-946, care se aplică în mod corespunzător."
                               }
+                           ],
+                           "article_range": [
+                              957,
+                              958
                            ]
                         }
+                     ],
+                     "article_range": [
+                        957,
+                        958
                      ]
                   },
                   {
@@ -5996,10 +6772,22 @@
                                  "article_number": 964,
                                  "text": "În cazuri urgente, instanţa va putea numi, prin încheiere definitivă dată fără citarea părţilor, un administrator provizoriu până la soluţionarea cererii de sechestru judiciar."
                               }
+                           ],
+                           "article_range": [
+                              959,
+                              964
                            ]
                         }
+                     ],
+                     "article_range": [
+                        959,
+                        964
                      ]
                   }
+               ],
+               "article_range": [
+                  939,
+                  964
                ]
             },
             {
@@ -6099,10 +6887,22 @@
                                  "article_number": 981,
                                  "text": "(1) În cazul în care părţile declară în mod expres că nu solicită predarea bunurilor, hotărârea de partaj nu este susceptibilă de executare silită.\n(2) Pentru a intră în posesia bunurilor atribuite şi a căror predare i-a fost refuzată de ceilalţi coproprietari, partea interesată va trebui să exercite acţiunea în revendicare.\n(3) De asemenea, este necesară introducerea unei acţiuni în revendicare în cazul în care bunurile atribuite unui coproprietar sunt deţinute de terţe persoane."
                               }
+                           ],
+                           "article_range": [
+                              965,
+                              981
                            ]
                         }
+                     ],
+                     "article_range": [
+                        965,
+                        981
                      ]
                   }
+               ],
+               "article_range": [
+                  965,
+                  981
                ]
             },
             {
@@ -6147,10 +6947,22 @@
                                  "article_number": 987,
                                  "text": "(1) Ordonanţa preşedinţială are autoritate de lucru de judecat faţă de o altă cerere de ordonanţă preşedinţială, numai dacă nu s-au modificat împrejurările de fapt care au justificat-o.\n(2) Ordonanţa preşedinţială nu are autoritate de lucru judecat asupra cererii privind fondul dreptului.\n(3) Hotărârea dată asupra fondului dreptului are putere de lucru judecat asupra unei cereri ulterioare de ordonanţă preşedinţială."
                               }
+                           ],
+                           "article_range": [
+                              982,
+                              987
                            ]
                         }
+                     ],
+                     "article_range": [
+                        982,
+                        987
                      ]
                   }
+               ],
+               "article_range": [
+                  982,
+                  987
                ]
             },
             {
@@ -6180,10 +6992,22 @@
                                  "article_number": 990,
                                  "text": "(1) Hotărârea judecătorească prin care s-a soluţionat o cerere posesorie are autoritate de lucru judecat într-o cerere posesorie ulterioară purtată între aceleaşi părţi şi întemeiată pe aceleaşi fapte. Ea nu are însă o astfel de autoritate într-o cerere ulterioară privitoare la fondul dreptului.\n(2) Hotărârea judecătorească prin care s-a soluţionat o acţiune privitoare la fondul dreptului are autoritate de lucru judecat într-o cerere posesorie ulterioară în legătură cu acelaşi bun."
                               }
+                           ],
+                           "article_range": [
+                              988,
+                              990
                            ]
                         }
+                     ],
+                     "article_range": [
+                        988,
+                        990
                      ]
                   }
+               ],
+               "article_range": [
+                  988,
+                  990
                ]
             },
             {
@@ -6238,10 +7062,22 @@
                                  "article_number": 998,
                                  "text": "Dispoziţiile prezentului titlu se completează cu prevederile Codului civil referitoare la ofertele de plată şi consemnaţiuni."
                               }
+                           ],
+                           "article_range": [
+                              991,
+                              998
                            ]
                         }
+                     ],
+                     "article_range": [
+                        991,
+                        998
                      ]
                   }
+               ],
+               "article_range": [
+                  991,
+                  998
                ]
             },
             {
@@ -6316,10 +7152,22 @@
                                  "article_number": 1010,
                                  "text": "(1) Ordonanţa de plată, devenită definitivă ca urmare a neintroducerii sau respingerii cererii în anulare, are putere de lucru judecat şi constituie titlu executoriu, fără a fi învestită cu formulă executorie.\n(2) Împotriva executării silite a ordonanţei de plată partea interesată poate face contestaţie la executare, potrivit dreptului comun. În cadrul contestaţiei nu se pot invoca decât neregularităţi privind procedura de executare, precum şi cauze de stingere a obligaţiei ivite ulterior rămânerii definitive a ordonanţei de plată."
                               }
+                           ],
+                           "article_range": [
+                              999,
+                              1010
                            ]
                         }
+                     ],
+                     "article_range": [
+                        999,
+                        1010
                      ]
                   }
+               ],
+               "article_range": [
+                  999,
+                  1010
                ]
             },
             {
@@ -6374,10 +7222,22 @@
                                  "article_number": 1018,
                                  "text": "(1) Hotărârea judecătoriei este supusă numai apelului la tribunal, în termen de 30 de zile de la comunicare.\n(2) Pentru motive temeinice, instanţa de apel poate să suspende executarea silită, însă numai dacă se consemnează o cauţiune de 10% din valoarea contestată.\n(3) Hotărârea instanţei de apel se comunică părţilor şi este definitivă."
                               }
+                           ],
+                           "article_range": [
+                              1011,
+                              1018
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1011,
+                        1018
                      ]
                   }
+               ],
+               "article_range": [
+                  1011,
+                  1018
                ]
             },
             {
@@ -6422,8 +7282,16 @@
                                  "article_number": 1024,
                                  "text": "Atunci când proprietarul unui imobil doreşte să îl evacueze pe ocupantul acestuia, după ce dreptul de a ocupa imobilul a încetat, proprietarul va notifica în scris ocupantul, punându-i în vedere să elibereze imobilul pe care îl ocupă fără niciun drept, în termen de 5 zile de la comunicarea notificării."
                               }
+                           ],
+                           "article_range": [
+                              1019,
+                              1024
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1019,
+                        1024
                      ]
                   },
                   {
@@ -6464,8 +7332,16 @@
                                  "article_number": 1030,
                                  "text": "(1) Executarea hotărârii de evacuare nu va putea fi suspendată. Cu toate acestea, în cazul evacuării pentru neplata chiriei sau a arenzii se va putea dispune suspendarea executării hotărârii în cadrul contestaţiei la executare sau a apelului exercitat de către pârât numai dacă acesta consemnează în numerar, la dispoziţia creditorului, chiria sau arenda la care a fost obligat, suma stabilită pentru asigurarea ratelor de chirie sau arendă datorate până la data cererii de suspendare, precum şi cea aferentă ratelor de chirie sau arendă ce ar deveni exigibile în cursul judecăţii procesului.\n(2) Suspendarea încetează de drept dacă, la expirarea termenului pentru care chiria sau arenda a fost astfel acoperită, debitorul nu cere şi nu depune suma ce se va fixa de instanţa de executare pentru acoperirea unor noi rate, în condiţiile prevăzute la alin. (1)."
                               }
+                           ],
+                           "article_range": [
+                              1025,
+                              1030
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1025,
+                        1030
                      ]
                   },
                   {
@@ -6496,10 +7372,22 @@
                                  "article_number": 1034,
                                  "text": "Dispoziţiile art. 1.031 se aplică în mod corespunzător şi pentru soluţionarea cererii formulate de o asociaţie de proprietari împotriva proprietarilor, membri ai acesteia, în cazul în care neefectuarea reparaţiilor ce sunt în sarcina fiecărui proprietar ori a reparaţiilor sau a oricăror lucrări la părţile sau la instalaţiile aflate în coproprietatea acestora ori la spaţiile aflate în proprietate exclusivă afectează folosinţa normală a părţilor comune sau a altor spaţii locative din imobil, precum şi siguranţa locuirii în acel imobil."
                               }
+                           ],
+                           "article_range": [
+                              1031,
+                              1034
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1031,
+                        1034
                      ]
                   }
+               ],
+               "article_range": [
+                  1019,
+                  1034
                ]
             },
             {
@@ -6534,10 +7422,22 @@
                                  "article_number": 1038,
                                  "text": "(1) Reclamantul va putea cere înscrierea provizorie a dreptului ce a uzucapat, în temeiul încheierii date potrivit art. 1.037 alin. (5) sau, după caz, al hotărârii judecătoreşti, de primă instanţă, prin care s-a admis cererea de înscriere, înainte de rămânerea definitivă a acesteia. Justificarea înscrierii provizorii se va face pe baza încheierii sau, după caz, a hotărârii judecătoreşti, rămasă definitivă.\n(2) În toate cazurile, registratorul de carte funciară nu va putea dispune înscrierea dreptului, în temeiul uzucapiunii, dacă acesta a fost intabulat sau înscris provizoriu în folosul unei alte persoane, chiar după împlinirea termenului de uzucapiune; în cazul în care s-a făcut numai o notare, se va putea dispune înscrierea dreptului, fără ca înscrierea să fie opozabilă celui care a cerut notarea.\n(3) Reclamantul este considerat proprietar de la data înscrierii, în condiţiile legii, în cartea funciară a dreptului de proprietate dobândit în temeiul uzucapiunii."
                               }
+                           ],
+                           "article_range": [
+                              1035,
+                              1038
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1035,
+                        1038
                      ]
                   }
+               ],
+               "article_range": [
+                  1035,
+                  1038
                ]
             },
             {
@@ -6567,10 +7467,22 @@
                                  "article_number": 1041,
                                  "text": "Dispoziţiile art. 1.039 şi 1.040 se aplică în mod corespunzător şi în cazul în care se solicită refacerea unei hotărâri definitive."
                               }
+                           ],
+                           "article_range": [
+                              1039,
+                              1041
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1039,
+                        1041
                      ]
                   }
+               ],
+               "article_range": [
+                  1039,
+                  1041
                ]
             },
             {
@@ -6625,12 +7537,28 @@
                                  "article_number": 1049,
                                  "text": "(1) Cauţiunea depusă se va restitui, la cerere, după soluţionarea prin hotărâre definitivă a procesului în legătură cu care s-a stabilit cauţiunea, respectiv după încetarea efectelor măsurii pentru care aceasta s-a depus.\n(2) Cauţiunea se restituie celui care a depus-o în măsura în care asupra acesteia cel îndreptăţit nu a formulat cerere pentru plata despăgubirii cuvenite până la împlinirea unui termen de 30 de zile de la data rămânerii definitive a hotărârii sau, după caz, de la data încetării efectelor măsurii, prevăzute la alin. (1). Cu toate acestea, cauţiunea se restituie de îndată dacă partea interesată declară în mod expres că nu urmăreşte obligarea celui care a depus-o la despăgubiri pentru prejudiciile cauzate prin încuviinţarea măsurii pentru care aceasta s-a depus.\n(3) Instanţa se pronunţă asupra cererii de restituire a cauţiunii cu citarea părţilor, printr-o încheiere supusă numai recursului, la instanţa ierarhic superioară. În cazul în care încheierea a fost pronunţată de una dintre secţiile Înaltei Curţi de Casaţie şi Justiţie, recursul este de competenţa Completului de 9 judecători. În toate cazurile, recursul este suspensiv de executare.\n(4) Dacă cererea pentru care s-a depus cauţiunea a fost respinsă, instanţa va dispune din oficiu şi restituirea cauţiunii."
                               }
+                           ],
+                           "article_range": [
+                              1042,
+                              1049
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1042,
+                        1049
                      ]
                   }
+               ],
+               "article_range": [
+                  1042,
+                  1049
                ]
             }
+         ],
+         "article_range": [
+            903,
+            1049
          ]
       },
       {
@@ -6714,8 +7642,16 @@
                                  "article_number": 1063,
                                  "text": "Când o persoană aflată în străinătate trebuie să respecte un termen procedural în faţa autorităţilor judiciare sau administrative române, este suficient ca cererea sa să parvină în ultima zi a termenului la o reprezentanţă diplomatică sau consulară română."
                               }
+                           ],
+                           "article_range": [
+                              1051,
+                              1063
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1051,
+                        1063
                      ]
                   },
                   {
@@ -6746,10 +7682,22 @@
                                  "article_number": 1067,
                                  "text": "Pentru situaţiile prevăzute la art. 1.064 şi 1.065, convenţia de alegere a forului, altul decât instanţa română, este inoperantă."
                               }
+                           ],
+                           "article_range": [
+                              1064,
+                              1067
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1064,
+                        1067
                      ]
                   }
+               ],
+               "article_range": [
+                  1051,
+                  1067
                ]
             },
             {
@@ -6789,8 +7737,16 @@
                                  "article_number": 1072,
                                  "text": "Prevederile art. 1.068-1.071 se aplică în mod corespunzător apatrizilor, fără a fi cerută condiţia reciprocităţii."
                               }
+                           ],
+                           "article_range": [
+                              1068,
+                              1072
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1068,
+                        1072
                      ]
                   },
                   {
@@ -6831,10 +7787,22 @@
                                  "article_number": 1078,
                                  "text": "(1) Actele publice întocmite sau legalizate de o autoritate străină sau de un agent public străin pot fi produse în faţa instanţelor române numai dacă sunt supralegalizate, pe cale administrativă ierarhică în statul de origine şi apoi de misiunea diplomatică sau oficiul consular român, pentru certificarea autenticităţii semnăturilor şi sigiliului aplicate pe acestea.\n(2) Supralegalizarea pe cale administrativă este supusă procedurii stabilite de statul de origine al actului, urmată de supralegalizarea efectuată, fie de către misiunea diplomatică română sau oficiul consular român din acest stat, fie de către misiunea diplomatică sau oficiul consular în România ale statului de origine şi, în continuare, în oricare dintre cele două situaţii, de către Ministerul Afacerilor Externe.\n(3) Scutirea de supralegalizare este permisă în temeiul legii, al unui tratat internaţional la care România este parte sau pe bază de reciprocitate.\n(4) Supralegalizarea actelor întocmite sau legalizate de instanţele române se face, din partea autorităţilor române, de către Ministerul Justiţiei şi Ministerul Afacerilor Externe, în această ordine."
                               }
+                           ],
+                           "article_range": [
+                              1073,
+                              1078
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1073,
+                        1078
                      ]
                   }
+               ],
+               "article_range": [
+                  1068,
+                  1078
                ]
             },
             {
@@ -6889,8 +7857,16 @@
                                  "article_number": 1087,
                                  "text": "(1) Cererea de recunoaştere a hotărârii străine se soluţionează pe cale principală prin hotărâre, iar pe cale incidentă prin încheiere interlocutorie, în ambele cazuri după citarea părţilor.\n(2) Cererea poate fi soluţionată fără citarea părţilor, dacă din hotărârea străină rezultă că pârâtul a fost de acord cu admiterea acţiunii."
                               }
+                           ],
+                           "article_range": [
+                              1080,
+                              1087
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1080,
+                        1087
                      ]
                   },
                   {
@@ -6941,10 +7917,22 @@
                                  "article_number": 1095,
                                  "text": "Tranzacţiile judiciare încheiate în străinătate produc în România efectele ce decurg din legea care le-a fost aplicată, în condiţiile art. 1.088 alin. (1) şi art. 1.089 - 1.093."
                               }
+                           ],
+                           "article_range": [
+                              1088,
+                              1095
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1088,
+                        1095
                      ]
                   }
+               ],
+               "article_range": [
+                  1080,
+                  1095
                ]
             },
             {
@@ -7024,8 +8012,16 @@
                                  "article_number": 1108,
                                  "text": "Orice aspecte privind constituirea tribunalului arbitral, procedura, hotărârea arbitrală, completarea, comunicarea şi efectele acesteia, nereglementate de părţi prin convenţia arbitrală şi neîncredinţate de acestea rezolvării de către tribunalul arbitral, vor fi soluţionate prin aplicarea în mod corespunzător a dispoziţiilor cărţii a IV-a."
                               }
+                           ],
+                           "article_range": [
+                              1096,
+                              1108
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1096,
+                        1108
                      ]
                   },
                   {
@@ -7091,13 +8087,33 @@
                                  "article_number": 1119,
                                  "text": "(1) Prezentul cod de procedură civilă intră în vigoare la data care va fi prevăzută în legea pentru punerea în aplicare a acestuia.\n(2) În termen de 6 luni de la data publicării prezentului cod, Guvernul va supune Parlamentului spre adoptare proiectul de lege pentru punerea în aplicare a Codului de procedură civilă.\nAceastă lege a fost adoptată de Parlamentul României, cu respectarea prevederilor art. 75 şi ale art. 76 alin. (1) din Constituţia României, republicată.\nPREŞEDINTELE CAMEREI DEPUTAŢILOR\nROBERTA ALMA ANASTASE\nPREŞEDINTELE SENATULUI\nMIRCEA-DAN GEOANĂ\nBucureşti, 1 iulie 2010.\nNr. 134.\n----------"
                               }
+                           ],
+                           "article_range": [
+                              1109,
+                              1119
                            ]
                         }
+                     ],
+                     "article_range": [
+                        1109,
+                        1119
                      ]
                   }
+               ],
+               "article_range": [
+                  1096,
+                  1119
                ]
             }
+         ],
+         "article_range": [
+            1051,
+            1119
          ]
       }
+   ],
+   "article_range": [
+      1,
+      1119
    ]
 }

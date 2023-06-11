@@ -50,9 +50,10 @@ class LawProcessor:
         ]
 
         codes_json = []
-        for code in codes:
+        for i, code in enumerate(codes):
             f = open(f"../data/processed-laws/{code}.json", "r", encoding="utf8")
             codes_json.append(json.load(f))
+            codes_json[i]["code_number"] = i + 1
             f.close()
 
         f = open("../data/processed-laws/codes.json", "w", encoding="utf8")
@@ -114,11 +115,18 @@ class LawProcessor:
                             s["section_number"] = isc + 1
                             s["section_articles"] = []
 
-                            self.__process_constitution_articles(
+                            start, end = self.__process_constitution_articles(
                                 articles_text, s["section_articles"]
                             )
 
+                            s["article_range"] = [start, end]
+
                             c["chapter_sections"].append(s)
+
+                        c["article_range"] = [
+                            c["chapter_sections"][0]["article_range"][0],
+                            c["chapter_sections"][-1]["article_range"][1],
+                        ]
                     else:
                         # If we do not have sections we assume a chapter with a single section of the same name
                         # and the article text is the splitted section text itself
@@ -130,11 +138,19 @@ class LawProcessor:
                             }
                         )
 
-                        self.__process_constitution_articles(
+                        start, end = self.__process_constitution_articles(
                             sections_text, c["chapter_sections"][0]["section_articles"]
                         )
 
+                        c["chapter_sections"][0]["article_range"] = [start, end]
+                        c["article_range"] = [start, end]
+
                     t["title_chapters"].append(c)
+
+                t["article_range"] = [
+                    t["title_chapters"][0]["article_range"][0],
+                    t["title_chapters"][-1]["article_range"][1],
+                ]
             else:
                 # If we do not have chapters we assume a title with a single chapter with its single section,
                 # both of the same name, and the article text is the splitted chapter text itself
@@ -152,12 +168,25 @@ class LawProcessor:
                     }
                 )
 
-                self.__process_constitution_articles(
+                start, end = self.__process_constitution_articles(
                     chapters_text,
                     t["title_chapters"][0]["chapter_sections"][0]["section_articles"],
                 )
 
+                t["title_chapters"][0]["chapter_sections"][0]["article_range"] = [
+                    start,
+                    end,
+                ]
+                t["title_chapters"][0]["article_range"] = [start, end]
+                t["article_range"] = [start, end]
+
             constitution["books"][0]["book_titles"].append(t)
+
+        constitution["books"][0]["article_range"] = [
+            constitution["books"][0]["book_titles"][0]["article_range"][0],
+            constitution["books"][0]["book_titles"][-1]["article_range"][1],
+        ]
+        constitution["article_range"] = constitution["books"][0]["article_range"]
 
         f = open("../data/processed-laws/constitution.json", "w", encoding="utf8")
         json.dump(constitution, f, ensure_ascii=False, indent=3)
@@ -175,6 +204,11 @@ class LawProcessor:
             a["text"] = article_text
 
             appending_list.append(a)
+
+        start = appending_list[0]["article_number"]
+        end = appending_list[-1]["article_number"]
+
+        return start, end
 
     def process_civil_code(self, infile, outfile, code_name, first_book_name):
         f = open(infile, "r", encoding="utf8")
@@ -202,9 +236,16 @@ class LawProcessor:
             b["book_number"] = ib + 1
             b["book_titles"] = []
 
-            self.__process_book_titles(titles_text, b["book_titles"])
+            start, end = self.__process_book_titles(titles_text, b["book_titles"])
+
+            b["article_range"] = [start, end]
 
             civil_code["books"].append(b)
+
+        civil_code["article_range"] = [
+            civil_code["books"][0]["article_range"][0],
+            civil_code["books"][-1]["article_range"][1],
+        ]
 
         f = open(outfile, "w", encoding="utf8")
         json.dump(civil_code, f, ensure_ascii=False, indent=3)
@@ -228,9 +269,16 @@ class LawProcessor:
             b["book_number"] = ib + 1
             b["book_titles"] = []
 
-            self.__process_book_titles(titles_text, b["book_titles"])
+            start, end = self.__process_book_titles(titles_text, b["book_titles"])
+
+            b["article_range"] = [start, end]
 
             penal_code["books"].append(b)
+
+        penal_code["article_range"] = [
+            penal_code["books"][0]["article_range"][0],
+            penal_code["books"][-1]["article_range"][1],
+        ]
 
         f = open("../data/processed-laws/penal_code.json", "w", encoding="utf8")
         json.dump(penal_code, f, ensure_ascii=False, indent=3)
@@ -256,9 +304,16 @@ class LawProcessor:
             b["book_number"] = ib + 1
             b["book_titles"] = []
 
-            self.__process_book_titles(titles_text, b["book_titles"])
+            start, end = self.__process_book_titles(titles_text, b["book_titles"])
+
+            b["article_range"] = [start, end]
 
             penal_procedure_code["books"].append(b)
+
+        penal_procedure_code["article_range"] = [
+            penal_procedure_code["books"][0]["article_range"][0],
+            penal_procedure_code["books"][-1]["article_range"][1],
+        ]
 
         f = open(
             "../data/processed-laws/penal_procedure_code.json", "w", encoding="utf8"
@@ -282,7 +337,12 @@ class LawProcessor:
             ],
         }
 
-        self.__process_book_titles(text, fiscal_code["books"][0]["book_titles"])
+        start, end = self.__process_book_titles(
+            text, fiscal_code["books"][0]["book_titles"]
+        )
+
+        fiscal_code["books"][0]["article_range"] = [start, end]
+        fiscal_code["article_range"] = [start, end]
 
         f = open(outfile, "w", encoding="utf8")
         json.dump(fiscal_code, f, ensure_ascii=False, indent=3)
@@ -337,11 +397,18 @@ class LawProcessor:
                             s["section_number"] = isc + 1
                             s["section_articles"] = []
 
-                            self.__process_articles(
+                            start, end = self.__process_articles(
                                 articles_text, s["section_articles"]
                             )
 
+                            s["article_range"] = [start, end]
+
                             c["chapter_sections"].append(s)
+
+                        c["article_range"] = [
+                            c["chapter_sections"][0]["article_range"][0],
+                            c["chapter_sections"][-1]["article_range"][1],
+                        ]
                     else:
                         c["chapter_sections"].append(
                             {
@@ -351,12 +418,20 @@ class LawProcessor:
                             }
                         )
 
-                        self.__process_articles(
+                        start, end = self.__process_articles(
                             sections_text,
                             c["chapter_sections"][0]["section_articles"],
                         )
 
+                        c["chapter_sections"][0]["article_range"] = [start, end]
+                        c["article_range"] = [start, end]
+
                     t["title_chapters"].append(c)
+
+                t["article_range"] = [
+                    t["title_chapters"][0]["article_range"][0],
+                    t["title_chapters"][-1]["article_range"][1],
+                ]
             else:
                 t["title_chapters"].append(
                     {
@@ -372,12 +447,24 @@ class LawProcessor:
                     }
                 )
 
-                self.__process_articles(
+                start, end = self.__process_articles(
                     chapters_text,
                     t["title_chapters"][0]["chapter_sections"][0]["section_articles"],
                 )
 
+                t["title_chapters"][0]["chapter_sections"][0]["article_range"] = [
+                    start,
+                    end,
+                ]
+                t["title_chapters"][0]["article_range"] = [start, end]
+                t["article_range"] = [start, end]
+
             book_titles.append(t)
+
+        start = book_titles[0]["article_range"][0]
+        end = book_titles[-1]["article_range"][1]
+
+        return start, end
 
     def __process_articles(self, articles_text, appending_list):
         articles = re.split(r"\nArticolul ", articles_text)
@@ -393,10 +480,78 @@ class LawProcessor:
 
             appending_list.append(a)
 
+        start = appending_list[0]["article_number"]
+        end = appending_list[-1]["article_number"]
+
+        return start, end
+
     def find_article(self, article_number, legal_code):
-        pass
+        f = open("../data/processed-laws/codes.json", "r", encoding="utf8")
+        codes = json.load(f)
+        f.close()
+
+        code_index = -1
+        for i, code in enumerate(codes):
+            if legal_code in code["name"].lower():
+                code_index = i
+                break
+
+        if code_index != -1:
+            for book in codes[code_index]["books"]:
+                if (
+                    book["article_range"][0]
+                    <= article_number
+                    <= book["article_range"][1]
+                ):
+                    for title in book["book_titles"]:
+                        if (
+                            title["article_range"][0]
+                            <= article_number
+                            <= book["article_range"][1]
+                        ):
+                            for chapter in title["title_chapters"]:
+                                if (
+                                    chapter["article_range"][0]
+                                    <= article_number
+                                    <= chapter["article_range"][1]
+                                ):
+                                    for section in chapter["chapter_sections"]:
+                                        if (
+                                            section["article_range"][0]
+                                            <= article_number
+                                            <= section["article_range"][1]
+                                        ):
+                                            for article in section["section_articles"]:
+                                                if (
+                                                    article["article_number"]
+                                                    == article_number
+                                                ):
+                                                    return article["text"]
+            return (
+                f"Articolul cu numărul {article_number} nu există în acest cod de lege!"
+            )
+        else:
+            return f"Codul de lege specificat ({legal_code}) nu există!"
+
+    def get_code_size(self, legal_code):
+        f = open("../data/processed-laws/codes.json", "r", encoding="utf8")
+        codes = json.load(f)
+        f.close()
+
+        code_index = -1
+        for i, code in enumerate(codes):
+            if legal_code in code["name"].lower():
+                code_index = i
+                break
+
+        if code_index != -1:
+            size = codes[code_index]["article_range"][1]
+            return f"{legal_code.capitalize()} are {size} articole."
+        else:
+            return f"Codul de lege specificat ({legal_code}) nu există!"
 
 
 if __name__ == "__main__":
     lp = LawProcessor()
-    lp.process_laws()
+    # lp.process_laws()
+    lp.find_article(45, "codul fiscal")
