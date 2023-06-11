@@ -1,9 +1,11 @@
 import os
 import aiml
 from flask import Flask, jsonify, request, render_template
+from flask_cors import CORS
 from law_processor import LawProcessor
 
 app = Flask(__name__, template_folder="../templates", static_folder="../static")
+CORS(app)
 
 SESSION_ID = 13123
 
