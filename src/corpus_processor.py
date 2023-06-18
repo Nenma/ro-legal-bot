@@ -17,7 +17,7 @@ class CorpusProcessor:
     """
 
     MAX_WORKERS = 20
-    DOCUMENTS_NUMBER = 360
+    DOCUMENTS_NUMBER = 300
     RANDOM_WIKI = "https://ro.wikipedia.org/wiki/Special:Random"
     RELATE_URL = "http://relate.racai.ro:5000/process"
     HEADERS = {"Content-Type": "application/x-www-form-urlencoded"}
@@ -84,7 +84,9 @@ class CorpusProcessor:
             wiki_articles_urls.append(page.url)
             print(page.url)
 
-        json.dump(
+            # Write to file during iteration to save progress
+            f = open(f"../data/wikipedia/{file_suffix}.json", "w", encoding="utf8")
+            json.dump(
             {
                 "wikipedia_articles_urls": wiki_articles_urls,
                 "word_frequencies": word_frequencies,
@@ -92,6 +94,7 @@ class CorpusProcessor:
             f,
             ensure_ascii=False,
         )
+
         f.close()
 
         return file_suffix
@@ -154,6 +157,7 @@ class CorpusProcessor:
 if __name__ == "__main__":
     t = Timer()
     cp = CorpusProcessor()
+    
     t.start()
     cp.multithread_runner()
     t.stop()
