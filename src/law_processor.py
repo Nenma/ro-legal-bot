@@ -25,15 +25,20 @@ class LawProcessor:
             "Codul de Procedură Civilă al României",
             "PRELIMINAR",
         )
-        self.process_fiscal_code(
+        self.process_general_code(
             "../data/base-laws/fiscal_code.txt",
             "../data/processed-laws/fiscal_code.json",
             "Codul Fiscal al României",
         )
-        self.process_fiscal_code(
+        self.process_general_code(
             "../data/base-laws/fiscal_procedure_code.txt",
             "../data/processed-laws/fiscal_procedure_code.json",
             "Codul de Procedură Fiscală al României",
+        )
+        self.process_general_code(
+            "../data/base-laws/labor_code.txt",
+            "../data/processed-laws/labor_code.json",
+            "Codul Muncii al României",
         )
 
         self.__concatenate_laws()
@@ -47,6 +52,7 @@ class LawProcessor:
             "fiscal_procedure_code",
             "penal_code",
             "penal_procedure_code",
+            "labor_code",
         ]
 
         codes_json = []
@@ -72,7 +78,7 @@ class LawProcessor:
         f.close()
 
         constitution = {
-            "name": "Constituția României",
+            "name": "Constituția României / Constituție a României",
             "books": [
                 {
                     "book_name": "The Romanian Constitution",
@@ -192,7 +198,7 @@ class LawProcessor:
         json.dump(constitution, f, ensure_ascii=False, indent=3)
         f.close()
 
-    def __process_constitution_articles(self, articles_text, appending_list):
+    def __process_constitution_articles(self, articles_text: str, appending_list: list):
         articles = re.split(r"(.*ARTICOLUL \d+)\n", articles_text)
         for i in range(1, len(articles), 2):
             a = dict()
@@ -210,7 +216,9 @@ class LawProcessor:
 
         return start, end
 
-    def process_civil_code(self, infile, outfile, code_name, first_book_name):
+    def process_civil_code(
+        self, infile: str, outfile: str, code_name: str, first_book_name: str
+    ):
         f = open(infile, "r", encoding="utf8")
         text = f.read()
         f.close()
@@ -321,7 +329,7 @@ class LawProcessor:
         json.dump(penal_procedure_code, f, ensure_ascii=False, indent=3)
         f.close()
 
-    def process_fiscal_code(self, infile, outfile, code_name):
+    def process_general_code(self, infile: str, outfile: str, code_name: str):
         f = open(infile, "r", encoding="utf8")
         text = f.read()
         f.close()
@@ -348,7 +356,7 @@ class LawProcessor:
         json.dump(fiscal_code, f, ensure_ascii=False, indent=3)
         f.close()
 
-    def __process_book_titles(self, titles_text, book_titles):
+    def __process_book_titles(self, titles_text: str, book_titles: list):
         titles = re.split(r"\nTitlul [A-Z]", titles_text)
         for it, title in enumerate(titles[1:]):
             t = dict()
@@ -466,7 +474,7 @@ class LawProcessor:
 
         return start, end
 
-    def __process_articles(self, articles_text, appending_list):
+    def __process_articles(self, articles_text: str, appending_list: list):
         articles = re.split(r"\nArticolul ", articles_text)
         for article in articles[1:]:
             a = dict()
@@ -474,9 +482,14 @@ class LawProcessor:
             article_number, article_body = re.split(r"\n\n", article, 1)
             article_name, article_text = re.split(r"\n", article_body, 1)
 
-            a["article_name"] = article_name
-            a["article_number"] = int(article_number.replace(".", ""))
-            a["text"] = article_text.strip()
+            if article_text != "":
+                a["article_name"] = article_name
+                a["article_number"] = int(article_number.replace(".", ""))
+                a["text"] = article_text.strip()
+            else:
+                a["article_name"] = f"Articolul {article_number}"
+                a["article_number"] = int(article_number.replace(".", ""))
+                a["text"] = article_name
 
             appending_list.append(a)
 
@@ -485,14 +498,14 @@ class LawProcessor:
 
         return start, end
 
-    def find_article(self, article_number, legal_code):
+    def find_article(self, article_number: int, legal_code: str):
         f = open("../data/processed-laws/codes.json", "r", encoding="utf8")
         codes = json.load(f)
         f.close()
 
         code_index = -1
         for i, code in enumerate(codes):
-            if legal_code in code["name"].lower():
+            if legal_code.lower() in code["name"].lower():
                 code_index = i
                 break
 
@@ -526,21 +539,21 @@ class LawProcessor:
                                                     article["article_number"]
                                                     == article_number
                                                 ):
-                                                    return article["text"]
+                                                    return f'{article["article_name"]}\n{article["text"]}'
             return (
                 f"Articolul cu numărul {article_number} nu există în acest cod de lege!"
             )
         else:
             return f"Codul de lege specificat ({legal_code}) nu există!"
 
-    def get_code_size(self, legal_code):
+    def get_code_size(self, legal_code: str):
         f = open("../data/processed-laws/codes.json", "r", encoding="utf8")
         codes = json.load(f)
         f.close()
 
         code_index = -1
         for i, code in enumerate(codes):
-            if legal_code in code["name"].lower():
+            if legal_code.lower() in code["name"].lower():
                 code_index = i
                 break
 
@@ -553,5 +566,5 @@ class LawProcessor:
 
 if __name__ == "__main__":
     lp = LawProcessor()
-    # lp.process_laws()
-    lp.find_article(45, "codul fiscal")
+    lp.process_laws()
+    # lp.find_article(45, "codul fiscal")

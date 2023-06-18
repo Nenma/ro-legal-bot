@@ -9,17 +9,19 @@ Link to Overleaf paper (continuously updated) can be found [here](https://www.ov
 In the context of this project, base Romanian legislation is comprised of:
 
 1. The Constitution \[[source](https://www.cdep.ro/pls/dic/site2015.page?id=339&idl=1)\]
-2. The Civil Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/175630?isFormaDeBaza=True&rep=True)\]
-3. The Civil Procedure Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/236282?isFormaDeBaza=True&rep=True)\]
-4. The Penal Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/255278?isFormaDeBaza=True&rep=True)\]
-5. The Penal Procedure Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/262649?isFormaDeBaza=True&rep=True)\]
-6. The Fiscal Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/171282?isFormaDeBaza=True&rep=True)\]
-7. The Fiscal Procedure Code \[[source](https://legislatie.just.ro/Public/DetaliiDocument/172697?isFormaDeBaza=True&rep=True)\]
-8. The Administrative Code*
+2. The Civil Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G1TT7EZVJJX6870CWN6ZG1TWPAC)\]
+3. The Civil Procedure Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G1NE6WQB9B6WYG13YGXTQETNYA8)\]
+4. The Penal Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G3RCJVMCPZK1D5301YV9BG07ZE3)\]
+5. The Penal Procedure Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G3SGIENTQKF6QX0SUWA2W5Y3ZV3)\]
+6. The Fiscal Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G1ZAKIDCF325CT2OM2WBUU98MOP)\]
+7. The Fiscal Procedure Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G1SA6VV3H1PY8920ESSHWCB3WXT)\]
+8. The Labor Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G3RCE89TJASJDO1SWLGVM5I6DWB)\]
+9. The Administrative Code\*
 
 ## Running the app
 
 The flask chat app can be run like this:
+
 ```
 cd src
 python app.py

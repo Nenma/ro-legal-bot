@@ -56,6 +56,7 @@ const handleBotResponse = async (event) => {
     redirect: "follow",
   });
   res = await res.json();
+  res.answer = res.answer.replaceAll("\n", "<br>")
 
   addChatBubble(res.answer, "RLB", "message-received");
 
@@ -82,7 +83,7 @@ document.querySelector(".help").addEventListener("click", (event) => {
   messageHelpText.className = "help";
 
   messageHelpText.innerHTML =
-    "<p>Poți avea o discuție lejeră cu mine! Încearcă să îmi spui ceva!</p><p>Sunt specializat în orice lege! Întreaba-mă despre ce ți-ar plăcea să aflii!</p>";
+    "<p>Poți avea o discuție lejeră cu mine! Încearcă să îmi spui ceva!</p><p>Sunt specializat în orice lege! Întreaba-mă despre ce ți-ar plăcea să aflii!</p><p>Îți pot spune despre: Constituție, Codul Civil și cel de Procedură Civilă, Codul Fiscal și cel de Procedură Fiscală, Codul Penal și cel de Procedură Penală, Codul Muncii.</p>";
   messageHelp.appendChild(messageHelpText);
 
   content.appendChild(messageHelp);
