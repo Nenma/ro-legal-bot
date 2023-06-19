@@ -17,18 +17,22 @@ class CorpusProcessor:
     """
 
     MAX_WORKERS = 20
-    DOCUMENTS_NUMBER = 300
-    RANDOM_WIKI = "https://ro.wikipedia.org/wiki/Special:Random"
+    DOCUMENTS_NUMBER = 2
+    # RANDOM_WIKI = "https://ro.wikipedia.org/wiki/Special:Random"
+    RANDOM_WIKI = "https://ro.wikipedia.org/wiki/Special:RandomInCategory?&wpcategory=Articole+de+calitate"
     RELATE_URL = "http://relate.racai.ro:5000/process"
     HEADERS = {"Content-Type": "application/x-www-form-urlencoded"}
 
     def generate_frequencies(self, file_suffix: str) -> str:
-        f = open(f"../data/wikipedia/{file_suffix}.json", "w", encoding="utf8")
+        f = open(
+            f"../data/wikipedia/intermediary/{file_suffix}.json", "w", encoding="utf8"
+        )
+        f.close()
 
         word_frequencies = dict()
         wiki_articles_urls = list()
 
-        for _ in range(self.DOCUMENTS_NUMBER):
+        for i in range(self.DOCUMENTS_NUMBER):
             page = requests.get(self.RANDOM_WIKI)
             soup = BeautifulSoup(page.content, "html.parser")
 
@@ -82,18 +86,23 @@ class CorpusProcessor:
                 word_frequencies[word] += 1
 
             wiki_articles_urls.append(page.url)
-            print(page.url)
+            print(f"{file_suffix} - {i+1}/{self.DOCUMENTS_NUMBER} done - {page.url}")
 
             # Write to file during iteration to save progress
-            f = open(f"../data/wikipedia/{file_suffix}.json", "w", encoding="utf8")
+            f = open(
+                f"../data/wikipedia/intermediary/{file_suffix}.json",
+                "w",
+                encoding="utf8",
+            )
             json.dump(
-            {
-                "wikipedia_articles_urls": wiki_articles_urls,
-                "word_frequencies": word_frequencies,
-            },
-            f,
-            ensure_ascii=False,
-        )
+                {
+                    "wikipedia_articles_urls": wiki_articles_urls,
+                    "word_frequencies": word_frequencies,
+                },
+                f,
+                ensure_ascii=False,
+            )
+            f.flush()
 
         f.close()
 
@@ -118,30 +127,30 @@ class CorpusProcessor:
                 print(f"Task {task.result()} completed!")
 
     def get_idf_merge(self):
-        directory = "../data/wikipedia"
-
+        directory = "../data/wikipedia/intermediary"
         ro_wikipedia = {"wikipedia_articles_urls": [], "word_frequencies": {}}
+        documents_total = 0
+
         for file_name in os.listdir(directory):
             file_path = os.path.join(directory, file_name)
             f = open(file_path, "r", encoding="utf8")
-            obj = json.load(f)
+            temp = json.load(f)
             f.close()
 
             ro_wikipedia["wikipedia_articles_urls"].extend(
-                obj["wikipedia_articles_urls"]
+                temp["wikipedia_articles_urls"]
             )
+            documents_total += len(temp["wikipedia_articles_urls"])
 
             ro_wikipedia["word_frequencies"] = self.__merge_dictionaries(
-                ro_wikipedia["word_frequencies"], obj["word_frequencies"]
+                ro_wikipedia["word_frequencies"], temp["word_frequencies"]
             )
 
         # Calculate inverse document frequency (idf)
         for key, value in ro_wikipedia["word_frequencies"].items():
-            ro_wikipedia["word_frequencies"][key] = math.log(
-                (self.DOCUMENTS_NUMBER * self.MAX_WORKERS) / value
-            )
+            ro_wikipedia["word_frequencies"][key] = math.log(documents_total / value)
 
-        f = open(f"{directory}/ro_wikipedia.json", "w", encoding="utf8")
+        f = open("../data/wikipedia/ro_wikipedia.json", "w", encoding="utf8")
         json.dump(ro_wikipedia, f, ensure_ascii=False)
         f.close()
 
@@ -157,9 +166,9 @@ class CorpusProcessor:
 if __name__ == "__main__":
     t = Timer()
     cp = CorpusProcessor()
-    
+
     t.start()
     cp.multithread_runner()
-    t.stop()
     # cp.get_idf_merge()
     # print(cp.get_lemma("aceluia"))
+    t.stop()

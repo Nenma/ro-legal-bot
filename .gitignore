@@ -1,7 +1,7 @@
 .venv/
 __pycache__/
 aiml/*.brn
-data/wikipedia/*b5.json
+data/wikipedia/intermediary
 test-data/
 test/
 SOTA/
