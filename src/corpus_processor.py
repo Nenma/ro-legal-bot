@@ -32,7 +32,10 @@ class CorpusProcessor:
         word_frequencies = dict()
         wiki_articles_urls = list()
 
+        print(f"{file_suffix} - 0/{self.DOCUMENTS_NUMBER} done - {page.url}")
+        
         for i in range(self.DOCUMENTS_NUMBER):
+
             page = requests.get(self.RANDOM_WIKI)
             soup = BeautifulSoup(page.content, "html.parser")
 
