@@ -8,7 +8,7 @@ Link to Overleaf paper (continuously updated) can be found [here](https://www.ov
 
 In the context of this project, base Romanian legislation is comprised of:
 
-1. The Constitution \[[source](https://www.cdep.ro/pls/dic/site2015.page?id=339&idl=1)\]
+1. The Constitution \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G0NF8LQJNGG75M2SUMLP2PIT6ZP)\]
 2. The Civil Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G1TT7EZVJJX6870CWN6ZG1TWPAC)\]
 3. The Civil Procedure Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G1NE6WQB9B6WYG13YGXTQETNYA8)\]
 4. The Penal Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G3RCJVMCPZK1D5301YV9BG07ZE3)\]
@@ -16,7 +16,7 @@ In the context of this project, base Romanian legislation is comprised of:
 6. The Fiscal Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G1ZAKIDCF325CT2OM2WBUU98MOP)\]
 7. The Fiscal Procedure Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G1SA6VV3H1PY8920ESSHWCB3WXT)\]
 8. The Labor Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G3RCE89TJASJDO1SWLGVM5I6DWB)\]
-9. The Administrative Code\*
+9. The Administrative Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G26T9IKD8IXCIZ0X39N88WZQ5GJ)\]
 
 ## Running the app
 

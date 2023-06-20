@@ -77,7 +77,7 @@ class CorpusProcessor:
                             "PERIOD",
                         ]:
                             word_frequencies[item["_lemma"]] = word_frequencies.get(
-                                item["_lemma"], 0
+                                item["_lemma"], [0] * self.DOCUMENTS_NUMBER
                             )
                             just_added[item["_lemma"]] = (
                                 just_added.get(item["_lemma"], 0) + 1
@@ -85,8 +85,8 @@ class CorpusProcessor:
 
             # If the word was found in this iteration, we increase the number of documents it
             # is present in by one
-            for word in just_added.keys():
-                word_frequencies[word] += 1
+            for word, value in just_added.items():
+                word_frequencies[word][i] = value
 
             wiki_articles_urls.append(page.url)
             print(f"{file_suffix} - {i+1}/{self.DOCUMENTS_NUMBER} done - {page.url}")
