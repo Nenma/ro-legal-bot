@@ -17,7 +17,7 @@ class CorpusProcessor:
     """
 
     MAX_WORKERS = 20
-    DOCUMENTS_NUMBER = 2
+    DOCUMENTS_NUMBER = 4
     # RANDOM_WIKI = "https://ro.wikipedia.org/wiki/Special:Random"
     RANDOM_WIKI = "https://ro.wikipedia.org/wiki/Special:RandomInCategory?&wpcategory=Articole+de+calitate"
     RELATE_URL = "http://relate.racai.ro:5000/process"
@@ -129,6 +129,7 @@ class CorpusProcessor:
             for task in as_completed(threads):
                 print(f"Task {task.result()} completed!")
 
+    # TODO: update to new format
     def get_idf_merge(self):
         directory = "../data/wikipedia/intermediary"
         ro_wikipedia = {"wikipedia_articles_urls": [], "word_frequencies": {}}

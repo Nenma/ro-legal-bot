@@ -1,5 +1,9 @@
-import re
+from bs4 import BeautifulSoup
+import requests
 import json
+import math
+import re
+import os
 
 
 class LawProcessor:
@@ -10,218 +14,81 @@ class LawProcessor:
     """
 
     def process_laws(self):
-        self.process_constitution()
-        self.process_penal_code()
-        self.process_penal_procedure_code()
-        self.process_civil_code(
-            "../data/base-laws/civil_code.txt",
-            "../data/processed-laws/civil_code.json",
-            "Codul Civil al României",
-            "PRELIMINAR",
+        self.process_general_code_type1(
+            "../data/processed-laws/codes/constitution.json",
+            "Constituția României / Constituție a României",
+            "https://legislatie.just.ro/Public/FormaPrintabila/00000G0NF8LQJNGG75M2SUMLP2PIT6ZP",
         )
-        self.process_civil_code(
-            "../data/base-laws/civil_procedure_code.txt",
-            "../data/processed-laws/civil_procedure_code.json",
-            "Codul de Procedură Civilă al României",
-            "PRELIMINAR",
-        )
-        self.process_general_code(
-            "../data/base-laws/fiscal_code.txt",
-            "../data/processed-laws/fiscal_code.json",
+        self.process_general_code_type1(
+            "../data/processed-laws/codes/fiscal_code.json",
             "Codul Fiscal al României",
+            "https://legislatie.just.ro/Public/FormaPrintabila/00000G1ZAKIDCF325CT2OM2WBUU98MOP",
         )
-        self.process_general_code(
-            "../data/base-laws/fiscal_procedure_code.txt",
-            "../data/processed-laws/fiscal_procedure_code.json",
+        self.process_general_code_type1(
+            "../data/processed-laws/codes/fiscal_procedure_code.json",
             "Codul de Procedură Fiscală al României",
+            "https://legislatie.just.ro/Public/FormaPrintabila/00000G1SA6VV3H1PY8920ESSHWCB3WXT",
         )
-        self.process_general_code(
-            "../data/base-laws/labor_code.txt",
-            "../data/processed-laws/labor_code.json",
+        self.process_general_code_type1(
+            "../data/processed-laws/codes/labor_code.json",
             "Codul Muncii al României",
+            "https://legislatie.just.ro/Public/FormaPrintabila/00000G3RCE89TJASJDO1SWLGVM5I6DWB",
+        )
+
+        self.process_general_code_type2(
+            "../data/processed-laws/codes/penal_code.json",
+            "Codul Penal al României",
+            "https://legislatie.just.ro/Public/FormaPrintabila/00000G3RCJVMCPZK1D5301YV9BG07ZE3",
+            r"\nPartea (.*)\n\n",
+        )
+        self.process_general_code_type2(
+            "../data/processed-laws/codes/penal_procedure_code.json",
+            "Codul de Procedură Penală al României",
+            "https://legislatie.just.ro/Public/FormaPrintabila/00000G3SGIENTQKF6QX0SUWA2W5Y3ZV3",
+            r"\nPartea ([A-ZĂÎÂȘȚ]+)",
+        )
+        self.process_general_code_type2(
+            "../data/processed-laws/codes/administrative_code.json",
+            "Codul Administrativ al României",
+            "https://legislatie.just.ro/Public/FormaPrintabila/00000G26T9IKD8IXCIZ0X39N88WZQ5GJ",
+            r"\nPARTEA (.*)\n",
+        )
+
+        self.process_civil_code(
+            "../data/processed-laws/codes/civil_code.json",
+            "Codul Civil al României",
+            "https://legislatie.just.ro/Public/FormaPrintabila/00000G1TT7EZVJJX6870CWN6ZG1TWPAC",
+            "PRELIMINAR",
+        )
+        self.process_civil_code(
+            "../data/processed-laws/codes/civil_procedure_code.json",
+            "Codul de Procedură Civilă al României",
+            "https://legislatie.just.ro/Public/FormaPrintabila/00000G1NE6WQB9B6WYG13YGXTQETNYA8",
+            "PRELIMINAR",
         )
 
         self.__concatenate_laws()
 
     def __concatenate_laws(self):
-        codes = [
-            "civil_code",
-            "civil_procedure_code",
-            "constitution",
-            "fiscal_code",
-            "fiscal_procedure_code",
-            "penal_code",
-            "penal_procedure_code",
-            "labor_code",
-        ]
+        directory = "../data/processed-laws"
 
         codes_json = []
-        for i, code in enumerate(codes):
-            f = open(f"../data/processed-laws/{code}.json", "r", encoding="utf8")
+        for i, file_name in enumerate(os.listdir(f"{directory}/codes")):
+            file_path = os.path.join(f"{directory}/codes", file_name)
+            f = open(file_path, "r", encoding="utf8")
             codes_json.append(json.load(f))
             codes_json[i]["code_number"] = i + 1
             f.close()
 
-        f = open("../data/processed-laws/codes.json", "w", encoding="utf8")
+        f = open(f"{directory}/codes.json", "w", encoding="utf8")
         json.dump(codes_json, f, ensure_ascii=False, indent=3)
         f.close()
 
-    def process_constitution(self):
-        """
-        The structure of the Constitution titles boils down to: Titles -> Chapters -> Sections -> Articles.
-
-        However, most cases follow the Titles -> Articles structure, thus we need to check at every step.
-        """
-
-        f = open("../data/base-laws/constitution.txt", "r", encoding="utf8")
-        text = f.read()
-        f.close()
-
-        constitution = {
-            "name": "Constituția României / Constituție a României",
-            "books": [
-                {
-                    "book_name": "The Romanian Constitution",
-                    "book_number": 1,
-                    "book_titles": [],
-                }
-            ],
-        }
-
-        titles = re.split(r"TITLUL .*\n", text)
-        for it, title in enumerate(titles[1:]):
-            t = dict()
-
-            title_name, chapters_text = re.split(r"\n", title, 1)
-            t["title_name"] = title_name
-            t["title_number"] = it + 1
-            t["title_chapters"] = []
-
-            if "CAPITOLUL" in chapters_text:
-                # If we have chapters we further check for existing sections
-                chapters = re.split(r"CAPITOLUL .*\n", chapters_text)
-
-                for ic, chapter in enumerate(chapters[1:]):
-                    c = dict()
-
-                    chapter_name, sections_text = re.split(r"\n", chapter, 1)
-                    c["chapter_name"] = chapter_name
-                    c["chapter_number"] = ic + 1
-                    c["chapter_sections"] = []
-
-                    if "SECŢIUNEA" in sections_text:
-                        # If we have sections we can safely begin parsing the article text
-                        sections = re.split(r"SECŢIUNEA .*\n", sections_text)
-
-                        for isc, section in enumerate(sections[1:]):
-                            s = dict()
-
-                            section_name, articles_text = re.split(r"\n", section, 1)
-                            s["section_name"] = section_name
-                            s["section_number"] = isc + 1
-                            s["section_articles"] = []
-
-                            start, end = self.__process_constitution_articles(
-                                articles_text, s["section_articles"]
-                            )
-
-                            s["article_range"] = [start, end]
-
-                            c["chapter_sections"].append(s)
-
-                        c["article_range"] = [
-                            c["chapter_sections"][0]["article_range"][0],
-                            c["chapter_sections"][-1]["article_range"][1],
-                        ]
-                    else:
-                        # If we do not have sections we assume a chapter with a single section of the same name
-                        # and the article text is the splitted section text itself
-                        c["chapter_sections"].append(
-                            {
-                                "section_name": c["chapter_name"],
-                                "section_number": 1,
-                                "section_articles": [],
-                            }
-                        )
-
-                        start, end = self.__process_constitution_articles(
-                            sections_text, c["chapter_sections"][0]["section_articles"]
-                        )
-
-                        c["chapter_sections"][0]["article_range"] = [start, end]
-                        c["article_range"] = [start, end]
-
-                    t["title_chapters"].append(c)
-
-                t["article_range"] = [
-                    t["title_chapters"][0]["article_range"][0],
-                    t["title_chapters"][-1]["article_range"][1],
-                ]
-            else:
-                # If we do not have chapters we assume a title with a single chapter with its single section,
-                # both of the same name, and the article text is the splitted chapter text itself
-                t["title_chapters"].append(
-                    {
-                        "chapter_name": t["title_name"],
-                        "chapter_number": 1,
-                        "chapter_sections": [
-                            {
-                                "section_name": t["title_name"],
-                                "section_number": 1,
-                                "section_articles": [],
-                            }
-                        ],
-                    }
-                )
-
-                start, end = self.__process_constitution_articles(
-                    chapters_text,
-                    t["title_chapters"][0]["chapter_sections"][0]["section_articles"],
-                )
-
-                t["title_chapters"][0]["chapter_sections"][0]["article_range"] = [
-                    start,
-                    end,
-                ]
-                t["title_chapters"][0]["article_range"] = [start, end]
-                t["article_range"] = [start, end]
-
-            constitution["books"][0]["book_titles"].append(t)
-
-        constitution["books"][0]["article_range"] = [
-            constitution["books"][0]["book_titles"][0]["article_range"][0],
-            constitution["books"][0]["book_titles"][-1]["article_range"][1],
-        ]
-        constitution["article_range"] = constitution["books"][0]["article_range"]
-
-        f = open("../data/processed-laws/constitution.json", "w", encoding="utf8")
-        json.dump(constitution, f, ensure_ascii=False, indent=3)
-        f.close()
-
-    def __process_constitution_articles(self, articles_text: str, appending_list: list):
-        articles = re.split(r"(.*ARTICOLUL \d+)\n", articles_text)
-        for i in range(1, len(articles), 2):
-            a = dict()
-            article_name, article_number = re.split(r"\tARTICOLUL ", articles[i])
-            article_text = articles[i + 1].replace("\n\n", "\n").strip()
-
-            a["article_name"] = article_name
-            a["article_number"] = int(article_number)
-            a["text"] = article_text
-
-            appending_list.append(a)
-
-        start = appending_list[0]["article_number"]
-        end = appending_list[-1]["article_number"]
-
-        return start, end
-
     def process_civil_code(
-        self, infile: str, outfile: str, code_name: str, first_book_name: str
+        self, outfile: str, code_name: str, code_url: str, first_book_name: str
     ):
-        f = open(infile, "r", encoding="utf8")
-        text = f.read()
-        f.close()
+        text = self.__get_code_text(code_url)
+        text = re.sub(r"\n[A-Z]+\. .*\n", "", text)
 
         civil_code = {"name": code_name, "books": []}
 
@@ -233,268 +100,337 @@ class LawProcessor:
 
             if ib == 0:
                 # First "book" does not have proper name
-                b["book_name"] = first_book_name
+                b["name"] = first_book_name
             elif "-" in book_name:
-                # ex: a II-a Despre familie*)
-                b["book_name"] = book_name.split(" ", 2)[-1][:-2]
+                # ex: a II-a Despre familie
+                b["name"] = book_name.split(" ", 2)[-1]
             else:
-                # ex: I Despre persoane*)
-                b["book_name"] = book_name.split(" ", 1)[-1][:-2]
+                # ex: I Despre persoane
+                b["name"] = book_name.split(" ", 1)[-1]
 
-            b["book_number"] = ib + 1
-            b["book_titles"] = []
+            b["number"] = ib + 1
+            b["titles"] = []
 
-            start, end = self.__process_book_titles(titles_text, b["book_titles"])
+            start, end = self.__process_book_titles(titles_text, b["name"], b["titles"])
 
-            b["article_range"] = [start, end]
+            b["range"] = [start, end]
 
             civil_code["books"].append(b)
 
-        civil_code["article_range"] = [
-            civil_code["books"][0]["article_range"][0],
-            civil_code["books"][-1]["article_range"][1],
+        civil_code["range"] = [
+            civil_code["books"][0]["range"][0],
+            civil_code["books"][-1]["range"][1],
         ]
 
         f = open(outfile, "w", encoding="utf8")
         json.dump(civil_code, f, ensure_ascii=False, indent=3)
         f.close()
 
-    def process_penal_code(self):
-        f = open("../data/base-laws/penal_code.txt", "r", encoding="utf8")
-        text = f.read()
-        f.close()
+    def process_general_code_type1(self, outfile: str, code_name: str, code_url: str):
+        text = self.__get_code_text(code_url)
 
-        penal_code = {"name": "Codul Penal al României", "books": []}
-
-        text = re.split(r"\n\n\nPartea ", text)[-1]
-
-        books = re.split(r"PARTEA ", text)
-        for ib, book in enumerate(books[1:]):
-            b = dict()
-
-            book_name, titles_text = re.split(r"\n", book, 1)
-            b["book_name"] = book_name
-            b["book_number"] = ib + 1
-            b["book_titles"] = []
-
-            start, end = self.__process_book_titles(titles_text, b["book_titles"])
-
-            b["article_range"] = [start, end]
-
-            penal_code["books"].append(b)
-
-        penal_code["article_range"] = [
-            penal_code["books"][0]["article_range"][0],
-            penal_code["books"][-1]["article_range"][1],
-        ]
-
-        f = open("../data/processed-laws/penal_code.json", "w", encoding="utf8")
-        json.dump(penal_code, f, ensure_ascii=False, indent=3)
-        f.close()
-
-    def process_penal_procedure_code(self):
-        f = open("../data/base-laws/penal_procedure_code.txt", "r", encoding="utf8")
-        text = f.read()
-        f.close()
-
-        penal_procedure_code = {
-            "name": "Codul de Procedură Penală al României",
-            "books": [],
-        }
-        penal_procedure_book_names = ["GENERALĂ", "SPECIALĂ"]
-
-        books = re.split(r"\nPartea [A-Z]", text)
-        for ib, book in enumerate(books[1:]):
-            b = dict()
-
-            _, titles_text = re.split(r"\n", book, 1)
-            b["book_name"] = penal_procedure_book_names[ib]
-            b["book_number"] = ib + 1
-            b["book_titles"] = []
-
-            start, end = self.__process_book_titles(titles_text, b["book_titles"])
-
-            b["article_range"] = [start, end]
-
-            penal_procedure_code["books"].append(b)
-
-        penal_procedure_code["article_range"] = [
-            penal_procedure_code["books"][0]["article_range"][0],
-            penal_procedure_code["books"][-1]["article_range"][1],
-        ]
-
-        f = open(
-            "../data/processed-laws/penal_procedure_code.json", "w", encoding="utf8"
-        )
-        json.dump(penal_procedure_code, f, ensure_ascii=False, indent=3)
-        f.close()
-
-    def process_general_code(self, infile: str, outfile: str, code_name: str):
-        f = open(infile, "r", encoding="utf8")
-        text = f.read()
-        f.close()
-
-        fiscal_code = {
+        general_code = {
             "name": code_name,
             "books": [
                 {
-                    "book_name": code_name,
-                    "book_number": 1,
-                    "book_titles": [],
+                    "name": code_name,
+                    "number": 1,
+                    "titles": [],
                 }
             ],
         }
 
         start, end = self.__process_book_titles(
-            text, fiscal_code["books"][0]["book_titles"]
+            text, general_code["books"][0]["name"], general_code["books"][0]["titles"]
         )
 
-        fiscal_code["books"][0]["article_range"] = [start, end]
-        fiscal_code["article_range"] = [start, end]
+        general_code["books"][0]["range"] = [start, end]
+        general_code["range"] = [start, end]
 
         f = open(outfile, "w", encoding="utf8")
-        json.dump(fiscal_code, f, ensure_ascii=False, indent=3)
+        json.dump(general_code, f, ensure_ascii=False, indent=3)
         f.close()
 
-    def __process_book_titles(self, titles_text: str, book_titles: list):
-        titles = re.split(r"\nTitlul [A-Z]", titles_text)
-        for it, title in enumerate(titles[1:]):
-            t = dict()
+    def process_general_code_type2(
+        self, outfile: str, code_name: str, code_url: str, delimiter: str
+    ):
+        text = self.__get_code_text(code_url)
 
-            title_name, chapters_text = re.split(r"\n", title, 1)
+        general_code = {"name": code_name, "books": []}
 
-            # if ib == 0 and it == 0:
-            #     # First title of first "book" does not have proper name
-            #     t["title_name"] = "Preliminar"
-            # else:
-            t["title_name"] = title_name.split(" ", 1)[-1]
+        books = re.split(delimiter, text)
+        for i in range(1, len(books[1:]), 2):
+            b = dict()
 
-            t["title_number"] = it + 1
-            t["title_chapters"] = []
+            _, titles_text = re.split(r"\n", books[i + 1], 1)
+            b["name"] = books[i].strip()
+            b["number"] = math.floor(i / 2) + 1
+            b["titles"] = []
 
-            if "\nCapitolul" in chapters_text:
-                chapters = re.split(r"\nCapitolul ", chapters_text)
-                # Excluding potential empty chapter after split
-                if re.split(r"\n", chapters[0], 1)[0] == "":
-                    chapters = chapters[1:]
+            start, end = self.__process_book_titles(titles_text, b["name"], b["titles"])
 
-                for ic, chapter in enumerate(chapters):
-                    c = dict()
+            b["range"] = [start, end]
 
-                    chapter_name, sections_text = re.split(r"\n", chapter, 1)
-                    c["chapter_name"] = chapter_name.split(" ", 1)[-1]
-                    c["chapter_number"] = ic + 1
-                    c["chapter_sections"] = []
+            general_code["books"].append(b)
 
-                    if "\nSecţiunea" in sections_text:
-                        sections = re.split(r"\nSecţiunea ", sections_text)
-                        # Excluding potential empty section after split
-                        if re.split(r"\n", sections[0], 1)[0] == "":
-                            sections = sections[1:]
+        general_code["range"] = [
+            general_code["books"][0]["range"][0],
+            general_code["books"][-1]["range"][1],
+        ]
 
-                        for isc, section in enumerate(sections):
-                            s = dict()
+        f = open(outfile, "w", encoding="utf8")
+        json.dump(general_code, f, ensure_ascii=False, indent=3)
+        f.close()
 
-                            section_name, articles_text = re.split(r"\n", section, 1)
+    def __get_code_text(self, code_url):
+        page = requests.get(code_url)
+        soup = BeautifulSoup(page.content, "html.parser")
 
-                            if "-" in section_name:
-                                s["section_name"] = section_name.split(" ", 2)[-1]
-                            else:
-                                s["section_name"] = section_name.split(" ", 1)[-1]
+        for sp in soup.find_all("span", {"class": "S_ALN_TTL"}):
+            sp.string = f"NEWLINE{sp.text}"
 
-                            s["section_number"] = isc + 1
-                            s["section_articles"] = []
+        for br in soup.find_all("br"):
+            br.replaceWith("NEWLINE")
 
-                            start, end = self.__process_articles(
-                                articles_text, s["section_articles"]
+        return soup.get_text().replace("NEWLINE", "\n")
+
+    def __process_book_titles(
+        self, titles_text: str, book_name: str, book_titles: list
+    ):
+        if "\nTitlul" in titles_text:
+            titles = re.split(r"\nTitlul [A-Z]", titles_text)
+            for it, title in enumerate(titles):
+                if "EMITENT" in title or len(title) <= 1:
+                    continue
+
+                t = dict()
+
+                title_name, chapters_text = re.split(r"\n", title, 1)
+
+                t["name"] = title_name.split(" ", 1)[-1]
+                t["number"] = it + 1
+                t["chapters"] = []
+
+                if "\nCapitolul" in chapters_text:
+                    chapters = re.split(r"\nCapitolul ", chapters_text)
+                    # Excluding potential empty chapter after split
+                    if re.split(r"\n", chapters[0], 1)[0] == "":
+                        chapters = chapters[1:]
+
+                    for ic, chapter in enumerate(chapters):
+                        c = dict()
+
+                        chapter_name, sections_text = re.split(r"\n", chapter, 1)
+                        c["name"] = chapter_name.split(" ", 1)[-1]
+                        c["number"] = ic + 1
+                        c["sections"] = []
+
+                        if "\nSecţiunea" in sections_text:
+                            sections = re.split(r"\nSecţiunea ", sections_text)
+                            # Excluding potential empty section after split
+                            if re.split(r"\n", sections[0], 1)[0] == "":
+                                sections = sections[1:]
+
+                            for isc, section in enumerate(sections):
+                                s = dict()
+
+                                section_name, subsections_text = re.split(
+                                    r"\n", section, 1
+                                )
+
+                                if "-" in section_name:
+                                    s["name"] = section_name.split(" ", 2)[-1]
+                                else:
+                                    s["name"] = section_name.split(" ", 1)[-1]
+
+                                s["number"] = isc + 1
+                                s["subsections"] = []
+
+                                if "\n§" in subsections_text:
+                                    subsections = re.split(r"\n§", subsections_text)
+
+                                    for iss, subsection in enumerate(subsections):
+                                        if subsection != "":
+                                            ss = dict()
+
+                                            subsection_title, articles_text = re.split(
+                                                r"\n", subsection, 1
+                                            )
+
+                                            subsection_split = re.split(
+                                                r" ", subsection_title.strip(), 1
+                                            )
+                                            if len(subsection_split) > 1:
+                                                subsection_name = subsection_split[1]
+                                            else:
+                                                subsection_name = (
+                                                    f"Subsecțiunea {iss + 1}"
+                                                )
+
+                                            ss["name"] = subsection_name
+                                            ss["number"] = iss + 1
+                                            ss["articles"] = []
+
+                                            start, end = self.__process_articles(
+                                                articles_text, ss["articles"]
+                                            )
+
+                                            ss["range"] = [start, end]
+
+                                            s["subsections"].append(ss)
+                                else:
+                                    s["subsections"].append(
+                                        {"name": s["name"], "number": 1, "articles": []}
+                                    )
+
+                                    start, end = self.__process_articles(
+                                        subsections_text,
+                                        s["subsections"][0]["articles"],
+                                    )
+
+                                    s["subsections"][0]["range"] = [start, end]
+
+                                s["range"] = [
+                                    s["subsections"][0]["range"][0],
+                                    s["subsections"][-1]["range"][1],
+                                ]
+
+                                c["sections"].append(s)
+
+                            c["range"] = [
+                                c["sections"][0]["range"][0],
+                                c["sections"][-1]["range"][1],
+                            ]
+                        else:
+                            c["sections"].append(
+                                {
+                                    "name": c["name"],
+                                    "number": 1,
+                                    "subsections": [
+                                        {"name": c["name"], "number": 1, "articles": []}
+                                    ],
+                                }
                             )
 
-                            s["article_range"] = [start, end]
+                            start, end = self.__process_articles(
+                                sections_text,
+                                c["sections"][0]["subsections"][0]["articles"],
+                            )
 
-                            c["chapter_sections"].append(s)
+                            c["sections"][0]["subsections"][0]["range"] = [start, end]
+                            c["sections"][0]["range"] = [start, end]
+                            c["range"] = [start, end]
 
-                        c["article_range"] = [
-                            c["chapter_sections"][0]["article_range"][0],
-                            c["chapter_sections"][-1]["article_range"][1],
-                        ]
-                    else:
-                        c["chapter_sections"].append(
-                            {
-                                "section_name": c["chapter_name"],
-                                "section_number": 1,
-                                "section_articles": [],
-                            }
-                        )
+                        t["chapters"].append(c)
 
-                        start, end = self.__process_articles(
-                            sections_text,
-                            c["chapter_sections"][0]["section_articles"],
-                        )
+                    t["range"] = [
+                        t["chapters"][0]["range"][0],
+                        t["chapters"][-1]["range"][1],
+                    ]
+                else:
+                    t["chapters"].append(
+                        {
+                            "name": t["name"],
+                            "number": 1,
+                            "sections": [
+                                {
+                                    "name": t["name"],
+                                    "number": 1,
+                                    "subsections": [
+                                        {"name": t["name"], "number": 1, "articles": []}
+                                    ],
+                                }
+                            ],
+                        }
+                    )
 
-                        c["chapter_sections"][0]["article_range"] = [start, end]
-                        c["article_range"] = [start, end]
+                    start, end = self.__process_articles(
+                        chapters_text,
+                        t["chapters"][0]["sections"][0]["subsections"][0]["articles"],
+                    )
 
-                    t["title_chapters"].append(c)
+                    t["chapters"][0]["sections"][0]["subsections"][0]["range"] = [
+                        start,
+                        end,
+                    ]
+                    t["chapters"][0]["sections"][0]["range"] = [
+                        start,
+                        end,
+                    ]
+                    t["chapters"][0]["range"] = [start, end]
+                    t["range"] = [start, end]
 
-                t["article_range"] = [
-                    t["title_chapters"][0]["article_range"][0],
-                    t["title_chapters"][-1]["article_range"][1],
-                ]
-            else:
-                t["title_chapters"].append(
-                    {
-                        "chapter_name": t["title_name"],
-                        "chapter_number": 1,
-                        "chapter_sections": [
-                            {
-                                "section_name": t["title_name"],
-                                "section_number": 1,
-                                "section_articles": [],
-                            }
-                        ],
-                    }
-                )
+                book_titles.append(t)
 
-                start, end = self.__process_articles(
-                    chapters_text,
-                    t["title_chapters"][0]["chapter_sections"][0]["section_articles"],
-                )
+            start = book_titles[0]["range"][0]
+            end = book_titles[-1]["range"][1]
+        else:
+            book_titles.append(
+                {
+                    "name": book_name,
+                    "number": 1,
+                    "chapters": [
+                        {
+                            "name": book_name,
+                            "number": 1,
+                            "sections": [
+                                {
+                                    "name": book_name,
+                                    "number": 1,
+                                    "subsections": [
+                                        {"name": book_name, "number": 1, "articles": []}
+                                    ],
+                                }
+                            ],
+                        }
+                    ],
+                }
+            )
 
-                t["title_chapters"][0]["chapter_sections"][0]["article_range"] = [
-                    start,
-                    end,
-                ]
-                t["title_chapters"][0]["article_range"] = [start, end]
-                t["article_range"] = [start, end]
+            start, end = self.__process_articles(
+                titles_text,
+                book_titles[0]["chapters"][0]["sections"][0]["subsections"][0][
+                    "articles"
+                ],
+            )
 
-            book_titles.append(t)
-
-        start = book_titles[0]["article_range"][0]
-        end = book_titles[-1]["article_range"][1]
+            book_titles[0]["chapters"][0]["sections"][0]["subsections"][0]["range"] = [
+                start,
+                end,
+            ]
+            book_titles[0]["chapters"][0]["sections"][0]["range"] = [start, end]
+            book_titles[0]["chapters"][0]["range"] = [start, end]
+            book_titles[0]["range"] = [start, end]
 
         return start, end
 
     def __process_articles(self, articles_text: str, appending_list: list):
+        articles_text = articles_text.replace("ART ", "Articolul ")
         articles = re.split(r"\nArticolul ", articles_text)
-        for article in articles[1:]:
-            a = dict()
+        for article in articles:
+            if len(article) > 1:
+                a = dict()
 
-            article_number, article_body = re.split(r"\n\n", article, 1)
-            article_name, article_text = re.split(r"\n", article_body, 1)
+                article = article.replace("Articolul ", "")
 
-            if article_text != "":
-                a["article_name"] = article_name
-                a["article_number"] = int(article_number.replace(".", ""))
-                a["text"] = article_text.strip()
-            else:
-                a["article_name"] = f"Articolul {article_number}"
-                a["article_number"] = int(article_number.replace(".", ""))
-                a["text"] = article_name
+                article_number, article_body = re.split(r"\s+", article, 1)
+                article_name, article_text = re.split(r"\n+", article_body, 1)
 
-            appending_list.append(a)
+                print(article)
 
-        start = appending_list[0]["article_number"]
-        end = appending_list[-1]["article_number"]
+                if article_text != "":
+                    a["name"] = re.sub(r"\s+", " ", article_name)
+                    a["number"] = int(article_number.replace(".", "").replace(" ", ""))
+                    a["text"] = article_text.strip()
+                else:
+                    a["name"] = f"Articolul {article_number}"
+                    a["number"] = int(article_number.replace(".", "").replace(" ", ""))
+                    a["text"] = article_name
+
+                appending_list.append(a)
+
+        start = appending_list[0]["number"]
+        end = appending_list[-1]["number"]
 
         return start, end
 
@@ -511,35 +447,35 @@ class LawProcessor:
 
         if code_index != -1:
             for book in codes[code_index]["books"]:
-                if (
-                    book["article_range"][0]
-                    <= article_number
-                    <= book["article_range"][1]
-                ):
-                    for title in book["book_titles"]:
-                        if (
-                            title["article_range"][0]
-                            <= article_number
-                            <= book["article_range"][1]
-                        ):
-                            for chapter in title["title_chapters"]:
+                if book["range"][0] <= article_number <= book["range"][1]:
+                    for title in book["titles"]:
+                        if title["range"][0] <= article_number <= book["range"][1]:
+                            for chapter in title["chapters"]:
                                 if (
-                                    chapter["article_range"][0]
+                                    chapter["range"][0]
                                     <= article_number
-                                    <= chapter["article_range"][1]
+                                    <= chapter["range"][1]
                                 ):
-                                    for section in chapter["chapter_sections"]:
+                                    for section in chapter["sections"]:
                                         if (
-                                            section["article_range"][0]
+                                            section["range"][0]
                                             <= article_number
-                                            <= section["article_range"][1]
+                                            <= section["range"][1]
                                         ):
-                                            for article in section["section_articles"]:
+                                            for subsection in section["subsections"]:
                                                 if (
-                                                    article["article_number"]
-                                                    == article_number
+                                                    subsection["range"][0]
+                                                    <= article_number
+                                                    <= subsection["range"][1]
                                                 ):
-                                                    return f'{article["article_name"]}\n{article["text"]}'
+                                                    for article in subsection[
+                                                        "articles"
+                                                    ]:
+                                                        if (
+                                                            article["number"]
+                                                            == article_number
+                                                        ):
+                                                            return f'{article["name"]}\n{article["text"]}'
             return (
                 f"Articolul cu numărul {article_number} nu există în acest cod de lege!"
             )
@@ -558,7 +494,7 @@ class LawProcessor:
                 break
 
         if code_index != -1:
-            size = codes[code_index]["article_range"][1]
+            size = codes[code_index]["range"][1]
             return f"{legal_code.capitalize()} are {size} articole."
         else:
             return f"Codul de lege specificat ({legal_code}) nu există!"
@@ -567,4 +503,3 @@ class LawProcessor:
 if __name__ == "__main__":
     lp = LawProcessor()
     lp.process_laws()
-    # lp.find_article(45, "codul fiscal")
