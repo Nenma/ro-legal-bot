@@ -1,7 +1,7 @@
 .venv/
 __pycache__/
 aiml/*.brn
-data/wikipedia/intermediary
+data/corpus/intermediary
 test-data/
 test/
 SOTA/

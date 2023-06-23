@@ -118,4 +118,22 @@
         </template>
     </category>
 
+    <category>
+        <pattern>CE AR TREBUI SĂ ȘTIU DESPRE *</pattern>
+        <template>
+            <think>
+                <set name="keyword">
+                    <star index="1" />
+                </set>
+            </think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SPUNE-MI DESPRE *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
 </aiml>

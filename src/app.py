@@ -3,6 +3,7 @@ import re
 import aiml
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
+
 from law_processor import LawProcessor
 from simplification import SimplificationTool
 
@@ -52,6 +53,12 @@ def send():
         legal_code = str(KERNEL.getPredicate("legal_code", SESSION_ID)).strip()
         response = LawProcessor().find_article(article_number, legal_code)
         MEMORISED_TEXT = response
+
+        return jsonify({"answer": response})
+
+    elif message.startswith("ce ar trebui să știu despre") or message.startswith("spune-mi despre"):
+        keyword = KERNEL.getPredicate("keyword", SESSION_ID)
+        response = LawProcessor().find_relevant_text(keyword)
 
         return jsonify({"answer": response})
 

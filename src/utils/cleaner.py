@@ -5,6 +5,10 @@ import re
 class TextCleaner:
     RO_STOPWORDS = stopwords.get_stopwords("romanian")
 
+    def __init__(self) -> None:
+        for i, word in enumerate(self.RO_STOPWORDS):
+            self.RO_STOPWORDS[i] = word.replace("ţ", "ț").replace("ş", "ș")
+
     def clean_text(self, text: str):
         # Remove special characters
         text = re.sub(
@@ -19,14 +23,14 @@ class TextCleaner:
             [
                 word
                 for word in text.split()
-                if word not in self.RO_STOPWORDS and len(word) > 1
+                if word.lower() not in self.RO_STOPWORDS and len(word) > 1
             ]
         )
 
         return text
 
     def is_stopword(self, word: str):
-        return word in self.RO_STOPWORDS
+        return word.lower() in self.RO_STOPWORDS
 
     def has_numbers(self, word: str):
         return bool(re.search(r"\d", word))

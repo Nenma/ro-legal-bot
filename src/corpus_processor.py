@@ -1,31 +1,104 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from bs4 import BeautifulSoup
-from utils.cleaner import TextCleaner
-from utils.timer import Timer
 import requests
+import spacy
 import uuid
 import math
 import json
+import re
 import os
+
+from utils.cleaner import TextCleaner
+from utils.timer import Timer
+from law_processor import LawProcessor
 
 
 class CorpusProcessor:
     """
-    This processor class randomly retrieves a large number of Wikipedia articles in Romanian
-    and generates a word frequency dictionary that will be used to classify "simple" and
-    "complex" words.
+    This processor class collects word frequency data for both general (Wikipedia) texts
+    and legal texts, as well as handles formatting and processing of it.
     """
 
-    MAX_WORKERS = 20
-    DOCUMENTS_NUMBER = 4
-    # RANDOM_WIKI = "https://ro.wikipedia.org/wiki/Special:Random"
-    RANDOM_WIKI = "https://ro.wikipedia.org/wiki/Special:RandomInCategory?&wpcategory=Articole+de+calitate"
+    MAX_WORKERS = 1
+    DOCUMENTS_NUMBER = 1
+
+    QUALITY_ARTICLES = 200
+    RANDOM_QUALITY_WIKI = "https://ro.wikipedia.org/wiki/Special:RandomInCategory?&wpcategory=Articole+de+calitate"
+    
+    GOOD_ARTICLES = 493
+    RANDOM_GOOD_WIKI = "https://ro.wikipedia.org/wiki/Special:RandomInCategory?&wpcategory=Articole+bune"
+
     RELATE_URL = "http://relate.racai.ro:5000/process"
     HEADERS = {"Content-Type": "application/x-www-form-urlencoded"}
 
-    def generate_frequencies(self, file_suffix: str) -> str:
+    nlp = spacy.load("ro_core_news_lg")
+    tc = TextCleaner()
+    lp = LawProcessor()
+
+    def get_articles_list(self, outfile: str, url: str, list_size: str):
+        wikis = {}
+
+        f = open(f"../data/wikipedia/{outfile}", "w", encoding="utf8")
+        f.close()
+
+        while(len(wikis) < list_size):
+            page = requests.get(url)
+            wikis[page.url] = wikis.get(page.url, 0) + 1
+
+            f = open(f"../data/wikipedia/{outfile}", "w", encoding="utf8")
+            json.dump(wikis, f, ensure_ascii=False, indent=3)
+            f.flush()
+        f.close()
+
+    def generate_legal_frequencies(self):
+        f = open("../data/corpus/legal.json", "w", encoding="utf8")
+        f.close()
+
+        codes_keywords = [
+            "Codul administrativ",
+            "Codul civil",
+            "Codul de procedură civilă",
+            "Constituția",
+            "Codul fiscal",
+            "Codul de procedură fiscală",
+            "Codul muncii",
+            "Codul penal",
+            "Codul de procedură penală",
+        ]
+        word_frequencies = dict()
+
+        print(f"0/{len(codes_keywords)} done")
+        for i, key in enumerate(codes_keywords):
+            word_frequencies[key] = dict()
+
+            code_size = self.lp.get_code_size(key)
+            code_size = int(re.findall(r"\d+", code_size)[0])
+
+            for j in range(1, code_size + 1):
+                clean_article = self.tc.clean_text(self.lp.find_article(j, key))
+                res = self.nlp(clean_article)
+                for word in res:
+                    if word.pos_ not in ["PNOUN", "PUNCT"]:
+                        w = word.lemma_.lower()
+                        word_frequencies[key][w] = word_frequencies[key].get(
+                            w, {"freq": 0, "articles": []}
+                        )
+                        word_frequencies[key][w]["freq"] += 1
+                        if j not in word_frequencies[key][w]["articles"]:
+                            word_frequencies[key][w]["articles"].append(j)
+
+            print(f"{i+1}/{len(codes_keywords)} done - {key}")
+
+            f = open("../data/corpus/legal.json", "w", encoding="utf8")
+            json.dump(word_frequencies, f, ensure_ascii=False, indent=3)
+            f.flush()
+
+        f.close()
+
+    # TODO: readjust with articles list
+    def generate_frequencies_with_scipy(self, file_suffix: str) -> str:
         f = open(
-            f"../data/wikipedia/intermediary/{file_suffix}.json", "w", encoding="utf8"
+            f"../data/corpus/intermediary/{file_suffix}.json", "w", encoding="utf8"
         )
         f.close()
 
@@ -35,8 +108,67 @@ class CorpusProcessor:
         print(f"{file_suffix} - 0/{self.DOCUMENTS_NUMBER} done")
 
         for i in range(self.DOCUMENTS_NUMBER):
+            page = requests.get(self.RANDOM_QUALITY_WIKI)
+            soup = BeautifulSoup(page.content, "html.parser")
 
-            page = requests.get(self.RANDOM_WIKI)
+            just_added = dict()
+
+            for p in soup.find_all("p"):
+                text = p.get_text()
+                text = TextCleaner().clean_text(text)
+
+                if text != "":
+                    res = self.nlp(text)
+
+                    for word in res:
+                        if word.pos_ not in ["PROPN", "PUNCT"]:
+                            w = word.lemma_.lower()
+                            word_frequencies[w] = word_frequencies.get(
+                                w, [0] * self.DOCUMENTS_NUMBER
+                            )
+                            just_added[w] = just_added.get(w, 0) + 1
+
+            for word, value in just_added.items():
+                word_frequencies[word][i] = value
+
+            wiki_articles_urls.append(page.url)
+            print(f"{file_suffix} - {i+1}/{self.DOCUMENTS_NUMBER} done - {page.url}")
+
+            # Write to file during iteration to save progress
+            f = open(
+                f"../data/corpus/intermediary/{file_suffix}.json",
+                "w",
+                encoding="utf8",
+            )
+            json.dump(
+                {
+                    "wikipedia_articles_urls": wiki_articles_urls,
+                    "word_frequencies": word_frequencies,
+                },
+                f,
+                ensure_ascii=False,
+                indent=3,
+            )
+            f.flush()
+
+        f.close()
+
+        return file_suffix
+
+    # TODO: readjust with articles list
+    def generate_frequencies_with_relate(self, file_suffix: str) -> str:
+        f = open(
+            f"../data/corpus/intermediary/{file_suffix}.json", "w", encoding="utf8"
+        )
+        f.close()
+
+        word_frequencies = dict()
+        wiki_articles_urls = list()
+
+        print(f"{file_suffix} - 0/{self.DOCUMENTS_NUMBER} done")
+
+        for i in range(self.DOCUMENTS_NUMBER):
+            page = requests.get(self.RANDOM_QUALITY_WIKI)
             soup = BeautifulSoup(page.content, "html.parser")
 
             just_added = dict()
@@ -83,8 +215,6 @@ class CorpusProcessor:
                                 just_added.get(item["_lemma"], 0) + 1
                             )
 
-            # If the word was found in this iteration, we increase the number of documents it
-            # is present in by one
             for word, value in just_added.items():
                 word_frequencies[word][i] = value
 
@@ -93,7 +223,7 @@ class CorpusProcessor:
 
             # Write to file during iteration to save progress
             f = open(
-                f"../data/wikipedia/intermediary/{file_suffix}.json",
+                f"../data/corpus/intermediary/{file_suffix}.json",
                 "w",
                 encoding="utf8",
             )
@@ -104,6 +234,7 @@ class CorpusProcessor:
                 },
                 f,
                 ensure_ascii=False,
+                indent=3,
             )
             f.flush()
 
@@ -111,60 +242,87 @@ class CorpusProcessor:
 
         return file_suffix
 
-    def get_lemma(self, word):
-        res = requests.post(
-            self.RELATE_URL,
-            headers=self.HEADERS,
-            data=f"tokenization=ttl-icia&text={word}  ",
-        )
-        return res.json()["teprolin-result"]["tokenized"][0][0]["_lemma"]
-
     def multithread_runner(self):
         threads = []
         with ThreadPoolExecutor(max_workers=self.MAX_WORKERS) as executor:
             for _ in range(self.MAX_WORKERS):
                 file_suffix = uuid.uuid1()
-                threads.append(executor.submit(self.generate_frequencies, file_suffix))
+                threads.append(
+                    executor.submit(self.generate_frequencies_with_scipy, file_suffix)
+                )
 
             for task in as_completed(threads):
                 print(f"Task {task.result()} completed!")
 
-    # TODO: update to new format
-    def get_idf_merge(self):
-        directory = "../data/wikipedia/intermediary"
+    def get_tfidf_merge(self):
+        directory = "../data/corpus"
         ro_wikipedia = {"wikipedia_articles_urls": [], "word_frequencies": {}}
-        documents_total = 0
 
-        for file_name in os.listdir(directory):
-            file_path = os.path.join(directory, file_name)
-            f = open(file_path, "r", encoding="utf8")
-            temp = json.load(f)
-            f.close()
+        for file_name in os.listdir(f"{directory}/intermediary"):
+            if file_name.endswith(".json"):
+                file_path = os.path.join(f"{directory}/intermediary", file_name)
+                f = open(file_path, "r", encoding="utf8")
+                temp = json.load(f)
+                f.close()
 
-            ro_wikipedia["wikipedia_articles_urls"].extend(
-                temp["wikipedia_articles_urls"]
-            )
-            documents_total += len(temp["wikipedia_articles_urls"])
+                for i, url in enumerate(temp["wikipedia_articles_urls"]):
+                    if url not in ro_wikipedia["wikipedia_articles_urls"]:
+                        ro_wikipedia["wikipedia_articles_urls"].append(url)
 
-            ro_wikipedia["word_frequencies"] = self.__merge_dictionaries(
-                ro_wikipedia["word_frequencies"], temp["word_frequencies"]
-            )
+                        for key, value in temp["word_frequencies"].items():
+                            ro_wikipedia["word_frequencies"][key] = ro_wikipedia[
+                                "word_frequencies"
+                            ].get(
+                                key,
+                                {
+                                    "raw": [0]
+                                    * (
+                                        len(ro_wikipedia["wikipedia_articles_urls"]) - 1
+                                    ),
+                                    "tf": 0,
+                                    "tfidf": [],
+                                },
+                            )
+                            ro_wikipedia["word_frequencies"][key]["raw"].append(
+                                value[i]
+                            )
+                            if value[i] > 0:
+                                ro_wikipedia["word_frequencies"][key]["tf"] += 1
 
-        # Calculate inverse document frequency (idf)
+                        for key in ro_wikipedia["word_frequencies"].keys():
+                            if key not in temp["word_frequencies"].keys():
+                                ro_wikipedia["word_frequencies"][key]["raw"].append(0)
+
+        # Calculate tf-idf
+        documents_total = len(ro_wikipedia["wikipedia_articles_urls"])
         for key, value in ro_wikipedia["word_frequencies"].items():
-            ro_wikipedia["word_frequencies"][key] = math.log(documents_total / value)
+            for i, freq in enumerate(value["raw"]):
+                ro_wikipedia["word_frequencies"][key]["tfidf"].append(
+                    self.get_tfidf(freq, documents_total, value["tf"])
+                )
 
-        f = open("../data/wikipedia/ro_wikipedia.json", "w", encoding="utf8")
-        json.dump(ro_wikipedia, f, ensure_ascii=False)
+        f = open(f"{directory}/ro_wikipedia.json", "w", encoding="utf8")
+        json.dump(ro_wikipedia, f, ensure_ascii=False, indent=3)
         f.close()
 
-    def __merge_dictionaries(self, dict1: dict, dict2: dict):
-        res_dict = {**dict1, **dict2}
-        for key, value in res_dict.items():
-            if key in dict1 and key in dict2:
-                res_dict[key] = value + dict1[key]
+        for key, value in ro_wikipedia["word_frequencies"].items():
+            ro_wikipedia["word_frequencies"][key] = sum(value["tfidf"]) / len(
+                value["tfidf"]
+            )
 
-        return res_dict
+        f = open(f"{directory}/ro_wikipedia_final.json", "w", encoding="utf8")
+        json.dump(ro_wikipedia, f, ensure_ascii=False, indent=3)
+        f.close()
+
+    def get_tfidf(self, tf: int, n: int, d: int) -> float:
+        """
+        Get tf-idf value of a word.
+
+        :param int tf: The number of occurences in the document
+        :param int n: The total number of documents
+        :param int d: The number of documents in which the word is present
+        """
+        return math.log(1 + tf) * math.log(n / (d + 1))
 
 
 if __name__ == "__main__":
@@ -172,7 +330,9 @@ if __name__ == "__main__":
     cp = CorpusProcessor()
 
     t.start()
-    cp.multithread_runner()
-    # cp.get_idf_merge()
-    # print(cp.get_lemma("aceluia"))
+    # cp.multithread_runner()
+    # cp.generate_legal_frequencies()
+    cp.get_articles_list("quality.json", cp.RANDOM_QUALITY_WIKI, cp.QUALITY_ARTICLES)
+    cp.get_articles_list("good.json", cp.RANDOM_GOOD_WIKI, cp.GOOD_ARTICLES)
+    # cp.get_tfidf_merge()
     t.stop()
