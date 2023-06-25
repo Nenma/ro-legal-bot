@@ -24,11 +24,6 @@
             <random>
                 <li>Aici m-ai cam blocat.</li>
                 <li>Nu știu cum să continui...</li>
-                <li>Mi-ar plăcea să aud mai mult!</li>
-                <li>Continuă.</li>
-                <li>Fii mai specific.</li>
-                <li>Nu știam asta.</li>
-                <li>Spui adevărul?</li>
                 <li>Nu știu ce înseamnă asta.</li>
                 <li>Încearcă să-mi spui asta în alt mod.</li>
             </random>
@@ -82,6 +77,13 @@
     </category>
 
     <category>
+        <pattern>CÂTE ARTICOLE ARE *</pattern>
+        <template>
+            <srai>CÂTE ARTICOLE SUNT ÎN <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
         <pattern>CARE ESTE ARTICOLUL * AL *</pattern>
         <template>
             <think>
@@ -122,7 +124,7 @@
         <pattern>CE AR TREBUI SĂ ȘTIU DESPRE *</pattern>
         <template>
             <think>
-                <set name="keyword">
+                <set name="search_term">
                     <star index="1" />
                 </set>
             </think>
@@ -130,9 +132,104 @@
     </category>
 
     <category>
-        <pattern>SPUNE-MI DESPRE *</pattern>
+        <pattern>CE LEGI SUNT LEGATE DE *</pattern>
         <template>
             <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CARE LEGI SUNT LEGATE DE *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CE LEGI SUNT DESPRE *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CARE LEGI SUNT DESPRE *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CARE SUNT LEGILE LEGATE DE *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CARE SUNT LEGILE DESPRE *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CE LEGI AU LEGĂTURĂ CU *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CARE LEGI AU LEGĂTURĂ CU *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>AȘ VREA SĂ ȘTIU DESPRE *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>VREAU SĂ ȘTIU DESPRE *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ZI DESPRE *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SPUNE DESPRE *</pattern>
+        <template>
+            <srai>CE AR TREBUI SĂ ȘTIU DESPRE <star index="1" /></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DEFINEȘTE *</pattern>
+        <template>
+            <think>
+                <set name="word_definition">
+                    <star index="1" />
+                </set>
+            </think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CE ÎNSEAMNĂ *</pattern>
+        <template>
+            <srai>DEFINEȘTE <star index="1" /></srai>
         </template>
     </category>
 

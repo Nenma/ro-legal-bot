@@ -1,8 +1,8 @@
 {
-   "name": "Codul de Procedură Fiscală al României",
+   "name": "Codul de Procedură Fiscală al României / Cod de Procedură Fiscală al României / Conținutul Codului de Procedură Fiscală al României",
    "books": [
       {
-         "name": "Codul de Procedură Fiscală al României",
+         "name": "Codul de Procedură Fiscală al României / Cod de Procedură Fiscală al României / Conținutul Codului de Procedură Fiscală al României",
          "number": 1,
          "titles": [
             {
@@ -3069,7 +3069,7 @@
                            "subsections": [
                               {
                                  "name": "Schimbul de informaţii la cerere",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Procedura aplicabilă schimbului de informaţii la cerere",
@@ -3094,7 +3094,7 @@
                               },
                               {
                                  "name": "Schimbul automat obligatoriu de informaţii",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Sfera de aplicare şi condiţiile schimbului automat obligatoriu de informaţii",
@@ -3109,7 +3109,7 @@
                               },
                               {
                                  "name": "Schimbul spontan de informaţii",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Sfera de aplicare şi condiţiile schimbului spontan de informaţii",
@@ -3139,7 +3139,7 @@
                            "subsections": [
                               {
                                  "name": "Prezenţa în birourile administrative şi participarea la anchetele administrative",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Sfera de aplicare şi condiţii",
@@ -3154,7 +3154,7 @@
                               },
                               {
                                  "name": "Cooperarea administrativă prin efectuarea de controale simultane",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Controale simultane",
@@ -3169,7 +3169,7 @@
                               },
                               {
                                  "name": "Notificări administrative",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Cereri de notificare",
@@ -3184,7 +3184,7 @@
                               },
                               {
                                  "name": "Rezultatul utilizării informaţiilor",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Condiţii",
@@ -3199,7 +3199,7 @@
                               },
                               {
                                  "name": "Schimbul de experienţă şi de bune practici",
-                                 "number": 6,
+                                 "number": 5,
                                  "articles": [
                                     {
                                        "name": "Sfera de aplicare şi condiţii",

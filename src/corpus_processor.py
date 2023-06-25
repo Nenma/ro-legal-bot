@@ -22,14 +22,16 @@ class CorpusProcessor:
     MAX_WORKERS = 1
     DOCUMENTS_NUMBER = 1
 
-    QUALITY_ARTICLES = 200
+    DEX_URL = "https://dexonline.ro/definitie"
+
+    QUALITY_ARTICLES = 200  # number recorded as of June 2023
     RANDOM_QUALITY_WIKI = "https://ro.wikipedia.org/wiki/Special:RandomInCategory?&wpcategory=Articole+de+calitate"
-    
-    GOOD_ARTICLES = 493
+
+    GOOD_ARTICLES = 493  # number recorded as of June 2023
     RANDOM_GOOD_WIKI = "https://ro.wikipedia.org/wiki/Special:RandomInCategory?&wpcategory=Articole+bune"
 
     RELATE_URL = "http://relate.racai.ro:5000/process"
-    HEADERS = {"Content-Type": "application/x-www-form-urlencoded"}
+    RELATE_HEADERS = {"Content-Type": "application/x-www-form-urlencoded"}
 
     nlp = spacy.load("ro_core_news_lg")
     tc = TextCleaner()
@@ -41,7 +43,7 @@ class CorpusProcessor:
         f = open(f"../data/wikipedia/{outfile}", "w", encoding="utf8")
         f.close()
 
-        while(len(wikis) < list_size):
+        while len(wikis) < list_size:
             page = requests.get(url)
             wikis[page.url] = wikis.get(page.url, 0) + 1
 
@@ -50,6 +52,7 @@ class CorpusProcessor:
             f.flush()
         f.close()
 
+    # TODO: rethink utility
     def generate_legal_frequencies(self):
         f = open("../data/corpus/legal.json", "w", encoding="utf8")
         f.close()
@@ -95,20 +98,21 @@ class CorpusProcessor:
 
         f.close()
 
-    # TODO: readjust with articles list
-    def generate_frequencies_with_scipy(self, file_suffix: str) -> str:
-        f = open(
-            f"../data/corpus/intermediary/{file_suffix}.json", "w", encoding="utf8"
-        )
+    def generate_frequencies_with_scipy(self, infile: str):
+        f = open(f"../data/wikipedia/{infile}", "r", encoding="utf8")
+        url_list = json.load(f).keys()
+        f.close()
+
+        f = open(f"../data/corpus/intermediary/{infile}", "w", encoding="utf8")
         f.close()
 
         word_frequencies = dict()
         wiki_articles_urls = list()
 
-        print(f"{file_suffix} - 0/{self.DOCUMENTS_NUMBER} done")
+        print(f"{infile} - 0/{len(url_list)} done")
 
-        for i in range(self.DOCUMENTS_NUMBER):
-            page = requests.get(self.RANDOM_QUALITY_WIKI)
+        for i, url in enumerate(url_list):
+            page = requests.get(url)
             soup = BeautifulSoup(page.content, "html.parser")
 
             just_added = dict()
@@ -124,7 +128,7 @@ class CorpusProcessor:
                         if word.pos_ not in ["PROPN", "PUNCT"]:
                             w = word.lemma_.lower()
                             word_frequencies[w] = word_frequencies.get(
-                                w, [0] * self.DOCUMENTS_NUMBER
+                                w, [0] * len(url_list)
                             )
                             just_added[w] = just_added.get(w, 0) + 1
 
@@ -132,11 +136,11 @@ class CorpusProcessor:
                 word_frequencies[word][i] = value
 
             wiki_articles_urls.append(page.url)
-            print(f"{file_suffix} - {i+1}/{self.DOCUMENTS_NUMBER} done - {page.url}")
+            print(f"{infile} - {i+1}/{len(url_list)} done - {page.url}")
 
             # Write to file during iteration to save progress
             f = open(
-                f"../data/corpus/intermediary/{file_suffix}.json",
+                f"../data/corpus/intermediary/{infile}",
                 "w",
                 encoding="utf8",
             )
@@ -152,8 +156,6 @@ class CorpusProcessor:
             f.flush()
 
         f.close()
-
-        return file_suffix
 
     # TODO: readjust with articles list
     def generate_frequencies_with_relate(self, file_suffix: str) -> str:
@@ -180,7 +182,7 @@ class CorpusProcessor:
                 if text != "":
                     res = requests.post(
                         self.RELATE_URL,
-                        headers=self.HEADERS,
+                        headers=self.RELATE_HEADERS,
                         data=f"tokenization=ttl-icia&text={text}  ",
                     )
                     res = res.json()["teprolin-result"]
@@ -241,6 +243,32 @@ class CorpusProcessor:
         f.close()
 
         return file_suffix
+
+    def get_lemma_with_relate(self, word):
+        word = word.lower()
+        res = requests.post(
+            self.RELATE_URL,
+            headers=self.RELATE_HEADERS,
+            data=f"lemmatization=ttl-icia&text={word}  ",
+        )
+        return res.json()["teprolin-result"]["tokenized"][0][0]["_lemma"]
+
+    def get_dex_definition(self, word):
+        word = word.lower()
+        page = requests.get(f"{self.DEX_URL}/{word}")
+        soup = BeautifulSoup(page.content, "html.parser")
+
+        definitions = soup.find_all("span", {"class": "def html"})
+        alt_definition = soup.find_all("span", {"class": "def"})
+
+        if len(definitions) > 0:
+            definition = definitions[0].text.strip()
+        elif len(alt_definition) > 0:
+            definition = alt_definition[0].text.strip()
+        else:
+            definition = word
+
+        return definition
 
     def multithread_runner(self):
         threads = []
@@ -332,7 +360,6 @@ if __name__ == "__main__":
     t.start()
     # cp.multithread_runner()
     # cp.generate_legal_frequencies()
-    cp.get_articles_list("quality.json", cp.RANDOM_QUALITY_WIKI, cp.QUALITY_ARTICLES)
-    cp.get_articles_list("good.json", cp.RANDOM_GOOD_WIKI, cp.GOOD_ARTICLES)
+    cp.get_tfidf_merge()
     # cp.get_tfidf_merge()
     t.stop()

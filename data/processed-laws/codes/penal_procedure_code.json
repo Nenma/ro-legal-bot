@@ -1,5 +1,5 @@
 {
-   "name": "Codul de Procedură Penală al României",
+   "name": "Codul de Procedură Penală al României / Cod de Procedură Penală al României / Conținutul Codului de Procedură Penală al României",
    "books": [
       {
          "name": "GENERALĂ",
@@ -1459,8 +1459,33 @@
                      "number": 6,
                      "sections": [
                         {
-                           "name": "Percheziția domiciliară",
+                           "name": "",
                            "number": 1,
+                           "subsections": [
+                              {
+                                 "name": "",
+                                 "number": 1,
+                                 "articles": [
+                                    {
+                                       "name": "Dispoziții comune",
+                                       "number": 156,
+                                       "text": "(1) Percheziția poate fi domiciliară, corporală, informatică sau a unui vehicul.\n(2) Percheziția se efectuează cu respectarea demnității, fără a constitui ingerință disproporțională în viața privată."
+                                    }
+                                 ],
+                                 "range": [
+                                    156,
+                                    156
+                                 ]
+                              }
+                           ],
+                           "range": [
+                              156,
+                              156
+                           ]
+                        },
+                        {
+                           "name": "Percheziția domiciliară",
+                           "number": 2,
                            "subsections": [
                               {
                                  "name": "Percheziția domiciliară",
@@ -1520,7 +1545,7 @@
                         },
                         {
                            "name": "Alte forme de percheziție",
-                           "number": 2,
+                           "number": 3,
                            "subsections": [
                               {
                                  "name": "Alte forme de percheziție",
@@ -1575,7 +1600,7 @@
                         }
                      ],
                      "range": [
-                        157,
+                        156,
                         171
                      ]
                   },

@@ -1,6 +1,6 @@
 body {
 	font: 700 18px 'Noto Sans', sans-serif;
-	background: #e7f3fb;
+	background: #FFFDE3;
 	font-family: 'Noto Sans', sans-serif;
 	line-height: 1.5;
 }
@@ -56,5 +56,5 @@ body {
 	color: #eee;
 	font-weight: 700;
 	box-shadow: 1px 4px 10px 1px #aaa;
-	background: linear-gradient(to bottom right, #fc4a1a, #7f1d1d);
+	background: linear-gradient(to bottom right, #E64848, #C21010/*#fc4a1a, #7f1d1d*/);
 }

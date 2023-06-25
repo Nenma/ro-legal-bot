@@ -1,5 +1,5 @@
 {
-   "name": "Codul Civil al României",
+   "name": "Codul Civil al României / Cod Civil al României / Conținutul Codului Civil al României",
    "books": [
       {
          "name": "PRELIMINAR",
@@ -1189,7 +1189,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii generale",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Exercitarea tutelei în interesul minorului",
@@ -1214,7 +1214,7 @@
                               },
                               {
                                  "name": "Exercitarea tutelei cu privire la persoana minorului",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Avizul consiliului de familie",
@@ -1244,7 +1244,7 @@
                               },
                               {
                                  "name": "Exercitarea tutelei cu privire la bunurile minorului",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Inventarul bunurilor minorului",
@@ -1849,7 +1849,7 @@
                            "subsections": [
                               {
                                  "name": "Capacitatea de exerciţiu",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Data dobândirii capacităţii de exerciţiu",
@@ -1874,7 +1874,7 @@
                               },
                               {
                                  "name": "Funcţionarea persoanei juridice",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Actele emise de organele persoanei juridice",
@@ -1929,7 +1929,7 @@
                               },
                               {
                                  "name": "Dispoziţii speciale",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Răspunderea persoanelor juridice de drept public",
@@ -2854,7 +2854,7 @@
                            "subsections": [
                               {
                                  "name": "Despre regimul matrimonial în general",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Regimurile matrimoniale",
@@ -2909,7 +2909,7 @@
                               },
                               {
                                  "name": "Locuinţa familiei",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -2939,7 +2939,7 @@
                               },
                               {
                                  "name": "Cheltuielile căsătoriei",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Contribuţia soţilor",
@@ -2969,7 +2969,7 @@
                               },
                               {
                                  "name": "Alegerea regimului matrimonial",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Convenţia matrimonială",
@@ -3249,7 +3249,7 @@
                            "subsections": [
                               {
                                  "name": "Modificarea convenţională",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Condiţiile",
@@ -3264,7 +3264,7 @@
                               },
                               {
                                  "name": "Modificarea judiciară",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Separaţia judiciară de bunuri",
@@ -3309,7 +3309,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii generale",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Motivele de divorţ",
@@ -3324,7 +3324,7 @@
                               },
                               {
                                  "name": "Divorţul prin acordul soţilor pe cale judiciară",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Condiţiile",
@@ -3339,7 +3339,7 @@
                               },
                               {
                                  "name": "Divorţul prin acordul soţilor pe cale administrativă sau prin procedură notarială",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Condiţiile",
@@ -3369,7 +3369,7 @@
                               },
                               {
                                  "name": "Divorţul din culpă",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Condiţiile",
@@ -3389,7 +3389,7 @@
                               },
                               {
                                  "name": "Divorţul din cauza stării sănătăţii unui soţ",
-                                 "number": 6,
+                                 "number": 5,
                                  "articles": [
                                     {
                                        "name": "Condiţiile divorţului",
@@ -3414,7 +3414,7 @@
                            "subsections": [
                               {
                                  "name": "Data desfacerii căsătoriei",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Data desfacerii căsătoriei",
@@ -3429,7 +3429,7 @@
                               },
                               {
                                  "name": "Efectele divorţului cu privire la raporturile nepatrimoniale dintre soţi",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Numele de familie după căsătorie",
@@ -3449,7 +3449,7 @@
                               },
                               {
                                  "name": "Efectele  - I. Efecte cu privire la regimul matrimonial",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Încetarea regimului matrimonial",
@@ -3514,7 +3514,7 @@
                               },
                               {
                                  "name": "Efectele divorţului cu privire la raporturile dintre părinţi şi copiii lor minori",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Raporturile dintre părinţii divorţaţi şi copiii lor minori",
@@ -3644,7 +3644,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii generale",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Modurile de stabilire a filiaţiei",
@@ -3684,7 +3684,7 @@
                               },
                               {
                                  "name": "Prezumţia de paternitate",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Prezumţia de paternitate",
@@ -3699,7 +3699,7 @@
                               },
                               {
                                  "name": "Recunoaşterea copilului",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Felurile recunoaşterii",
@@ -3739,7 +3739,7 @@
                               },
                               {
                                  "name": " - I. Contestarea filiaţiei",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Acţiunea în contestaţia filiaţiei",
@@ -3999,7 +3999,7 @@
                            "subsections": [
                               {
                                  "name": "Persoanele care pot fi adoptate",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Vârsta adoptatului",
@@ -4029,7 +4029,7 @@
                               },
                               {
                                  "name": "Persoanele care pot adopta",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Capacitatea şi starea de sănătate",
@@ -4059,7 +4059,7 @@
                               },
                               {
                                  "name": "Consimţământul la adopţie",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Persoanele care consimt la adopţie",
@@ -5159,7 +5159,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii comune",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Dobândirea lucrării de către proprietarul imobilului",
@@ -5184,7 +5184,7 @@
                               },
                               {
                                  "name": "Realizarea lucrării cu materialele altuia",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Regimul juridic",
@@ -5199,7 +5199,7 @@
                               },
                               {
                                  "name": "Realizarea unei lucrări autonome cu caracter durabil asupra imobilului altuia",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Lucrările autonome cu caracter durabil efectuate cu bună-credinţă",
@@ -5219,7 +5219,7 @@
                               },
                               {
                                  "name": "Realizarea unei lucrări adăugate cu caracter durabil asupra imobilului altuia",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Lucrările adăugate necesare",
@@ -5244,7 +5244,7 @@
                               },
                               {
                                  "name": "Înţelesul unor termeni",
-                                 "number": 6,
+                                 "number": 5,
                                  "articles": [
                                     {
                                        "name": "Buna-credinţă a autorului lucrării",
@@ -5259,7 +5259,7 @@
                               },
                               {
                                  "name": "Dispoziţii speciale",
-                                 "number": 7,
+                                 "number": 6,
                                  "articles": [
                                     {
                                        "name": "Lucrările realizate parţial asupra imobilului autorului",
@@ -5384,7 +5384,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii comune",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Interesul public şi interesul privat",
@@ -5404,7 +5404,7 @@
                               },
                               {
                                  "name": "Folosirea apelor",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Regulile privind curgerea firească a apelor",
@@ -5449,7 +5449,7 @@
                               },
                               {
                                  "name": "Picătura streşinii",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Picătura streşinii",
@@ -5464,7 +5464,7 @@
                               },
                               {
                                  "name": "Distanţa şi lucrările intermediare cerute pentru anumite construcţii, lucrări şi plantaţii",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Distanţa minimă în construcţii",
@@ -5484,7 +5484,7 @@
                               },
                               {
                                  "name": "Vederea asupra proprietăţii vecinului",
-                                 "number": 6,
+                                 "number": 5,
                                  "articles": [
                                     {
                                        "name": "Fereastra sau deschiderea în zidul comun",
@@ -5509,7 +5509,7 @@
                               },
                               {
                                  "name": "Dreptul de trecere",
-                                 "number": 7,
+                                 "number": 6,
                                  "articles": [
                                     {
                                        "name": "Dreptul de trecere",
@@ -5539,7 +5539,7 @@
                               },
                               {
                                  "name": "Alte limite legale",
-                                 "number": 8,
+                                 "number": 7,
                                  "articles": [
                                     {
                                        "name": "Dreptul de trecere pentru utilităţi",
@@ -5774,7 +5774,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii comune",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Cazurile de coproprietate forţată",
@@ -5794,7 +5794,7 @@
                               },
                               {
                                  "name": " - I. Părţile comune",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -5864,7 +5864,7 @@
                               },
                               {
                                  "name": "Coproprietatea asupra despărţiturilor comune",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Prezumţia de coproprietate asupra despărţiturilor comune",
@@ -6269,7 +6269,7 @@
                            "subsections": [
                               {
                                  "name": "Drepturile uzufructuarului şi ale nudului proprietar",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Drepturile uzufructuarului",
@@ -6349,7 +6349,7 @@
                               },
                               {
                                  "name": "Obligaţiile uzufructuarului şi ale nudului proprietar",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Inventarierea bunurilor",
@@ -6429,7 +6429,7 @@
                               },
                               {
                                  "name": "Dispoziţii speciale",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Opozabilitatea uzufructului asupra creanţelor",
@@ -9234,7 +9234,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii comune",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Cauzele de revocare",
@@ -9259,7 +9259,7 @@
                               },
                               {
                                  "name": "Revocarea pentru ingratitudine",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Cazurile",
@@ -9289,7 +9289,7 @@
                               },
                               {
                                  "name": "Revocarea pentru neexecutarea sarcinii",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Acţiunile în caz de neexecutare a sarcinii",
@@ -9534,7 +9534,7 @@
                            "subsections": [
                               {
                                  "name": "Categorii de legate",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Clasificarea legatelor",
@@ -9564,7 +9564,7 @@
                               },
                               {
                                  "name": "Efectele legatelor",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Fructele bunurilor ce constituie obiectul legatului",
@@ -9624,7 +9624,7 @@
                               },
                               {
                                  "name": "Ineficacitatea legatelor",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Revocarea voluntară a legatului",
@@ -10684,7 +10684,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii preliminare",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Libertatea formei",
@@ -10704,7 +10704,7 @@
                               },
                               {
                                  "name": "Capacitatea părţilor",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Capacitatea părţilor",
@@ -10724,7 +10724,7 @@
                               },
                               {
                                  "name": "Consimţământul  - I. Formarea contractului",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Încheierea contractului",
@@ -10949,7 +10949,7 @@
                               },
                               {
                                  "name": "Obiectul contractului",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Obiectul contractului",
@@ -11009,7 +11009,7 @@
                               },
                               {
                                  "name": "Cauza",
-                                 "number": 6,
+                                 "number": 5,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -11044,7 +11044,7 @@
                               },
                               {
                                  "name": "Forma contractului",
-                                 "number": 7,
+                                 "number": 6,
                                  "articles": [
                                     {
                                        "name": "Formele de exprimare a consimţământului",
@@ -11094,7 +11094,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii generale",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Nulitatea",
@@ -11124,7 +11124,7 @@
                               },
                               {
                                  "name": "Cauzele de nulitate",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Cauzele de nulitate absolută",
@@ -11149,7 +11149,7 @@
                               },
                               {
                                  "name": "Efectele nulităţii",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Desfiinţarea retroactivă a contractului",
@@ -11194,7 +11194,7 @@
                               },
                               {
                                  "name": "Validarea contractului",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Cauzele de validare",
@@ -11279,7 +11279,7 @@
                            "subsections": [
                               {
                                  "name": "Efectele între părţi",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Forţa obligatorie",
@@ -11339,7 +11339,7 @@
                               },
                               {
                                  "name": "Efectele  - I. Dispoziţii generale",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Relativitatea efectelor contractului",
@@ -12654,7 +12654,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii generale",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Solidaritatea dintre debitori",
@@ -12684,7 +12684,7 @@
                               },
                               {
                                  "name": "Efectele  - I. Efectele principale în raporturile dintre creditor şi debitorii solidari",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Drepturile creditorului",
@@ -12739,7 +12739,7 @@
                               },
                               {
                                  "name": "Efectele solidarităţii în raporturile dintre debitori",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Regresul între codebitori",
@@ -13389,7 +13389,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii generale",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Dreptul la daune-interese",
@@ -13404,7 +13404,7 @@
                               },
                               {
                                  "name": "Prejudiciul  - I. Evaluarea prejudiciului",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Repararea integrală",
@@ -13494,7 +13494,7 @@
                               },
                               {
                                  "name": "Vinovăţia debitorului",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Culpa debitorului",
@@ -14589,7 +14589,7 @@
                            "subsections": [
                               {
                                  "name": "Domeniul de aplicare",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -14609,7 +14609,7 @@
                               },
                               {
                                  "name": "Cine poate cumpăra sau vinde",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Principiul capacităţii",
@@ -14644,7 +14644,7 @@
                               },
                               {
                                  "name": "Obiectul vânzării",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Bunurile ce pot fi vândute",
@@ -14709,7 +14709,7 @@
                               },
                               {
                                  "name": "Pactul de opţiune privind contractul de vânzare şi promisiunea de vânzare",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Pactul de opţiune privind contractul de vânzare",
@@ -14734,7 +14734,7 @@
                               },
                               {
                                  "name": "Obligaţiile  - I. Dispoziţii generale",
-                                 "number": 6,
+                                 "number": 5,
                                  "articles": [
                                     {
                                        "name": "Interpretarea clauzelor vânzării",
@@ -14984,7 +14984,7 @@
                               },
                               {
                                  "name": "Obligaţiile cumpărătorului",
-                                 "number": 7,
+                                 "number": 6,
                                  "articles": [
                                     {
                                        "name": "Plata preţului şi primirea bunului",
@@ -15049,7 +15049,7 @@
                               },
                               {
                                  "name": "Dreptul de preempţiune",
-                                 "number": 8,
+                                 "number": 7,
                                  "articles": [
                                     {
                                        "name": "Noţiune şi domeniu",
@@ -15124,7 +15124,7 @@
                            "subsections": [
                               {
                                  "name": "Reguli speciale aplicabile vânzării imobilelor",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Vânzarea imobilelor fără indicarea suprafeţei",
@@ -15159,7 +15159,7 @@
                               },
                               {
                                  "name": "Vânzarea terenurilor forestiere",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Vânzarea terenurilor forestiere",
@@ -15244,7 +15244,7 @@
                            "subsections": [
                               {
                                  "name": "Vânzarea cu plata preţului în rate şi rezerva proprietăţii",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Rezerva proprietăţii şi riscurile",
@@ -15269,7 +15269,7 @@
                               },
                               {
                                  "name": "Vânzarea cu opţiune de răscumpărare",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Noţiune şi condiţii",
@@ -15484,7 +15484,7 @@
                            "subsections": [
                               {
                                  "name": "Cuprinsul contractului",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -15539,7 +15539,7 @@
                               },
                               {
                                  "name": "Obligaţiile locatorului",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Obligaţiile principale ale locatorului",
@@ -15599,7 +15599,7 @@
                               },
                               {
                                  "name": "Obligaţiile locatarului",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Obligaţiile principale",
@@ -15654,7 +15654,7 @@
                               },
                               {
                                  "name": "Sublocaţiunea şi cesiunea contractului de locaţiune",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Dreptul de a subcontracta şi de a ceda contractul",
@@ -15684,7 +15684,7 @@
                               },
                               {
                                  "name": "Expirarea termenului şi tacita relocaţiune",
-                                 "number": 6,
+                                 "number": 5,
                                  "articles": [
                                     {
                                        "name": "Expirarea termenului",
@@ -15704,7 +15704,7 @@
                               },
                               {
                                  "name": "Înstrăinarea bunului dat în locaţiune",
-                                 "number": 7,
+                                 "number": 6,
                                  "articles": [
                                     {
                                        "name": "Opozabilitatea contractului de locaţiune faţă de dobânditor",
@@ -15739,7 +15739,7 @@
                               },
                               {
                                  "name": "Încetarea contractului",
-                                 "number": 8,
+                                 "number": 7,
                                  "articles": [
                                     {
                                        "name": "Denunţarea contractului",
@@ -15984,7 +15984,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii generale",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -16024,7 +16024,7 @@
                               },
                               {
                                  "name": "Obligaţiile părţilor",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Procurarea, păstrarea şi întrebuinţarea materialelor",
@@ -16099,7 +16099,7 @@
                               },
                               {
                                  "name": "Încetarea contractului",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Decesul beneficiarului",
@@ -16269,7 +16269,7 @@
                            "subsections": [
                               {
                                  "name": "Încheierea contractului de societate",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Condiţiile de formă",
@@ -16299,7 +16299,7 @@
                               },
                               {
                                  "name": "Efectele  - I. Drepturile şi obligaţiile asociaţilor între ei",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Formarea capitalului social",
@@ -16464,7 +16464,7 @@
                               },
                               {
                                  "name": "Pierderea calităţii de asociat",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Cazuri generale",
@@ -16499,7 +16499,7 @@
                               },
                               {
                                  "name": "Încetarea contractului de societate şi dizolvarea societăţii",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Cazurile generale de încetare",
@@ -16564,7 +16564,7 @@
                               },
                               {
                                  "name": "Lichidarea societăţii",
-                                 "number": 6,
+                                 "number": 5,
                                  "articles": [
                                     {
                                        "name": "Numirea şi revocarea lichidatorului",
@@ -17064,7 +17064,7 @@
                            "subsections": [
                               {
                                  "name": "Forma şi întinderea mandatului",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Forma mandatului",
@@ -17094,7 +17094,7 @@
                               },
                               {
                                  "name": "Obligaţiile mandatarului",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Executarea mandatului",
@@ -17144,7 +17144,7 @@
                               },
                               {
                                  "name": "Obligaţiile mandantului",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Sumele necesare executării mandatului",
@@ -17179,7 +17179,7 @@
                               },
                               {
                                  "name": "Încetarea mandatului",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Modurile de încetare",
@@ -17244,7 +17244,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii generale",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -17274,7 +17274,7 @@
                               },
                               {
                                  "name": "Contractul de comision",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -17339,7 +17339,7 @@
                               },
                               {
                                  "name": "Contractul de consignaţie",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -17399,7 +17399,7 @@
                               },
                               {
                                  "name": "Contractul de expediţie",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -17684,7 +17684,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii generale",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -17714,7 +17714,7 @@
                               },
                               {
                                  "name": "Obligaţiile depozitarului",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Diligenţa depozitarului",
@@ -17799,7 +17799,7 @@
                               },
                               {
                                  "name": "Obligaţiile deponentului",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Cheltuielile şi despăgubirile",
@@ -18109,7 +18109,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii comune",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -18164,7 +18164,7 @@
                               },
                               {
                                  "name": "Împrumutul cu dobândă",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Domeniul de aplicare",
@@ -19254,7 +19254,7 @@
                            "subsections": [
                               {
                                  "name": "Efectele fideiusiunii între creditor şi fideiusor",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Obligaţia fideiusorului",
@@ -19324,7 +19324,7 @@
                               },
                               {
                                  "name": "Efectele fideiusiunii între debitor şi fideiusor",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Subrogarea fideiusorului",
@@ -19374,7 +19374,7 @@
                               },
                               {
                                  "name": "Efectele fideiusiunii între mai mulţi fideiusori",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Regresul contra celorlalţi fideiusori",
@@ -19714,7 +19714,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii comune",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Noţiunea",
@@ -19759,7 +19759,7 @@
                               },
                               {
                                  "name": "Obiectul şi întinderea ipotecii",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Obiectul ipotecii",
@@ -19819,7 +19819,7 @@
                               },
                               {
                                  "name": "Efectele ipotecii faţă de terţi",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Drepturile reale constituite după înscrierea ipotecii",
@@ -19854,7 +19854,7 @@
                               },
                               {
                                  "name": "Ipotecile convenţionale",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Dreptul de a ipoteca",
@@ -19924,7 +19924,7 @@
                            "subsections": [
                               {
                                  "name": "Constituirea ipotecii imobiliare",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Înscrierea în cartea funciară",
@@ -19969,7 +19969,7 @@
                               },
                               {
                                  "name": "Drepturile şi obligaţiile părţilor",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Clauzele de inalienabilitate",
@@ -19989,7 +19989,7 @@
                               },
                               {
                                  "name": "Ipotecile legale",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Creanţele care beneficiază de ipotecă legală",
@@ -20014,7 +20014,7 @@
                            "subsections": [
                               {
                                  "name": "Dispoziţii  - I. Constituirea ipotecii",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Constituirea şi eficacitatea ipotecii",
@@ -20079,7 +20079,7 @@
                               },
                               {
                                  "name": "Ipotecile  - I. Dispoziţii comune",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Obiectul ipotecii",
@@ -20144,7 +20144,7 @@
                               },
                               {
                                  "name": "Perfectarea ipotecilor mobiliare",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Ipotecile mobiliare perfecte",
@@ -20174,7 +20174,7 @@
                               },
                               {
                                  "name": "Înscrierea ipotecilor mobiliare",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Arhiva Electronică de Garanţii Reale Mobiliare",
@@ -20374,7 +20374,7 @@
                            "subsections": [
                               {
                                  "name": "Executarea  - I. Deposedarea debitorului",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Drepturile creditorului",
@@ -20524,7 +20524,7 @@
                               },
                               {
                                  "name": "Executarea ipotecii asupra titlurilor reprezentative",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Ipoteca asupra titlurilor reprezentative",
@@ -20539,7 +20539,7 @@
                               },
                               {
                                  "name": "Executarea ipotecii asupra creanţelor",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Ipoteca asupra creanţelor",
@@ -20564,7 +20564,7 @@
                               },
                               {
                                  "name": "Preluarea bunului în vederea administrării",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Condiţiile",
@@ -20604,7 +20604,7 @@
                               },
                               {
                                  "name": "Sancţiuni",
-                                 "number": 6,
+                                 "number": 5,
                                  "articles": [
                                     {
                                        "name": "Încălcarea regulilor privitoare la preluarea bunului",
@@ -21649,7 +21649,7 @@
                            "subsections": [
                               {
                                  "name": "Încheierea căsătoriei",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Legea aplicabilă promisiunii de căsătorie",
@@ -21679,7 +21679,7 @@
                               },
                               {
                                  "name": "Efectele căsătoriei",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Legea aplicabilă efectelor generale ale căsătoriei",
@@ -21729,7 +21729,7 @@
                               },
                               {
                                  "name": "Desfacerea căsătoriei",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Alegerea legii aplicabile divorţului",
@@ -21779,7 +21779,7 @@
                            "subsections": [
                               {
                                  "name": "Filiaţia copilului din căsătorie",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Legea aplicabilă",
@@ -21799,7 +21799,7 @@
                               },
                               {
                                  "name": "Filiaţia copilului din afara căsătoriei",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Legea aplicabilă",
@@ -21819,7 +21819,7 @@
                               },
                               {
                                  "name": "Adopţia",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Legea aplicabilă condiţiilor de fond",

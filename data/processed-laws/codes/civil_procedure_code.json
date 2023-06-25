@@ -1,5 +1,5 @@
 {
-   "name": "Codul de Procedură Civilă al României",
+   "name": "Codul de Procedură Civilă al României / Cod de Procedură Civilă al României / Conținutul Codului de Procedură Civilă al României",
    "books": [
       {
          "name": "PRELIMINAR",
@@ -459,8 +459,33 @@
                      "number": 2,
                      "sections": [
                         {
-                           "name": "Folosinţa şi exerciţiul drepturilor procedurale",
+                           "name": "",
                            "number": 1,
+                           "subsections": [
+                              {
+                                 "name": "",
+                                 "number": 1,
+                                 "articles": [
+                                    {
+                                       "name": "Enumerarea",
+                                       "number": 54,
+                                       "text": "Sunt părţi reclamantul şi pârâtul, precum şi, în condiţiile legii, terţele persoane care intervin voluntar sau forţat în proces."
+                                    }
+                                 ],
+                                 "range": [
+                                    54,
+                                    54
+                                 ]
+                              }
+                           ],
+                           "range": [
+                              54,
+                              54
+                           ]
+                        },
+                        {
+                           "name": "Folosinţa şi exerciţiul drepturilor procedurale",
+                           "number": 2,
                            "subsections": [
                               {
                                  "name": "Folosinţa şi exerciţiul drepturilor procedurale",
@@ -495,7 +520,7 @@
                         },
                         {
                            "name": "Persoanele care sunt împreună reclamante sau pârâte",
-                           "number": 2,
+                           "number": 3,
                            "subsections": [
                               {
                                  "name": "Persoanele care sunt împreună reclamante sau pârâte",
@@ -525,11 +550,11 @@
                         },
                         {
                            "name": "Alte persoane care pot lua parte la judecată",
-                           "number": 3,
+                           "number": 4,
                            "subsections": [
                               {
                                  "name": "Intervenţia voluntară",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Formele",
@@ -573,8 +598,8 @@
                                  ]
                               },
                               {
-                                 "name": "Subsecțiunea 3",
-                                 "number": 3,
+                                 "name": "Subsecțiunea 2",
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Formularea cererii. Termenele",
@@ -650,11 +675,11 @@
                         },
                         {
                            "name": "Reprezentarea părţilor în judecată",
-                           "number": 4,
+                           "number": 5,
                            "subsections": [
                               {
                                  "name": "Dispoziţii generale",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Formele reprezentării",
@@ -679,7 +704,7 @@
                               },
                               {
                                  "name": "Dispoziţii speciale privind reprezentarea convenţională",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Reprezentarea convenţională a persoanelor fizice",
@@ -730,7 +755,7 @@
                         },
                         {
                            "name": "Asistenţa judiciară",
-                           "number": 5,
+                           "number": 6,
                            "subsections": [
                               {
                                  "name": "Asistenţa judiciară",
@@ -755,7 +780,7 @@
                         }
                      ],
                      "range": [
-                        55,
+                        54,
                         89
                      ]
                   },
@@ -3189,7 +3214,7 @@
                            "subsections": [
                               {
                                  "name": "Denumirea, întocmirea şi comunicarea hotărârii",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Denumirea hotărârilor",
@@ -3224,7 +3249,7 @@
                               },
                               {
                                  "name": "Efectele hotărârii judecătoreşti",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Dezinvestirea instanţei",
@@ -5969,7 +5994,7 @@
                            "subsections": [
                               {
                                  "name": "Sechestrarea bunurilor mobile",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Indicarea bunurilor asupra cărora să se facă executarea",
@@ -6089,7 +6114,7 @@
                               },
                               {
                                  "name": "Valorificarea bunurilor sechestrate",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Modalităţile de valorificare",
@@ -6124,7 +6149,7 @@
                               },
                               {
                                  "name": "Vânzarea la licitaţie publică",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Evaluarea bunurilor sechestrate",
@@ -6239,7 +6264,7 @@
                               },
                               {
                                  "name": "Dispoziţii speciale",
-                                 "number": 5,
+                                 "number": 4,
                                  "articles": [
                                     {
                                        "name": "Preluarea bunului în contul creanţei",
@@ -6359,7 +6384,7 @@
                            "subsections": [
                               {
                                  "name": "Urmărirea silită a fructelor neculese şi a recoltelor prinse de rădăcini",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Obiectul urmăririi",
@@ -6394,7 +6419,7 @@
                               },
                               {
                                  "name": "Urmărirea veniturilor generale ale imobilelor",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Obiectul urmăririi",
@@ -6629,7 +6654,7 @@
                            "subsections": [
                               {
                                  "name": "Formalităţile premergătoare vânzării",
-                                 "number": 2,
+                                 "number": 1,
                                  "articles": [
                                     {
                                        "name": "Procesul-verbal de situaţie",
@@ -6669,7 +6694,7 @@
                               },
                               {
                                  "name": "Scoaterea în vânzare a imobilului",
-                                 "number": 3,
+                                 "number": 2,
                                  "articles": [
                                     {
                                        "name": "Declanşarea procedurii de vânzare",
@@ -6714,7 +6739,7 @@
                               },
                               {
                                  "name": "Licitaţia şi adjudecarea imobilului",
-                                 "number": 4,
+                                 "number": 3,
                                  "articles": [
                                     {
                                        "name": "Locul licitaţiei",

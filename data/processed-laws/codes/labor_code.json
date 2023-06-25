@@ -1,8 +1,8 @@
 {
-   "name": "Codul Muncii al României",
+   "name": "Codul Muncii al României / Cod de Muncă al României / Conținutul Codului Muncii al României",
    "books": [
       {
-         "name": "Codul Muncii al României",
+         "name": "Codul Muncii al României / Cod de Muncă al României / Conținutul Codului Muncii al României",
          "number": 1,
          "titles": [
             {
@@ -474,8 +474,33 @@
                      "number": 5,
                      "sections": [
                         {
-                           "name": "Încetarea de drept a contractului individual de muncă",
+                           "name": "",
                            "number": 1,
+                           "subsections": [
+                              {
+                                 "name": "",
+                                 "number": 1,
+                                 "articles": [
+                                    {
+                                       "name": "Contractul individual de muncă poate inceta astfel:",
+                                       "number": 55,
+                                       "text": "a) de drept; ... \n b) ca urmare a acordului părţilor, la data convenită de acestea; ... \n c) ca urmare a voinţei unilaterale a uneia dintre părţi, în cazurile şi în condiţiile limitativ prevăzute de lege. ..."
+                                    }
+                                 ],
+                                 "range": [
+                                    55,
+                                    55
+                                 ]
+                              }
+                           ],
+                           "range": [
+                              55,
+                              55
+                           ]
+                        },
+                        {
+                           "name": "Încetarea de drept a contractului individual de muncă",
+                           "number": 2,
                            "subsections": [
                               {
                                  "name": "Încetarea de drept a contractului individual de muncă",
@@ -505,7 +530,7 @@
                         },
                         {
                            "name": "Concedierea",
-                           "number": 2,
+                           "number": 3,
                            "subsections": [
                               {
                                  "name": "Concedierea",
@@ -540,7 +565,7 @@
                         },
                         {
                            "name": "Concedierea pentru motive care ţin de persoana salariatului",
-                           "number": 3,
+                           "number": 4,
                            "subsections": [
                               {
                                  "name": "Concedierea pentru motive care ţin de persoana salariatului",
@@ -580,7 +605,7 @@
                         },
                         {
                            "name": "Concedierea pentru motive care nu ţin de persoana salariatului",
-                           "number": 4,
+                           "number": 5,
                            "subsections": [
                               {
                                  "name": "Concedierea pentru motive care nu ţin de persoana salariatului",
@@ -615,7 +640,7 @@
                         },
                         {
                            "name": "Concedierea colectivă",
-                           "number": 5,
+                           "number": 6,
                            "subsections": [
                               {
                                  "name": "Concedierea colectivă",
@@ -660,7 +685,7 @@
                         },
                         {
                            "name": "Dreptul la preaviz",
-                           "number": 6,
+                           "number": 7,
                            "subsections": [
                               {
                                  "name": "Dreptul la preaviz",
@@ -695,7 +720,7 @@
                         },
                         {
                            "name": "Controlul şi sancţionarea concedierilor nelegale",
-                           "number": 7,
+                           "number": 8,
                            "subsections": [
                               {
                                  "name": "Controlul şi sancţionarea concedierilor nelegale",
@@ -730,7 +755,7 @@
                         },
                         {
                            "name": "Demisia",
-                           "number": 8,
+                           "number": 9,
                            "subsections": [
                               {
                                  "name": "Demisia",
@@ -755,7 +780,7 @@
                         }
                      ],
                      "range": [
-                        56,
+                        55,
                         79
                      ]
                   },

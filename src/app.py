@@ -6,13 +6,16 @@ from flask_cors import CORS
 
 from law_processor import LawProcessor
 from simplification import SimplificationTool
+from corpus_processor import CorpusProcessor
 
+lp = LawProcessor()
+st = SimplificationTool()
+cp = CorpusProcessor()
 app = Flask(__name__, template_folder="../templates", static_folder="../static")
 CORS(app)
 
-SESSION_ID = 13123
+SESSION_ID = "RLB"
 KERNEL = aiml.Kernel()
-MEMORISED_TEXT = ""
 
 
 @app.route("/")
@@ -22,7 +25,6 @@ def start():
 
 @app.route("/send", methods=["POST"])
 def send():
-    global MEMORISED_TEXT
     data = request.json
     message = data["message"]
     bot_response = KERNEL.respond(message, SESSION_ID)
@@ -44,28 +46,50 @@ def send():
 
     elif message.startswith("câte articole"):
         legal_code = str(KERNEL.getPredicate("legal_code_size", SESSION_ID)).strip()
-        response = LawProcessor().get_code_size(legal_code)
+        response = lp.get_code_size(legal_code)
 
         return jsonify({"answer": response})
 
     elif re.match(r"^care e.* articolul", message):
         article_number = int(KERNEL.getPredicate("article_number", SESSION_ID))
         legal_code = str(KERNEL.getPredicate("legal_code", SESSION_ID)).strip()
-        response = LawProcessor().find_article(article_number, legal_code)
-        MEMORISED_TEXT = response
+        response = lp.find_article(article_number, legal_code)
+        explained = st.simplify(response)
+
+        return jsonify({"answer": explained})
+
+    elif message.startswith(
+        (
+            "ce ar trebui să știu despre",
+            "ce legi sunt legate de",
+            "care legi sunt legate de",
+            "ce legi sunt despre",
+            "care legi sunt despre",
+            "care sunt legile legate de",
+            "care sunt legile despre",
+            "ce legi au legătură cu",
+            "care legi au legătură cu",
+            "aș vrea să știu despre",
+            "vreau să știu despre",
+            "zi despre",
+            "spune despre",
+        )
+    ):
+        keyword = KERNEL.getPredicate("search_term", SESSION_ID).strip()
+        response = lp.find_relevant_text(keyword)
 
         return jsonify({"answer": response})
 
-    elif message.startswith("ce ar trebui să știu despre") or message.startswith("spune-mi despre"):
-        keyword = KERNEL.getPredicate("keyword", SESSION_ID)
-        response = LawProcessor().find_relevant_text(keyword)
+    elif message.startswith(("definește", "ce înseamnă")):
+        word = KERNEL.getPredicate("word_definition", SESSION_ID)
+        definition = cp.get_dex_definition(word)
 
-        return jsonify({"answer": response})
-
-    elif message == "mai simplu":
-        simple_response = SimplificationTool().simplify(MEMORISED_TEXT)
-
-        return jsonify({"answer": simple_response})
+        if definition != word.lower():
+            return jsonify({"answer": definition})
+        else:
+            return jsonify(
+                {"answer": "Din păcate nu pot găsi o definiție pentru acest termen..."}
+            )
 
     elif message == "":
         return jsonify({"answer": "Voiai să mă întrebi ceva?"})

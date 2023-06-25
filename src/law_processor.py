@@ -16,58 +16,69 @@ class LawProcessor:
     """
 
     def process_laws(self):
+        print("done 0/9")
+
         self.process_general_code_type1(
             "../data/processed-laws/codes/constitution.json",
-            "Constituția României / Constituție a României",
+            "Constituția României / Constituție a României / Conținutul Constituției din România",
             LawUrls.CONSTITUTION,
         )
+        print("done 1/9 - Constitution")
         self.process_general_code_type1(
             "../data/processed-laws/codes/fiscal_code.json",
-            "Codul Fiscal al României",
+            "Codul Fiscal al României / Cod Fiscal al României / Conținutul Codului Fiscal al României",
             LawUrls.FISCAL,
         )
+        print("done 2/9 - Fiscal")
         self.process_general_code_type1(
             "../data/processed-laws/codes/fiscal_procedure_code.json",
-            "Codul de Procedură Fiscală al României",
+            "Codul de Procedură Fiscală al României / Cod de Procedură Fiscală al României / Conținutul Codului de Procedură Fiscală al României",
             LawUrls.FISCAL_PROCEDURE,
         )
+        print("done 3/9 - Fiscal procedure")
         self.process_general_code_type1(
             "../data/processed-laws/codes/labor_code.json",
-            "Codul Muncii al României",
+            "Codul Muncii al României / Cod de Muncă al României / Conținutul Codului Muncii al României",
             LawUrls.LABOR,
         )
+        print("done 4/9 - Labor")
 
         self.process_general_code_type2(
             "../data/processed-laws/codes/penal_code.json",
-            "Codul Penal al României",
+            "Codul Penal al României / Cod Penal al României / Conținutul Codului Penal al României",
             LawUrls.PENAL,
             r"\nPartea (.*)\n\n",
         )
+        print("done 5/9 - Penal")
         self.process_general_code_type2(
             "../data/processed-laws/codes/penal_procedure_code.json",
-            "Codul de Procedură Penală al României",
+            "Codul de Procedură Penală al României / Cod de Procedură Penală al României / Conținutul Codului de Procedură Penală al României",
             LawUrls.PENAL_PROCEDURE,
             r"\nPartea ([A-ZĂÎÂȘȚ]+)",
         )
+        print("done 6/9 - Penal procedure")
         self.process_general_code_type2(
             "../data/processed-laws/codes/administrative_code.json",
-            "Codul Administrativ al României",
+            "Codul Administrativ al României / Cod Administrativ al României / Conținutul Codului Administrativ al României",
             LawUrls.ADMINISTRATIVE,
             r"\nPARTEA (.*)\n",
         )
+        print("done 7/9 - Administrative")
 
         self.process_civil_code(
             "../data/processed-laws/codes/civil_code.json",
-            "Codul Civil al României",
+            "Codul Civil al României / Cod Civil al României / Conținutul Codului Civil al României",
             LawUrls.CIVIL,
             "PRELIMINAR",
         )
+        print("done 8/9 - Civil")
         self.process_civil_code(
             "../data/processed-laws/codes/civil_procedure_code.json",
-            "Codul de Procedură Civilă al României",
+            "Codul de Procedură Civilă al României / Cod de Procedură Civilă al României / Conținutul Codului de Procedură Civilă al României",
             LawUrls.CIVIL_PROCEDURE,
             "PRELIMINAR",
         )
+        print("done 9/9 - Civil procedure")
 
         self.__concatenate_laws()
 
@@ -128,7 +139,9 @@ class LawProcessor:
         json.dump(civil_code, f, ensure_ascii=False, indent=3)
         f.close()
 
-    def process_general_code_type1(self, outfile: str, code_name: str, code_url: LawUrls):
+    def process_general_code_type1(
+        self, outfile: str, code_name: str, code_url: LawUrls
+    ):
         text = self.__get_code_text(code_url)
 
         general_code = {
@@ -327,7 +340,7 @@ class LawProcessor:
         if "\nSecţiunea" in sections_text:
             sections = re.split(r"\nSecţiunea ", sections_text)
             # Excluding potential empty section after split
-            if re.split(r"\n", sections[0], 1)[0] == "":
+            if sections[0] in ["\n", " ", ""] or "Articolul" not in sections[0]:
                 sections = sections[1:]
 
             for isc, section in enumerate(sections):
@@ -380,28 +393,29 @@ class LawProcessor:
     ):
         if "\n§" in subsections_text:
             subsections = re.split(r"\n§", subsections_text)
+            if subsections[0] == "":
+                subsections = subsections[1:]
 
             for iss, subsection in enumerate(subsections):
-                if subsection != "":
-                    ss = dict()
+                ss = dict()
 
-                    subsection_title, articles_text = re.split(r"\n", subsection, 1)
+                subsection_title, articles_text = re.split(r"\n", subsection, 1)
 
-                    subsection_split = re.split(r" ", subsection_title.strip(), 1)
-                    if len(subsection_split) > 1:
-                        subsection_name = subsection_split[1]
-                    else:
-                        subsection_name = f"Subsecțiunea {iss + 1}"
+                subsection_split = re.split(r" ", subsection_title.strip(), 1)
+                if len(subsection_split) > 1:
+                    subsection_name = subsection_split[1]
+                else:
+                    subsection_name = f"Subsecțiunea {iss + 1}"
 
-                    ss["name"] = subsection_name
-                    ss["number"] = iss + 1
-                    ss["articles"] = []
+                ss["name"] = subsection_name
+                ss["number"] = iss + 1
+                ss["articles"] = []
 
-                    start, end = self.__process_articles(articles_text, ss["articles"])
+                start, end = self.__process_articles(articles_text, ss["articles"])
 
-                    ss["range"] = [start, end]
+                ss["range"] = [start, end]
 
-                    section_subsections.append(ss)
+                section_subsections.append(ss)
 
             return [
                 section_subsections[0]["range"][0],
@@ -429,7 +443,6 @@ class LawProcessor:
                 a = dict()
 
                 article = article.replace("Articolul ", "")
-
                 article_number, article_body = re.split(r"\s+", article, 1)
                 article_name, article_text = re.split(r"\n+", article_body, 1)
 
@@ -462,34 +475,105 @@ class LawProcessor:
 
         if code_index != -1:
             for book in codes[code_index]["books"]:
-                article = self.__find_article(book, article_number)
+                article = self.__find_article_by_number(book, article_number)
                 if article is not None:
-                    return f'{article["name"]}\n{article["text"]}'
+                    return f"{article['name']}\n{article['text']}"
             return (
                 f"Articolul cu numărul {article_number} nu există în acest cod de lege!"
             )
         else:
             return f"Codul de lege specificat ({legal_code}) nu există!"
 
-    def __find_article(self, obj: dict, article_number: int):
+    def __find_article_by_number(self, obj: dict, article_number: int):
         if "range" in obj.keys():
             if obj["range"][0] <= article_number <= obj["range"][1]:
                 for v in obj.values():
-                    if isinstance(v, list) and not all([isinstance(elem, int) for elem in v]):
+                    if isinstance(v, list) and not all(
+                        [isinstance(elem, int) for elem in v]
+                    ):
                         for elem in v:
-                            article = self.__find_article(elem, article_number)
+                            article = self.__find_article_by_number(
+                                elem, article_number
+                            )
                             if article is not None:
                                 return article
         elif obj["number"] == article_number:
             return obj
 
-    # TODO: finish implementation
+    # TODO: rethink utility
+    # def find_relevant_text(self, keyword: str):
+    #     f = open("../data/corpus/legal.json", "r", encoding="utf8")
+    #     legal_frequencies = json.load(f)
+    #     f.close()
+
+    #     keyword = keyword.lower()
+    #     candidates = dict()
+    #     for code, values in legal_frequencies.items():
+    #         if keyword in values:
+    #             candidates[code] = {
+    #                 "freq": values[keyword]["freq"],
+    #                 "articles": values[keyword]["articles"],
+    #             }
+
+    #     message = ""
+    #     for code, values in candidates.items():
+    #         message += f"<span class=\"highlightable\">{code}</span> conține {values['freq']} apariții ale termenului, cu {len(values['articles'])} articole relevante: {values['articles']}.\n\n"
+
+    #     if message != "":
+    #         message += (
+    #             "\nÎmi poți cere detalii despre oricare din articolele listate mai sus!"
+    #         )
+    #         return message
+    #     else:
+    #         return "Termenul nu se regăsește în niciun articol din lege.\nVerifică că a fost scris corect sau încearcă o altă formă a cuvântului!"
+
     def find_relevant_text(self, keyword: str):
-        f = open("..data/corpus/legal.json", "r", encoding="utf8")
-        legal_frequencies = json.load(f)
+        f = open("../data/processed-laws/codes.json", "r", encoding="utf8")
+        codes = json.load(f)
         f.close()
 
-        return "in progress"
+        codes_keywords = [
+            "Codul administrativ",
+            "Codul civil",
+            "Codul de procedură civilă",
+            "Constituția",
+            "Codul fiscal",
+            "Codul de procedură fiscală",
+            "Codul muncii",
+            "Codul penal",
+            "Codul de procedură penală",
+        ]
+
+        keyword = keyword.lower()
+        candidates = dict()
+        for i, code in enumerate(codes):
+            articles = list()
+            self.__find_articles_by_content(code, keyword, articles)
+            if len(articles) > 0:
+                candidates[codes_keywords[i]] = articles
+
+        message = ""
+        for code, values in candidates.items():
+            message += f"<span class=\"highlightable\">{code}</span> conține {len(values)} articole relevante: {values}.\n\n"
+
+        if message != "":
+            message += (
+                "\nÎmi poți cere detalii despre oricare din articolele listate mai sus!"
+            )
+            return message
+        else:
+            return "Termenul nu se regăsește în niciun articol din lege.\nVerifică că a fost scris corect sau încearcă o altă formă a cuvântului!"
+
+    def __find_articles_by_content(self, obj: dict, keyword: str, results: list()):
+        if "range" in obj.keys():
+            for v in obj.values():
+                if isinstance(v, list) and not all(
+                    [isinstance(elem, int) for elem in v]
+                ):
+                    for elem in v:
+                        self.__find_articles_by_content(elem, keyword, results)
+        elif keyword in obj["text"].lower():
+            results.append(obj["number"])
 
     def get_code_size(self, legal_code: str):
         f = open("../data/processed-laws/codes.json", "r", encoding="utf8")
@@ -504,11 +588,11 @@ class LawProcessor:
 
         if code_index != -1:
             size = codes[code_index]["range"][1]
-            return f"{legal_code.capitalize()} are {size} articole."
+            return f'{legal_code.capitalize()} are <span class="highlightable">{size}</span> articole.'
         else:
             return f"Codul de lege specificat ({legal_code}) nu există!"
+
 
 if __name__ == "__main__":
     lp = LawProcessor()
     lp.process_laws()
-    # lp.find_relevant_text("Moștenire")
