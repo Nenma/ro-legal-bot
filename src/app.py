@@ -4,9 +4,9 @@ import aiml
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 
-from law_processor import LawProcessor
-from simplification import SimplificationTool
-from corpus_processor import CorpusProcessor
+from src.law_processor import LawProcessor
+from src.simplification import SimplificationTool
+from src.corpus_processor import CorpusProcessor
 
 lp = LawProcessor()
 st = SimplificationTool()
@@ -15,7 +15,15 @@ app = Flask(__name__, template_folder="../templates", static_folder="../static")
 CORS(app)
 
 SESSION_ID = "RLB"
+
 KERNEL = aiml.Kernel()
+# Check for existing "brain", meaning existing kernel progress saved
+# If there is, load it, if not, learn from existing AIML file
+if os.path.isfile(f"./aiml/{SESSION_ID}.brn"):
+    KERNEL.bootstrap(brainFile=f"./aiml/{SESSION_ID}.brn")
+else:
+    KERNEL.bootstrap(learnFiles="./aiml/std-startup.xml", commands="load aiml b")
+    KERNEL.saveBrain(f"./aiml/{SESSION_ID}.brn")
 
 
 @app.route("/")
@@ -99,12 +107,4 @@ def send():
 
 
 if __name__ == "__main__":
-    # Check for existing "brain", meaning existing kernel progress saved
-    # If there is, load it, if not, learn from existing AIML file
-    if os.path.isfile(f"../aiml/{SESSION_ID}.brn"):
-        KERNEL.bootstrap(brainFile=f"../aiml/{SESSION_ID}.brn")
-    else:
-        KERNEL.bootstrap(learnFiles="../aiml/std-startup.xml", commands="load aiml b")
-        KERNEL.saveBrain(f"../aiml/{SESSION_ID}.brn")
-
     app.run(port=5000, debug=True)

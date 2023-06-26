@@ -23,6 +23,5 @@ In the context of this project, base Romanian legislation is comprised of:
 The flask chat app can be run like this:
 
 ```
-cd src
-python app.py
+python main.py
 ```

@@ -5,7 +5,7 @@ import math
 import re
 import os
 
-from utils.law_urls import LawUrls
+from src.utils.law_urls import LawUrls
 
 
 class LawProcessor:
@@ -19,46 +19,46 @@ class LawProcessor:
         print("done 0/9")
 
         self.process_general_code_type1(
-            "../data/processed-laws/codes/constitution.json",
+            "./data/processed-laws/codes/constitution.json",
             "Constituția României / Constituție a României / Conținutul Constituției din România",
             LawUrls.CONSTITUTION,
         )
         print("done 1/9 - Constitution")
         self.process_general_code_type1(
-            "../data/processed-laws/codes/fiscal_code.json",
+            "./data/processed-laws/codes/fiscal_code.json",
             "Codul Fiscal al României / Cod Fiscal al României / Conținutul Codului Fiscal al României",
             LawUrls.FISCAL,
         )
         print("done 2/9 - Fiscal")
         self.process_general_code_type1(
-            "../data/processed-laws/codes/fiscal_procedure_code.json",
+            "./data/processed-laws/codes/fiscal_procedure_code.json",
             "Codul de Procedură Fiscală al României / Cod de Procedură Fiscală al României / Conținutul Codului de Procedură Fiscală al României",
             LawUrls.FISCAL_PROCEDURE,
         )
         print("done 3/9 - Fiscal procedure")
         self.process_general_code_type1(
-            "../data/processed-laws/codes/labor_code.json",
+            "./data/processed-laws/codes/labor_code.json",
             "Codul Muncii al României / Cod de Muncă al României / Conținutul Codului Muncii al României",
             LawUrls.LABOR,
         )
         print("done 4/9 - Labor")
 
         self.process_general_code_type2(
-            "../data/processed-laws/codes/penal_code.json",
+            "./data/processed-laws/codes/penal_code.json",
             "Codul Penal al României / Cod Penal al României / Conținutul Codului Penal al României",
             LawUrls.PENAL,
             r"\nPartea (.*)\n\n",
         )
         print("done 5/9 - Penal")
         self.process_general_code_type2(
-            "../data/processed-laws/codes/penal_procedure_code.json",
+            "./data/processed-laws/codes/penal_procedure_code.json",
             "Codul de Procedură Penală al României / Cod de Procedură Penală al României / Conținutul Codului de Procedură Penală al României",
             LawUrls.PENAL_PROCEDURE,
             r"\nPartea ([A-ZĂÎÂȘȚ]+)",
         )
         print("done 6/9 - Penal procedure")
         self.process_general_code_type2(
-            "../data/processed-laws/codes/administrative_code.json",
+            "./data/processed-laws/codes/administrative_code.json",
             "Codul Administrativ al României / Cod Administrativ al României / Conținutul Codului Administrativ al României",
             LawUrls.ADMINISTRATIVE,
             r"\nPARTEA (.*)\n",
@@ -66,14 +66,14 @@ class LawProcessor:
         print("done 7/9 - Administrative")
 
         self.process_civil_code(
-            "../data/processed-laws/codes/civil_code.json",
+            "./data/processed-laws/codes/civil_code.json",
             "Codul Civil al României / Cod Civil al României / Conținutul Codului Civil al României",
             LawUrls.CIVIL,
             "PRELIMINAR",
         )
         print("done 8/9 - Civil")
         self.process_civil_code(
-            "../data/processed-laws/codes/civil_procedure_code.json",
+            "./data/processed-laws/codes/civil_procedure_code.json",
             "Codul de Procedură Civilă al României / Cod de Procedură Civilă al României / Conținutul Codului de Procedură Civilă al României",
             LawUrls.CIVIL_PROCEDURE,
             "PRELIMINAR",
@@ -83,7 +83,7 @@ class LawProcessor:
         self.__concatenate_laws()
 
     def __concatenate_laws(self):
-        directory = "../data/processed-laws"
+        directory = "./data/processed-laws"
 
         codes_json = []
         for i, file_name in enumerate(os.listdir(f"{directory}/codes")):
@@ -463,7 +463,7 @@ class LawProcessor:
         return start, end
 
     def find_article(self, article_number: int, legal_code: str):
-        f = open("../data/processed-laws/codes.json", "r", encoding="utf8")
+        f = open("./data/processed-laws/codes.json", "r", encoding="utf8")
         codes = json.load(f)
         f.close()
 
@@ -502,7 +502,7 @@ class LawProcessor:
 
     # TODO: rethink utility
     # def find_relevant_text(self, keyword: str):
-    #     f = open("../data/corpus/legal.json", "r", encoding="utf8")
+    #     f = open("./data/corpus/legal.json", "r", encoding="utf8")
     #     legal_frequencies = json.load(f)
     #     f.close()
 
@@ -528,7 +528,7 @@ class LawProcessor:
     #         return "Termenul nu se regăsește în niciun articol din lege.\nVerifică că a fost scris corect sau încearcă o altă formă a cuvântului!"
 
     def find_relevant_text(self, keyword: str):
-        f = open("../data/processed-laws/codes.json", "r", encoding="utf8")
+        f = open("./data/processed-laws/codes.json", "r", encoding="utf8")
         codes = json.load(f)
         f.close()
 
@@ -554,7 +554,7 @@ class LawProcessor:
 
         message = ""
         for code, values in candidates.items():
-            message += f"<span class=\"highlightable\">{code}</span> conține {len(values)} articole relevante: {values}.\n\n"
+            message += f'<span class="highlightable">{code}</span> conține {len(values)} articole relevante: {values}.\n\n'
 
         if message != "":
             message += (
@@ -576,7 +576,7 @@ class LawProcessor:
             results.append(obj["number"])
 
     def get_code_size(self, legal_code: str):
-        f = open("../data/processed-laws/codes.json", "r", encoding="utf8")
+        f = open("./data/processed-laws/codes.json", "r", encoding="utf8")
         codes = json.load(f)
         f.close()
 

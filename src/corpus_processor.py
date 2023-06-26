@@ -8,9 +8,9 @@ import json
 import re
 import os
 
-from utils.cleaner import TextCleaner
-from utils.timer import Timer
-from law_processor import LawProcessor
+from src.utils.cleaner import TextCleaner
+from src.utils.timer import Timer
+from src.law_processor import LawProcessor
 
 
 class CorpusProcessor:
@@ -40,21 +40,21 @@ class CorpusProcessor:
     def get_articles_list(self, outfile: str, url: str, list_size: str):
         wikis = {}
 
-        f = open(f"../data/wikipedia/{outfile}", "w", encoding="utf8")
+        f = open(f"./data/wikipedia/{outfile}", "w", encoding="utf8")
         f.close()
 
         while len(wikis) < list_size:
             page = requests.get(url)
             wikis[page.url] = wikis.get(page.url, 0) + 1
 
-            f = open(f"../data/wikipedia/{outfile}", "w", encoding="utf8")
+            f = open(f"./data/wikipedia/{outfile}", "w", encoding="utf8")
             json.dump(wikis, f, ensure_ascii=False, indent=3)
             f.flush()
         f.close()
 
     # TODO: rethink utility
     def generate_legal_frequencies(self):
-        f = open("../data/corpus/legal.json", "w", encoding="utf8")
+        f = open("./data/corpus/legal.json", "w", encoding="utf8")
         f.close()
 
         codes_keywords = [
@@ -92,18 +92,18 @@ class CorpusProcessor:
 
             print(f"{i+1}/{len(codes_keywords)} done - {key}")
 
-            f = open("../data/corpus/legal.json", "w", encoding="utf8")
+            f = open("./data/corpus/legal.json", "w", encoding="utf8")
             json.dump(word_frequencies, f, ensure_ascii=False, indent=3)
             f.flush()
 
         f.close()
 
     def generate_frequencies_with_scipy(self, infile: str):
-        f = open(f"../data/wikipedia/{infile}", "r", encoding="utf8")
+        f = open(f"./data/wikipedia/{infile}", "r", encoding="utf8")
         url_list = json.load(f).keys()
         f.close()
 
-        f = open(f"../data/corpus/intermediary/{infile}", "w", encoding="utf8")
+        f = open(f"./data/corpus/intermediary/{infile}", "w", encoding="utf8")
         f.close()
 
         word_frequencies = dict()
@@ -140,7 +140,7 @@ class CorpusProcessor:
 
             # Write to file during iteration to save progress
             f = open(
-                f"../data/corpus/intermediary/{infile}",
+                f"./data/corpus/intermediary/{infile}",
                 "w",
                 encoding="utf8",
             )
@@ -159,9 +159,7 @@ class CorpusProcessor:
 
     # TODO: readjust with articles list
     def generate_frequencies_with_relate(self, file_suffix: str) -> str:
-        f = open(
-            f"../data/corpus/intermediary/{file_suffix}.json", "w", encoding="utf8"
-        )
+        f = open(f"./data/corpus/intermediary/{file_suffix}.json", "w", encoding="utf8")
         f.close()
 
         word_frequencies = dict()
@@ -225,7 +223,7 @@ class CorpusProcessor:
 
             # Write to file during iteration to save progress
             f = open(
-                f"../data/corpus/intermediary/{file_suffix}.json",
+                f"./data/corpus/intermediary/{file_suffix}.json",
                 "w",
                 encoding="utf8",
             )
@@ -283,7 +281,7 @@ class CorpusProcessor:
                 print(f"Task {task.result()} completed!")
 
     def get_tfidf_merge(self):
-        directory = "../data/corpus"
+        directory = "./data/corpus"
         ro_wikipedia = {"wikipedia_articles_urls": [], "word_frequencies": {}}
 
         for file_name in os.listdir(f"{directory}/intermediary"):

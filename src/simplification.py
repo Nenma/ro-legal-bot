@@ -2,8 +2,8 @@ import rowordnet as rwn
 import json
 import re
 
-from utils.cleaner import TextCleaner
-from corpus_processor import CorpusProcessor
+from src.utils.cleaner import TextCleaner
+from src.corpus_processor import CorpusProcessor
 
 
 class SimplificationTool:
@@ -12,8 +12,8 @@ class SimplificationTool:
     lemmas = dict()
 
     def __init__(self):
-        f = open("../data/corpus/dictionary.json", "r", encoding="utf8")
-        g = open("../data/corpus/ro_wikipedia_final.json", "r", encoding="utf8")
+        f = open("./data/corpus/dictionary.json", "r", encoding="utf8")
+        g = open("./data/corpus/ro_wikipedia_final.json", "r", encoding="utf8")
 
         self.dictionary = json.load(f)
         self.ro_wikipedia = json.load(g)
@@ -33,7 +33,7 @@ class SimplificationTool:
             if not self.tc.is_stopword(word) and len(word) > 1 and "." not in word
         ]
 
-        # f = open("../data/corpus/legal.json", "r", encoding="utf8")
+        # f = open("./data/corpus/legal.json", "r", encoding="utf8")
         # legal = json.load(f)
         # f.close()
 
@@ -64,7 +64,7 @@ class SimplificationTool:
                             word.lower()
                         ] = f'<span class="highlightable tooltip"><i>{word}</i><span class="tooltiptext">{definition}</span></span>'
 
-                f = open("../data/corpus/dictionary.json", "w", encoding="utf8")
+                f = open("./data/corpus/dictionary.json", "w", encoding="utf8")
                 json.dump(self.dictionary, f, ensure_ascii=False, indent=3)
                 f.flush()
 
