@@ -2,6 +2,7 @@
 __pycache__/
 aiml/*.brn
 data/corpus/intermediary
+data/corpus/ro_wikipedia.json
 test-data/
 test/
 SOTA/
