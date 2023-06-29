@@ -2,7 +2,7 @@
 
 Project made as part of "Alexandru Ioan Cuza" University of Iași's Computational Linguistics Master's programme.
 
-Link to Overleaf paper (continuously updated) can be found [here](https://www.overleaf.com/6469494883tfgphsjrgvvw).
+Paper can be found here: THESIS
 
 ## What does _legislation_ mean?
 
@@ -17,6 +17,19 @@ In the context of this project, base Romanian legislation is comprised of:
 7. The Fiscal Procedure Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G1SA6VV3H1PY8920ESSHWCB3WXT)\]
 8. The Labor Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G3RCE89TJASJDO1SWLGVM5I6DWB)\]
 9. The Administrative Code \[[source](https://legislatie.just.ro/Public/FormaPrintabila/00000G26T9IKD8IXCIZ0X39N88WZQ5GJ)\]
+
+## System description
+
+The UI is a single-page web application rendered as a template over a Flask API's root endpoint.
+
+The user input query is sent over the exposed `/send` POST request and it's then handled by pattern matching using an AIML file wrapper.
+
+The chatbot is capable of answering 4 main types of quetions:
+
+1. What articles are of interest to me concerning X topic?
+2. How many total articles are there in Code of law X?
+3. What is article X of Code of law Y?
+4. Define X for me
 
 ## Running the app
 
