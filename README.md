@@ -2,7 +2,7 @@
 
 Project made as part of "Alexandru Ioan Cuza" University of Iași's Computational Linguistics Master's programme.
 
-Paper can be found here: THESIS
+Paper can be found here: [THESIS](thesis.pdf)
 
 ## What does _legislation_ mean?
 
