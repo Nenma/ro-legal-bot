@@ -24,6 +24,9 @@ class CorpusProcessor:
 
     DEX_URL = "https://dexonline.ro/definitie"
 
+    RANDOM_WIKI = "https://ro.wikipedia.org/wiki/Special:Random"
+    RANDOM_ARTICLES = 100_000
+
     QUALITY_ARTICLES = 200  # number recorded as of June 2023
     RANDOM_QUALITY_WIKI = "https://ro.wikipedia.org/wiki/Special:RandomInCategory?&wpcategory=Articole+de+calitate"
 
@@ -252,7 +255,7 @@ class CorpusProcessor:
         return res.json()["teprolin-result"]["tokenized"][0][0]["_lemma"]
 
     def get_dex_definition(self, word):
-        word = word.lower()
+        word = word.lower().strip()
         page = requests.get(f"{self.DEX_URL}/{word}")
         soup = BeautifulSoup(page.content, "html.parser")
 
@@ -356,8 +359,6 @@ if __name__ == "__main__":
     cp = CorpusProcessor()
 
     t.start()
-    # cp.multithread_runner()
-    # cp.generate_legal_frequencies()
-    cp.get_tfidf_merge()
+    cp.generate_frequencies_with_scipy("random.json")
     # cp.get_tfidf_merge()
     t.stop()

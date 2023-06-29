@@ -6,7 +6,7 @@ from src.utils.cleaner import TextCleaner
 from src.corpus_processor import CorpusProcessor
 
 
-class SimplificationTool:
+class ExplanationTool:
     tc = TextCleaner()
     cp = CorpusProcessor()
     lemmas = dict()
@@ -32,16 +32,6 @@ class SimplificationTool:
             for word in words
             if not self.tc.is_stopword(word) and len(word) > 1 and "." not in word
         ]
-
-        # f = open("./data/corpus/legal.json", "r", encoding="utf8")
-        # legal = json.load(f)
-        # f.close()
-
-        # words = []
-        # for value in legal.values():
-        #     for key in value.keys():
-        #         if key not in words and len(key) > 0:
-        #             words.append(key)
 
         for word in words:
             if word.lower() in self.lemmas:
@@ -80,5 +70,5 @@ class SimplificationTool:
 
 
 if __name__ == "__main__":
-    st = SimplificationTool()
+    st = ExplanationTool()
     st.simplify("ex")

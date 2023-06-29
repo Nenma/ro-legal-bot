@@ -5,11 +5,11 @@ from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 
 from src.law_processor import LawProcessor
-from src.simplification import SimplificationTool
+from src.explanation import ExplanationTool
 from src.corpus_processor import CorpusProcessor
 
 lp = LawProcessor()
-st = SimplificationTool()
+st = ExplanationTool()
 cp = CorpusProcessor()
 app = Flask(__name__, template_folder="../templates", static_folder="../static")
 CORS(app)
@@ -96,7 +96,7 @@ def send():
             return jsonify({"answer": definition})
         else:
             return jsonify(
-                {"answer": "Din păcate nu pot găsi o definiție pentru acest termen..."}
+                {"answer": f'Din păcate nu pot găsi o definiție pentru "{word}"...'}
             )
 
     elif message == "":
